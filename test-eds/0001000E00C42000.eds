@@ -1,0 +1,614 @@
+$ EDS file for 5069-L306ER controller module Firmware Revision 32
+
+[File]
+        DescText = "5069-L306ER";
+        CreateDate = 12-21-2017;
+        CreateTime = 14:16:51;
+        ModDate = 10-22-2018;
+        ModTime = 16:48:13;
+        Revision = 1.1;
+        HomeURL = "http://www.ab.com/networks/eds/EN/0001000E00C42000.eds";
+        
+[Device]
+        VendCode = 1;
+        VendName = "Rockwell Automation/Allen-Bradley";
+        ProdType = 14;
+        ProdTypeStr = "Programmable Logic Controller";
+        ProdCode = 196;
+        MajRev = 32;
+        MinRev = 1;
+        ProdName = "5069-L306ER LOGIX306ER";
+        DeviceStatusAssembly = 2;
+        DeviceStatusAssembly2 = 3;
+        Catalog = "5069-L306ER";
+        Icon = "0001_5069_L3z.ico";
+
+[Device Classification]
+        Class1 = EtherNetIP;            $ EtherNetIP class device
+        Class2 =
+                1_RSNetWorx_Connectable_Module,
+                1_RSLinx_CLGateway_Tool;
+        
+[Params]
+                $ This is the produce tag size parameter
+        Param2 =
+                0,
+                ,,
+                0x0000,
+                0xC7,
+                2,
+                "Size",
+                "",
+                "",
+                1,500,4,
+                ,,,,
+                ,,,,
+                ;
+
+
+        Param7 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0030,                 $ Descriptor
+                0xC6,                   $ Data Type
+                1,                      $ Data Size in bytes
+                "Device Status Values, bits 4-7",    $ name
+                "",                     $ units
+                "",                     $ help string
+                ,,0,                    $ min, max, default values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Enum7 =
+                0,"Self-Testing or Unknown",
+                1,"Firmware Update in Progress",
+                2,"Reserved",
+                3,"Reserved",
+                4,"Non-Volatile Configuration Bad",
+                5,"Major Fault - either bit 10 or bit 11 is true (1)",
+                6,"Programmable logic executing (Run)",
+                7,"Programmable logic is not executing (Idle)",
+                8,"Reserved",
+                9,"Reserved",
+                10,"Reserved",
+                11,"Reserved",
+                12,"Reserved",
+                13,"Reserved",
+                14,"Reserved",
+                15,"Reserved";
+
+        Param8 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0030,                 $ Descriptor
+                0xC6,                   $ Data Type
+                1,                      $ Data Size in bytes
+                "Key Switch Position",  $ name
+                "",                     $ units
+                "",                     $ help string
+                ,,0,                    $ min, max, default values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Enum8 =
+                0,"Unknown - not supported",
+                1,"Run Mode",
+                2,"Idle Mode",
+                3,"Remote mode";
+
+        Param9 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0030,                 $ Descriptor
+                0xC6,                   $ Data Type
+                1,                      $ Data Size in bytes
+                "Mode Transitioning",   $ name
+                "",                     $ units
+                "",                     $ help string
+                ,,0,                    $ min, max, default values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Enum9 =
+                0,"Mode Stable",
+                1,"Mode Transitioning";
+
+        Param10 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0030,                 $ Descriptor
+                0xC6,                   $ Data Type
+                1,                      $ Data Size in bytes
+                "Test Mode",            $ name
+                "",                     $ units
+                "",                     $ help string
+                ,,0,                    $ min, max, default values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Enum10 =
+                0,"Test Mode Disabled - outputs applied",
+                1,"Test Mode Enabled - outputs not applied";
+
+        Param11 =                       $ This parameter defines the Current Communications Choice attribute
+                0,                      $ reserved, shall equal 0
+                6,"20 F4 24 00 30 65",  $ Link Path Size, Link Path
+                0x0010,                 $ Descriptor (read only)
+                0xC7,                   $ Data Type (UINT)
+                2,                      $ Data Size in bytes
+                "EtherNet/IP Mode",     $ Name of attribute
+                "",                     $ Units
+                "",                     $ Help string
+                1,2,1,                  $ min, max, default values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Enum11 =
+                1,"A1/A2: Dual-IP",
+                2,"A1/A2: Linear/DLR";
+
+        Param12 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0020,                 $ Descriptor
+                0xC8,                   $ Data Type - UDINT
+                4,                      $ Data Size in bytes
+                "IP Address",           $ name
+                "",                     $ units
+                "",                     $ help string
+                ,,0,                    $ min, max, default values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+
+        Param13 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0020,                 $ Descriptor
+                0xC8,                   $ Data Type - UDINT
+                4,                      $ Data Size in bytes
+                "Network Mask",         $ name
+                "",                     $ units
+                "",                     $ help string
+                ,,0,                    $ min, max, default values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+
+        Param14 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0020,                 $ Descriptor
+                0xC8,                   $ Data Type - UDINT
+                4,                      $ Data Size in bytes
+                "Gateway Address",      $ name
+                "",                     $ units
+                "",                     $ help string
+                ,,0,                    $ min, max, default values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+
+        Param15 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0020,                 $ Descriptor
+                0xC8,                   $ Data Type - UDINT
+                4,                      $ Data Size in bytes
+                "Primary Name Server",  $ name
+                "",                     $ units
+                "",                     $ help string
+                0,0,0,                  $ min, max, default values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+
+        Param16 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0020,                 $ Descriptor
+                0xC8,                   $ Data Type - UDINT
+                4,                      $ Data Size in bytes
+                "Secondary Name Server",$ name
+                "",                     $ units
+                "",                     $ help string
+                0,0,0,                  $ min, max, default values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+
+        Param17 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0020,                 $ Descriptor
+                0xD0,                   $ Data Type - string
+                1,                      $ Data Size in bytes - max domain name length is 48
+                "Domain Name",          $ name
+                "",                     $ units
+                "",                     $ help string
+                0,0,"",                 $ min, max, default values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+
+        Param19 =                       $ parameter instance
+                0,                      $ First field shall equal 0
+                ,,                      $ path size, path
+                0x0000,                 $ descriptor - in hex format
+                0xC1,                   $ BOOL
+                1,                      $ data size
+                "Ring Supervisor Enable",    $ name
+                "",                     $ units
+                "",                     $ help string
+                0,1,0,                  $ min, max, default data values
+                ,,,,
+                ,,,,
+                ;
+
+        Param20 =                       $ parameter instance
+                0,                      $ First field shall equal 0
+                ,,                      $ path size, path
+                0x0000,                 $ descriptor - in hex format
+                0xC6,                   $ data type: 8-bit unsigned integer
+                1,                      $ data size
+                "Ring Supervisor Precedence",    $ name
+                "",                     $ units
+                "",                     $ help string
+                0,255,0,                $ min, max, default data values
+                ,,,,
+                ,,,,
+                ;
+        Param21 =                       $ parameter instance
+                0,                      $ First field shall equal 0
+                ,,                      $ path size, path
+                0x0000,                 $ descriptor - in hex format
+                0xC8,                   $ data type: 32-bit unsigned integer
+                4,                      $ data size
+                "Beacon Interval",      $ name
+                "microseconds",         $ units
+                "",                     $ help string
+                200,100000,400,         $ min, max, default data values
+                ,,,,
+                ,,,,
+                ;
+
+        Param22 =                       $ parameter instance
+                0,                      $ First field shall equal 0
+                ,,                      $ path size, path
+                0x0000,                 $ descriptor - in hex format
+                0xC8,                   $ data type: 32-bit unsigned integer
+                4,                      $ data size
+                "Beacon Timeout",       $ name
+                "microseconds",         $ units
+                "",                     $ help string
+                400,500000,1960,        $ min, max, default data values
+                ,,,,
+                ,,,,
+                ;
+        Param23 =                       $ parameter instance
+                0,                      $ First field shall equal 0
+                ,,                      $ path size, path
+                0x0000,                 $ descriptor - in hex format
+                0xC7,                   $ data type: 16-bit unsigned integer
+                2,                      $ data size
+                "DLR VLAN ID",          $ name
+                "",                     $ units
+                "",                     $ help string
+                0,4094,0,               $ min, max, default data values
+                ,,,,
+                ,,,,
+                ;
+
+    
+[Assembly]
+        Object_Name = "Assembly Object";
+        Object_Class_Code = 0x04;
+
+        Assem2 =
+                "Device Status, bits 4-7",    $ name
+                ,                       $ no path
+                ,                       $ size - unspecified
+                0x0000,                 $ reserved
+                ,,                      $ reserved
+                4,Param7;               $ describes bits 4-7
+
+        Assem3 =
+                "Device Status, bits 12-15",    $ name
+                ,                       $ no path
+                ,                       $ size - unspecified
+                0x0000,                 $ reserved
+                ,,                      $ reserved
+                2,Param8,               $ describes bit 12-13
+                1,Param9,               $ describes bit 14
+                1,Param10;              $ describes bit 15
+        Assem4 =
+                "Downlink TCP/IP interface configuration",    $ name
+                "20 F5 24 03 30 05",    $ path
+                ,                       $ size - unspecified
+                0x0000,                 $ reserved
+                ,,                      $ reserved
+                ,Param12,               $ IP Address
+                ,Param13,               $ Network Mask
+                ,Param14,               $ Gateway Address
+                ,Param15,               $ Primary Name Server
+                ,Param16,               $ Secondary Name Server
+                ,Param17;               $ Host Name
+
+        Assem5 =
+                "Supervisor Configuration",    $ Name
+                "20 47 24 01 30 04",    $ Path
+                ,
+                0x0000,
+                ,,                      $ Size, Descriptor, Reserved, Reserved
+                ,Param19,               $ Ring Supervisor Enable
+                ,Param20,               $ Ring Supervisor Precedence
+                ,Param21,               $ Beacon Interval - overrides minimum value to 200 us
+                ,Param22,               $ Beacon Timeout - overrides minimum value to 400 us
+                ,Param23;               $ DLR VLAN ID
+
+    
+[Connection Manager]
+        Object_Name = "Connection Manager Object";
+        Object_Class_Code = 0x06;
+        
+    $ Connection1 is only for the class 1 producer connections to the controller
+        Connection1 =
+                0x02010002,             $ trigger & transport
+                                        $       0-15    = supported transport classes (class 1)
+                                        $       16      = cyclic (1 = supported)
+                                        $       17      = change of state (0 = not supported)
+                                        $       18      = on demand (0 = not supported)
+                                        $       19-23   = reserved (must be zero)
+                                        $       24-27   = input only
+                                        $       28-30   = reserved (must be zero)
+                                        $       31      = client 0 (don't care for classes 0 and 1)
+                0x66640305,             $ point/multicast & priority & realtime format
+                                        $       0       = O=>T fixed (1 = supported)
+                                        $       1       = O=>T variable (0 = not supported)
+                                        $       2       = T=>O fixed (1 = supported)
+                                        $       3       = T=>O variable (0 = not supported)
+                                        $       4-7     = reserved (must be zero)
+                                        $       8-10    = O=>T header (heartbeat)
+                                        $       11      = reserved (must be zero)
+                                        $       12-14   = T=>O header  (no status)
+                                        $       15      = reserved (must be zero)
+                                        $       16-19   = O=>T point-to-point
+                                        $       20-23   = T=>O multicast and point-to-point
+                                        $       24-27   = O=>T high and scheduled
+                                        $       28-31   = T=>O high and scheduled
+                ,0,,                    $ O=>T RPI,Size,Format
+                ,Param2,,               $ T=>O RPI,Size,Format
+                ,,                      $ config part 1 (not used)
+                ,,                      $ config part 2 (not used)
+                "Receive Data From",    $ connection name
+                "Enter the name of the produce tag to which you want to connect.",    $ Help string
+                "SYMBOL_ANSI";          $ inputs only path
+
+    $ Connection2 is a Ping to the ID Object
+        Connection2 =
+                0x00000000,
+                0x00110000,
+                ,0,,
+                ,0,,
+                ,,
+                ,,
+                "Ping",
+                "",
+                "20 01 24 01";
+
+    
+        1_PLC5C_RTD_Format1 = 1_PLC5C_AC_Peer_In_RTD_Format;
+
+[Port]
+        Revision = 2;
+        Object_Name = "Port Object";
+        Object_Class_Code = 0xF4;
+        MaxInst = 5;
+        Number_Of_Static_Instances = 2;
+        Max_Number_Of_Dynamic_Instances = 2;
+
+        Service_Description1 =          $ This service description defines the mechanism to change the Communications Configuration
+                0x36,                   $ Change_Communications_Configuration_Choice_Reset service
+                "Change IP Mode",       $ Name of operation
+                "20 F4 24 00",          $ The application path to send the service to - port object class
+                Param11,                $ The service data that indicates IP mode
+                ;                       $ There is no service data in the response
+
+    $ Port 1 is the backplane port
+        Port1 =
+                1_5069_Chassis,
+                "Backplane",            $ port name must be Backplane for RSLinx
+                "21 00 73 03 24 01",
+                1,                      $ port number
+                0x33;                   $ routing capabilities: Unconnected and Class 3 incoming & outgoing
+
+    $ Note: Only static ports are listed here. Dynamic ports who's existence depends on the device configuration
+    $       are excluded. To find out more port information, interrogate the Port Object.
+
+    $ Port 5 is the controller embedded USB port
+        Port5 =
+                1_USB_Virtual_Backplane,
+                "PCviaUSB",
+                "21 00 00 03 24 01",
+                5,                      $ port number
+                0x11;                   $ routing capabilities: Unconnected and Class 3 incoming
+
+        1_EnableDownstreamPort2 = Yes;
+        1_EnableDownstreamPort3 = Yes;
+        1_EnableDownstreamPort4 = Yes;
+
+[Modular]
+        Width = 1;                      $ Occupies a single slot
+        Rack1 =
+                1,0x6c,0x149,1,1,,,,
+                0;                      $ 5069  1 slot Chassis, must be in slot 0
+        Rack2 =
+                1,0x6c,0x14a,1,1,,,,
+                0;                      $ 5069  2 slot Chassis, must be in slot 0
+        Rack3 =
+                1,0x6c,0x14b,1,1,,,,
+                0;                      $ 5069  3 slot Chassis, must be in slot 0
+        Rack4 =
+                1,0x6c,0x14c,1,1,,,,
+                0;                      $ 5069  4 slot Chassis, must be in slot 0
+        Rack5 =
+                1,0x6c,0x14d,1,1,,,,
+                0;                      $ 5069  5 slot Chassis, must be in slot 0
+        Rack6 =
+                1,0x6c,0x14e,1,1,,,,
+                0;                      $ 5069  6 slot Chassis, must be in slot 0
+        Rack7 =
+                1,0x6c,0x14f,1,1,,,,
+                0;                      $ 5069  7 slot Chassis, must be in slot 0
+        Rack8 =
+                1,0x6c,0x150,1,1,,,,
+                0;                      $ 5069  8 slot Chassis, must be in slot 0
+        Rack9 =
+                1,0x6c,0x151,1,1,,,,
+                0;                      $ 5069  9 slot Chassis, must be in slot 0
+        Rack10 =
+                1,0x6c,0x152,1,1,,,,
+                0;                      $ 5069 10 slot Chassis, must be in slot 0
+        Rack11 =
+                1,0x6c,0x153,1,1,,,,
+                0;                      $ 5069 11 slot Chassis, must be in slot 0
+        Rack12 =
+                1,0x6c,0x154,1,1,,,,
+                0;                      $ 5069 12 slot Chassis, must be in slot 0
+        Rack13 =
+                1,0x6c,0x155,1,1,,,,
+                0;                      $ 5069 13 slot Chassis, must be in slot 0
+        Rack14 =
+                1,0x6c,0x156,1,1,,,,
+                0;                      $ 5069 14 slot Chassis, must be in slot 0
+        Rack15 =
+                1,0x6c,0x157,1,1,,,,
+                0;                      $ 5069 15 slot Chassis, must be in slot 0
+        Rack16 =
+                1,0x6c,0x158,1,1,,,,
+                0;                      $ 5069 16 slot Chassis, must be in slot 0
+        Rack17 =
+                1,0x6c,0x159,1,1,,,,
+                0;                      $ 5069 17 slot Chassis, must be in slot 0
+        Rack18 =
+                1,0x6c,0x15a,1,1,,,,
+                0;                      $ 5069 18 slot Chassis, must be in slot 0
+        Rack19 =
+                1,0x6c,0x15b,1,1,,,,
+                0;                      $ 5069 19 slot Chassis, must be in slot 0
+        Rack20 =
+                1,0x6c,0x15c,1,1,,,,
+                0;                      $ 5069 20 slot Chassis, must be in slot 0
+        Rack21 =
+                1,0x6c,0x15d,1,1,,,,
+                0;                      $ 5069 21 slot Chassis, must be in slot 0
+        Rack22 =
+                1,0x6c,0x15e,1,1,,,,
+                0;                      $ 5069 22 slot Chassis, must be in slot 0
+        Rack23 =
+                1,0x6c,0x15f,1,1,,,,
+                0;                      $ 5069 23 slot Chassis, must be in slot 0
+        Rack24 =
+                1,0x6c,0x160,1,1,,,,
+                0;                      $ 5069 24 slot Chassis, must be in slot 0
+        Rack25 =
+                1,0x6c,0x161,1,1,,,,
+                0;                      $ 5069 25 slot Chassis, must be in slot 0
+        Rack26 =
+                1,0x6c,0x162,1,1,,,,
+                0;                      $ 5069 26 slot Chassis, must be in slot 0
+        Rack27 =
+                1,0x6c,0x163,1,1,,,,
+                0;                      $ 5069 27 slot Chassis, must be in slot 0
+        Rack28 =
+                1,0x6c,0x164,1,1,,,,
+                0;                      $ 5069 28 slot Chassis, must be in slot 0
+        Rack29 =
+                1,0x6c,0x165,1,1,,,,
+                0;                      $ 5069 29 slot Chassis, must be in slot 0
+        Rack30 =
+                1,0x6c,0x166,1,1,,,,
+                0;                      $ 5069 30 slot Chassis, must be in slot 0
+        Rack31 =
+                1,0x6c,0x167,1,1,,,,
+                0;                      $ 5069 31 slot Chassis, must be in slot 0
+        Rack32 =
+                1,0x6c,0x168,1,1,,,,
+                0;                      $ 5069 32 slot Chassis, must be in slot 0
+
+[Capacity]
+        MaxIOConnections = 1000;        $ Max IO
+        MaxMsgConnections = 500;        $ Max Msg
+        MaxConsumersPerMcast = 32;
+        TSpec1 = TxRx, 1, 128000;       $ Packets per sec @ 1 bytes
+        TSpec2 = TxRx, 508, 128000;     $ Packets per sec @ 508 bytes
+        1_NumberOfTCPIPConnections = 512;    $ Total number of TCP/IP connections supported by CIP router device
+        1_TCPIPConnectionReuseTime = 30;$ Sec. TCP/IP connection not avail after TCP/IP attempt to an IP address not present
+        1_TCPIPCIPInactivityTimeout = 120;    $ Sec. TCP/IP connection not avail after TCP/IP attempt to a non-EtherNet/IP
+        1_TCPIPInactivityTimeout = 120; $ Sec. TCP/IP connection remains open with no activity.
+
+[DLR Class]
+        Revision = 3;
+        Object_Name = "Device Level Ring Object";
+        Object_Class_Code = 0x47;
+        MaxInst = 1;
+        Number_Of_Static_Instances = 0;
+        Max_Number_Of_Dynamic_Instances = 1;
+        Ring_Supervisor_Capable = Yes;
+
+[TCP/IP Interface Class]        $ Class Code: 0x00F5
+        Revision = 4;
+        Object_Name = "TCP/IP Interface Object";
+        Object_Class_Code = 0xF5;
+        MaxInst = 3;
+        Number_Of_Static_Instances = 0;
+        Max_Number_Of_Dynamic_Instances = 2;
+
+[Ethernet Link Class]        $ Class Code: 0x00F6
+        Revision = 4;
+        Object_Name = "Ethernet Link Object";
+        Object_Class_Code = 0xF6;
+        MaxInst = 2;
+        Number_Of_Static_Instances = 2;
+        Max_Number_Of_Dynamic_Instances = 0;
+        InterfaceLabel1 = "A1";
+        InterfaceLabel2 = "A2";
+        InterfaceType1 = 2;             $ Twisted Pair
+        InterfaceType2 = 2;             $ Twisted Pair
+
+[File Class]
+        Revision = 2;
+        Object_Name = "File Object";
+        Object_Class_Code = 0x37;
+        MaxInst = 0xC9;                 $ Embedded EDS
+        Number_Of_Static_Instances = 2;
+        Max_Number_Of_Dynamic_Instances = 0;
+
+[Time Sync Class]
+        Revision = 4;
+        Object_Name = "Time Sync Object";
+        Object_Class_Code = 0x43;
+        MaxInst = 1;
+        Number_Of_Static_Instances = 1;
+        Max_Number_Of_Dynamic_Instances = 0;
+
+[Originator Connection List Class]
+        Revision = 1;
+        Object_Name = "Originator Connection List Object";
+        Object_Class_Code = 0x45;
+        MaxInst = 10;
+        Number_Of_Static_Instances = 0;
+        Max_Number_Of_Dynamic_Instances = 10;
+
+[QoS Class]
+        Revision = 1;
+        Object_Name = "QoS Object";
+        Object_Class_Code = 0x48;
+        MaxInst = 1;
+        Number_Of_Static_Instances = 1;
+        Max_Number_Of_Dynamic_Instances = 0;
+
+[Class106_Vendor1]
+
+[Class178_Vendor1]
+

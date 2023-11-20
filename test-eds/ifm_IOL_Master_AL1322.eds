@@ -1,0 +1,2401 @@
+$ EZ-EDS Version 3.25.1.20181218 Generated Electronic Data Sheet
+
+$ ****************************************************************************
+$  
+$ File:   ifm_IOL_Master_AL1322.eds
+$  
+$ Author: ifm electronic, Essen, Germany
+$  
+$ Date:   19.02.16
+$  
+$ ****************************************************************************
+$  
+$ ATTENTION:
+$  
+$  Changes in this file can cause configuration or communication problems.
+$  
+$ ****************************************************************************
+$  
+$ Changes:
+$  
+$  Version  Date       Name      Description
+$ -------------------------------------------------------------------------
+$  
+$  1.0      19.02.16   ifm       Inital version
+$  1.1      25.01.17   ifm       Minor changes and string corrections
+$  1.2      08.02.17   ifm       Fix wrong refernces in assemblies
+$  1.3      20.03.17   ifm       Set Swap Default to 1
+$  1.4      13.11.17   ifm       Add new connection and assemblies
+$  1.5      15.11.17   ifm       Increment MinRev to 5
+$  1.6      08.03.18   ifm       Adapted min and max rpi time
+$  1.7      22.03.18   ifm       Added enumerations for swap and fix some ranges
+$  1.8      23.03.18   ifm       Remove assembly sizes from from parameter enumeration texts
+$  1.9      05.04.18   ifm       Fix maximum sizes of assemblies
+$  1.10     27.08.18   ifm       Only small format/comment changes in Connection Manager
+$  1.11     10.05.19   ifm       Fix assembly paths
+$  1.12     20.04.20   ifm       Remove configuration from Listen Only connection and fix connection params (MinRev 6)
+$  1.13     09.02.23   ifm       Added enumerations for input and output assemblies size
+$  1.14     10.05.23   ifm       Enums for sizes deleted
+$ ****************************************************************************
+
+[File]
+        DescText = "EDS file for IO-Link-Master";
+        CreateDate = 12-13-2016;
+        CreateTime = 10:19:14;
+        ModDate = 05-10-2023;
+        ModTime = 11:23:30;
+        Revision = 1.14;
+        HomeURL = "http://www.ifm.com";
+
+[Device]
+        VendCode = 322;
+        VendName = "ifm electronic";
+        ProdType = 12;
+        ProdTypeStr = "Communications Adapter";
+        ProdCode = 1322;
+        MajRev = 1;
+        MinRev = 6;
+        ProdName = "IO-Link Master DL EIP 8P IP67";
+        Catalog = "AL1322";
+        Icon = "EIP_DL_8P_IP67.ico";
+
+[Device Classification]
+        Class1 = EtherNetIP;
+
+[Params]
+        Param1 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0000,                 $ Descriptor
+                0xC7,                   $ Data Type
+                2,                      $ Data Size in bytes
+                "Assembly Input Size",  $ name
+                "",                     $ units
+                "",                     $ help string
+                0,446,446,              $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                0;                      $ decimal places
+        Param2 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0000,                 $ Descriptor
+                0xC7,                   $ Data Type
+                2,                      $ Data Size in bytes
+                "Assembly Output Size", $ name
+                "",                     $ units
+                "",                     $ help string
+                0,302,302,              $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                0;                      $ decimal places
+        Param3 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0010,                 $ Descriptor
+                0xC7,                   $ Data Type
+                2,                      $ Data Size in bytes
+                "Input Data",           $ name
+                "",                     $ units
+                "",                     $ help string
+                0,65535,0,              $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                0;                      $ decimal places
+        Param4 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0000,                 $ Descriptor
+                0xC7,                   $ Data Type
+                2,                      $ Data Size in bytes
+                "Output Data",          $ name
+                "",                     $ units
+                "",                     $ help string
+                0,65535,0,              $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                0;                      $ decimal places
+        Param5 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0000,                 $ Descriptor
+                0xC6,                   $ Data Type
+                1,                      $ Data Size in bytes
+                "Input_CP",             $ name
+                "",                     $ units
+                "Input Connection Point",    $ help string
+                100,100,100,            $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Param6 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0000,                 $ Descriptor
+                0xC6,                   $ Data Type
+                1,                      $ Data Size in bytes
+                "Output_CP",            $ name
+                "",                     $ units
+                "Output Connection Point",    $ help string
+                150,150,150,            $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Param7 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0000,                 $ Descriptor
+                0xC6,                   $ Data Type
+                1,                      $ Data Size in bytes
+                "InputOnly_CP",         $ name
+                "",                     $ units
+                "Input Only Connection Point",    $ help string
+                193,193,193,            $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Param8 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0000,                 $ Descriptor
+                0xC6,                   $ Data Type
+                1,                      $ Data Size in bytes
+                "ListenOnly_CP",        $ name
+                "",                     $ units
+                "Listen Only Connection Point",    $ help string
+                192,192,192,            $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Param9 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0000,                 $ Descriptor
+                0xC6,                   $ Data Type
+                1,                      $ Data Size in bytes
+                "Config_CP",            $ name
+                "",                     $ units
+                "Configuration Path",   $ help string
+                199,199,199,            $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Param10 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0000,                 $ Descriptor
+                0xC2,                   $ Data Type
+                1,                      $ Data Size in bytes
+                "Reserved",             $ name
+                "",                     $ units
+                "",                     $ help string
+                0,0,0,                  $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Param11 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0000,                 $ Descriptor
+                0xC7,                   $ Data Type
+                2,                      $ Data Size in bytes
+                "Assembly 101 Input Size",    $ name
+                "",                     $ units
+                "",                     $ help string
+                0,318,318,              $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                0;                      $ decimal places
+        Param12 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0000,                 $ Descriptor
+                0xC7,                   $ Data Type
+                2,                      $ Data Size in bytes
+                "Assembly 102 Input Size",    $ name
+                "",                     $ units
+                "",                     $ help string
+                0,276,276,              $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                0;                      $ decimal places
+        Param13 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0000,                 $ Descriptor
+                0xC7,                   $ Data Type
+                2,                      $ Data Size in bytes
+                "Assembly 151 Output Size",    $ name
+                "",                     $ units
+                "",                     $ help string
+                0,258,258,              $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                0;                      $ decimal places
+        Param19 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0000,                 $ Descriptor
+                0xC8,                   $ Data Type
+                4,                      $ Data Size in bytes
+                "RPI",                  $ name
+                "",                     $ units
+                "",                     $ help string
+                1000,1000000,10000,     $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Param20 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0000,                 $ Descriptor
+                0xC2,                   $ Data Type
+                1,                      $ Data Size in bytes
+                "Configuration Assembly Size",    $ name
+                "",                     $ units
+                "",                     $ help string
+                0,98,98,                $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Param28 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0000,                 $ Descriptor
+                0xC6,                   $ Data Type
+                1,                      $ Data Size in bytes
+                "Communication Profile",$ name
+                "",                     $ units
+                "",                     $ help string
+                0,3,3,                  $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Enum28 =
+                0,"Ethernet/IP + LineRecorder",
+                1,"Ethernet/IP + LineRecorder (ro)",
+                2,"Ethernet/IP only",
+                3,"Keep setting";
+        Param29 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0000,                 $ Descriptor
+                0xC2,                   $ Data Type
+                1,                      $ Data Size in bytes
+                "Port Process Data Size ",    $ name
+                "",                     $ units
+                "",                     $ help string
+                0,4,4,                  $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Enum29 =
+                0,"2 Bytes",
+                1,"4 Bytes",
+                2,"8 Bytes",
+                3,"16 Bytes",
+                4,"32 Bytes";
+        Param30 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0000,                 $ Descriptor
+                0xC2,                   $ Data Type
+                1,                      $ Data Size in bytes
+                "Port Mode (Port 1)",   $ name
+                "",                     $ units
+                "",                     $ help string
+                0,3,3,                  $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Enum30 =
+                0,"Disabled",
+                1,"Digital Input (Pin 4)",
+                2,"Digital Output (Pin 4)",
+                3,"IO-Link (Pin 4)";
+        Param31 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0000,                 $ Descriptor
+                0xC6,                   $ Data Type
+                1,                      $ Data Size in bytes
+                "Port Cycle Time (Port 1)",    $ name
+                "",                     $ units
+                "",                     $ help string
+                0,7,0,                  $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Enum31 =
+                0,"As fast as possible",
+                1,"2 ms",
+                2,"4 ms",
+                3,"8 ms",
+                4,"16 ms",
+                5,"32 ms",
+                6,"64 ms",
+                7,"128 ms";
+        Param32 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0000,                 $ Descriptor
+                0xC2,                   $ Data Type
+                1,                      $ Data Size in bytes
+                "Swap (Port 1)",        $ name
+                "",                     $ units
+                "",                     $ help string
+                0,1,1,                  $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Enum32 =
+                0,"Disabled",
+                1,"Enabled";
+        Param33 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0000,                 $ Descriptor
+                0xC2,                   $ Data Type
+                1,                      $ Data Size in bytes
+                "Validation / Data Storage (Port 1)",    $ name
+                "",                     $ units
+                "",                     $ help string
+                0,4,0,                  $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Enum33 =
+                0,"No check and clear",
+                1,"Type compatible V1.0 device",
+                2,"Type compatible V1.1 device",
+                3,"Type compatible V1.1 device with Backup + Restore",
+                4,"Type compatible V1.1 device with Restore";
+        Param34 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0000,                 $ Descriptor
+                0xC7,                   $ Data Type
+                2,                      $ Data Size in bytes
+                "Vendor ID (Port 1)",   $ name
+                "",                     $ units
+                "",                     $ help string
+                0x00,0x7FFF,0x00,       $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Param35 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0000,                 $ Descriptor
+                0xC8,                   $ Data Type
+                4,                      $ Data Size in bytes
+                "Device ID (Port 1)",   $ name
+                "",                     $ units
+                "",                     $ help string
+                0x0,0x00FFFFFF,0x0,     $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Param36 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0000,                 $ Descriptor
+                0xC2,                   $ Data Type
+                1,                      $ Data Size in bytes
+                "Fail Safe Mode (Port 1)",    $ name
+                "",                     $ units
+                "",                     $ help string
+                0,3,0,                  $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Enum36 =
+                0,"No Fail Safe",
+                1,"Fail Safe Reset Value",
+                2,"Fail Safe Old Value",
+                3,"Fail Safe with Pattern";
+        Param37 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0000,                 $ Descriptor
+                0xC2,                   $ Data Type
+                1,                      $ Data Size in bytes
+                "Fail Safe Value DO (Port 1)",    $ name
+                "",                     $ units
+                "",                     $ help string
+                0,2,1,                  $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Enum37 =
+                0,"Fail Safe Reset Value",
+                1,"Fail Safe Old Value",
+                2,"Fail Safe Set Value";
+        Param130 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0000,                 $ Descriptor
+                0xC2,                   $ Data Type
+                1,                      $ Data Size in bytes
+                "Port Mode (Port 2)",   $ name
+                "",                     $ units
+                "",                     $ help string
+                0,3,3,                  $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Enum130 =
+                0,"Disabled",
+                1,"Digital Input (Pin 4)",
+                2,"Digital Output (Pin 4)",
+                3,"IO-Link (Pin 4)";
+        Param131 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0000,                 $ Descriptor
+                0xC6,                   $ Data Type
+                1,                      $ Data Size in bytes
+                "Port Cycle Time (Port 2)",    $ name
+                "",                     $ units
+                "",                     $ help string
+                0,7,0,                  $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Enum131 =
+                0,"As fast as possible",
+                1,"2 ms",
+                2,"4 ms",
+                3,"8 ms",
+                4,"16 ms",
+                5,"32 ms",
+                6,"64 ms",
+                7,"128 ms";
+        Param132 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0000,                 $ Descriptor
+                0xC2,                   $ Data Type
+                1,                      $ Data Size in bytes
+                "Swap (Port 2)",        $ name
+                "",                     $ units
+                "",                     $ help string
+                0,1,1,                  $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Enum132 =
+                0,"Disabled",
+                1,"Enabled";
+        Param133 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0000,                 $ Descriptor
+                0xC2,                   $ Data Type
+                1,                      $ Data Size in bytes
+                "Validation / Data Storage (Port 2)",    $ name
+                "",                     $ units
+                "",                     $ help string
+                0,4,0,                  $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Enum133 =
+                0,"No check and clear",
+                1,"Type compatible V1.0 device",
+                2,"Type compatible V1.1 device",
+                3,"Type compatible V1.1 device with Backup + Restore",
+                4,"Type compatible V1.1 device with Restore";
+        Param134 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0000,                 $ Descriptor
+                0xC7,                   $ Data Type
+                2,                      $ Data Size in bytes
+                "Vendor ID (Port 2)",   $ name
+                "",                     $ units
+                "",                     $ help string
+                0x00,0x7FFF,0x00,       $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Param135 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0000,                 $ Descriptor
+                0xC8,                   $ Data Type
+                4,                      $ Data Size in bytes
+                "Device ID (Port 2)",   $ name
+                "",                     $ units
+                "",                     $ help string
+                0x0,0x00FFFFFF,0x0,     $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Param136 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0000,                 $ Descriptor
+                0xC2,                   $ Data Type
+                1,                      $ Data Size in bytes
+                "Fail Safe Mode (Port 2)",    $ name
+                "",                     $ units
+                "",                     $ help string
+                0,3,0,                  $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Enum136 =
+                0,"No Fail Safe",
+                1,"Fail Safe Reset Value",
+                2,"Fail Safe Old Value",
+                3,"Fail Safe with Pattern";
+        Param137 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0000,                 $ Descriptor
+                0xC2,                   $ Data Type
+                1,                      $ Data Size in bytes
+                "Fail Safe Value DO (Port 2)",    $ name
+                "",                     $ units
+                "",                     $ help string
+                0,2,1,                  $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Enum137 =
+                0,"Fail Safe Reset Value",
+                1,"Fail Safe Old Value",
+                2,"Fail Safe Set Value";
+        Param230 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0000,                 $ Descriptor
+                0xC2,                   $ Data Type
+                1,                      $ Data Size in bytes
+                "Port Mode (Port 3)",   $ name
+                "",                     $ units
+                "",                     $ help string
+                0,3,3,                  $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Enum230 =
+                0,"Disabled",
+                1,"Digital Input (Pin 4)",
+                2,"Digital Output (Pin 4)",
+                3,"IO-Link (Pin 4)";
+        Param231 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0000,                 $ Descriptor
+                0xC6,                   $ Data Type
+                1,                      $ Data Size in bytes
+                "Port Cycle Time (Port 3)",    $ name
+                "",                     $ units
+                "",                     $ help string
+                0,7,0,                  $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Enum231 =
+                0,"As fast as possible",
+                1,"2 ms",
+                2,"4 ms",
+                3,"8 ms",
+                4,"16 ms",
+                5,"32 ms",
+                6,"64 ms",
+                7,"128 ms";
+        Param232 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0000,                 $ Descriptor
+                0xC2,                   $ Data Type
+                1,                      $ Data Size in bytes
+                "Swap (Port 3)",        $ name
+                "",                     $ units
+                "",                     $ help string
+                0,1,1,                  $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Enum232 =
+                0,"Disabled",
+                1,"Enabled";
+        Param233 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0000,                 $ Descriptor
+                0xC2,                   $ Data Type
+                1,                      $ Data Size in bytes
+                "Validation / Data Storage (Port 3)",    $ name
+                "",                     $ units
+                "",                     $ help string
+                0,4,0,                  $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Enum233 =
+                0,"No check and clear",
+                1,"Type compatible V1.0 device",
+                2,"Type compatible V1.1 device",
+                3,"Type compatible V1.1 device with Backup + Restore",
+                4,"Type compatible V1.1 device with Restore";
+        Param234 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0000,                 $ Descriptor
+                0xC7,                   $ Data Type
+                2,                      $ Data Size in bytes
+                "Vendor ID (Port 3)",   $ name
+                "",                     $ units
+                "",                     $ help string
+                0x00,0x7FFF,0x00,       $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Param235 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0000,                 $ Descriptor
+                0xC8,                   $ Data Type
+                4,                      $ Data Size in bytes
+                "Device ID (Port 3)",   $ name
+                "",                     $ units
+                "",                     $ help string
+                0x0,0x00FFFFFF,0x0,     $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Param236 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0000,                 $ Descriptor
+                0xC2,                   $ Data Type
+                1,                      $ Data Size in bytes
+                "Fail Safe Mode (Port 3)",    $ name
+                "",                     $ units
+                "",                     $ help string
+                0,3,0,                  $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Enum236 =
+                0,"No Fail Safe",
+                1,"Fail Safe Reset Value",
+                2,"Fail Safe Old Value",
+                3,"Fail Safe with Pattern";
+        Param237 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0000,                 $ Descriptor
+                0xC2,                   $ Data Type
+                1,                      $ Data Size in bytes
+                "Fail Safe Value DO (Port 3)",    $ name
+                "",                     $ units
+                "",                     $ help string
+                0,2,1,                  $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Enum237 =
+                0,"Fail Safe Reset Value",
+                1,"Fail Safe Old Value",
+                2,"Fail Safe Set Value";
+        Param330 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0000,                 $ Descriptor
+                0xC2,                   $ Data Type
+                1,                      $ Data Size in bytes
+                "Port Mode (Port 4)",   $ name
+                "",                     $ units
+                "",                     $ help string
+                0,3,3,                  $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Enum330 =
+                0,"Disabled",
+                1,"Digital Input (Pin 4)",
+                2,"Digital Output (Pin 4)",
+                3,"IO-Link (Pin 4)";
+        Param331 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0000,                 $ Descriptor
+                0xC6,                   $ Data Type
+                1,                      $ Data Size in bytes
+                "Port Cycle Time (Port 4)",    $ name
+                "",                     $ units
+                "",                     $ help string
+                0,7,0,                  $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Enum331 =
+                0,"As fast as possible",
+                1,"2 ms",
+                2,"4 ms",
+                3,"8 ms",
+                4,"16 ms",
+                5,"32 ms",
+                6,"64 ms",
+                7,"128 ms";
+        Param332 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0000,                 $ Descriptor
+                0xC2,                   $ Data Type
+                1,                      $ Data Size in bytes
+                "Swap (Port 4)",        $ name
+                "",                     $ units
+                "",                     $ help string
+                0,1,1,                  $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Enum332 =
+                0,"Disabled",
+                1,"Enabled";
+        Param333 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0000,                 $ Descriptor
+                0xC2,                   $ Data Type
+                1,                      $ Data Size in bytes
+                "Validation / Data Storage (Port 4)",    $ name
+                "",                     $ units
+                "",                     $ help string
+                0,4,0,                  $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Enum333 =
+                0,"No check and clear",
+                1,"Type compatible V1.0 device",
+                2,"Type compatible V1.1 device",
+                3,"Type compatible V1.1 device with Backup + Restore",
+                4,"Type compatible V1.1 device with Restore";
+        Param334 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0000,                 $ Descriptor
+                0xC7,                   $ Data Type
+                2,                      $ Data Size in bytes
+                "Vendor ID (Port 4)",   $ name
+                "",                     $ units
+                "",                     $ help string
+                0x00,0x7FFF,0x00,       $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Param335 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0000,                 $ Descriptor
+                0xC8,                   $ Data Type
+                4,                      $ Data Size in bytes
+                "Device ID (Port 4)",   $ name
+                "",                     $ units
+                "",                     $ help string
+                0x0,0x00FFFFFF,0x0,     $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Param336 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0000,                 $ Descriptor
+                0xC2,                   $ Data Type
+                1,                      $ Data Size in bytes
+                "Fail Safe Mode (Port 4)",    $ name
+                "",                     $ units
+                "",                     $ help string
+                0,3,0,                  $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Enum336 =
+                0,"No Fail Safe",
+                1,"Fail Safe Reset Value",
+                2,"Fail Safe Old Value",
+                3,"Fail Safe with Pattern";
+        Param337 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0000,                 $ Descriptor
+                0xC2,                   $ Data Type
+                1,                      $ Data Size in bytes
+                "Fail Safe Value DO (Port 4)",    $ name
+                "",                     $ units
+                "",                     $ help string
+                0,2,1,                  $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Enum337 =
+                0,"Fail Safe Reset Value",
+                1,"Fail Safe Old Value",
+                2,"Fail Safe Set Value";
+        Param430 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0000,                 $ Descriptor
+                0xC2,                   $ Data Type
+                1,                      $ Data Size in bytes
+                "Port Mode (Port 5)",   $ name
+                "",                     $ units
+                "",                     $ help string
+                0,3,3,                  $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Enum430 =
+                0,"Disabled",
+                1,"Digital Input (Pin 4)",
+                2,"Digital Output (Pin 4)",
+                3,"IO-Link (Pin 4)";
+        Param431 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0000,                 $ Descriptor
+                0xC6,                   $ Data Type
+                1,                      $ Data Size in bytes
+                "Port Cycle Time (Port 5)",    $ name
+                "",                     $ units
+                "",                     $ help string
+                0,7,0,                  $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Enum431 =
+                0,"As fast as possible",
+                1,"2 ms",
+                2,"4 ms",
+                3,"8 ms",
+                4,"16 ms",
+                5,"32 ms",
+                6,"64 ms",
+                7,"128 ms";
+        Param432 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0000,                 $ Descriptor
+                0xC2,                   $ Data Type
+                1,                      $ Data Size in bytes
+                "Swap (Port 5)",        $ name
+                "",                     $ units
+                "",                     $ help string
+                0,1,1,                  $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Enum432 =
+                0,"Disabled",
+                1,"Enabled";
+        Param433 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0000,                 $ Descriptor
+                0xC2,                   $ Data Type
+                1,                      $ Data Size in bytes
+                "Validation / Data Storage (Port 5)",    $ name
+                "",                     $ units
+                "",                     $ help string
+                0,4,0,                  $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Enum433 =
+                0,"No check and clear",
+                1,"Type compatible V1.0 device",
+                2,"Type compatible V1.1 device",
+                3,"Type compatible V1.1 device with Backup + Restore",
+                4,"Type compatible V1.1 device with Restore";
+        Param434 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0000,                 $ Descriptor
+                0xC7,                   $ Data Type
+                2,                      $ Data Size in bytes
+                "Vendor ID (Port 5)",   $ name
+                "",                     $ units
+                "",                     $ help string
+                0x00,0x7FFF,0x00,       $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Param435 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0000,                 $ Descriptor
+                0xC8,                   $ Data Type
+                4,                      $ Data Size in bytes
+                "Device ID (Port 5)",   $ name
+                "",                     $ units
+                "",                     $ help string
+                0x0,0x00FFFFFF,0x0,     $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Param436 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0000,                 $ Descriptor
+                0xC2,                   $ Data Type
+                1,                      $ Data Size in bytes
+                "Fail Safe Mode (Port 5)",    $ name
+                "",                     $ units
+                "",                     $ help string
+                0,3,0,                  $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Enum436 =
+                0,"No Fail Safe",
+                1,"Fail Safe Reset Value",
+                2,"Fail Safe Old Value",
+                3,"Fail Safe with Pattern";
+        Param437 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0000,                 $ Descriptor
+                0xC2,                   $ Data Type
+                1,                      $ Data Size in bytes
+                "Fail Safe Value DO (Port 5)",    $ name
+                "",                     $ units
+                "",                     $ help string
+                0,2,1,                  $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Enum437 =
+                0,"Fail Safe Reset Value",
+                1,"Fail Safe Old Value",
+                2,"Fail Safe Set Value";
+        Param530 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0000,                 $ Descriptor
+                0xC2,                   $ Data Type
+                1,                      $ Data Size in bytes
+                "Port Mode (Port 6)",   $ name
+                "",                     $ units
+                "",                     $ help string
+                0,3,3,                  $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Enum530 =
+                0,"Disabled",
+                1,"Digital Input (Pin 4)",
+                2,"Digital Output (Pin 4)",
+                3,"IO-Link (Pin 4)";
+        Param531 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0000,                 $ Descriptor
+                0xC6,                   $ Data Type
+                1,                      $ Data Size in bytes
+                "Port Cycle Time (Port 6)",    $ name
+                "",                     $ units
+                "",                     $ help string
+                0,7,0,                  $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Enum531 =
+                0,"As fast as possible",
+                1,"2 ms",
+                2,"4 ms",
+                3,"8 ms",
+                4,"16 ms",
+                5,"32 ms",
+                6,"64 ms",
+                7,"128 ms";
+        Param532 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0000,                 $ Descriptor
+                0xC2,                   $ Data Type
+                1,                      $ Data Size in bytes
+                "Swap (Port 6)",        $ name
+                "",                     $ units
+                "",                     $ help string
+                0,1,1,                  $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Enum532 =
+                0,"Disabled",
+                1,"Enabled";
+        Param533 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0000,                 $ Descriptor
+                0xC2,                   $ Data Type
+                1,                      $ Data Size in bytes
+                "Validation / Data Storage (Port 6)",    $ name
+                "",                     $ units
+                "",                     $ help string
+                0,4,0,                  $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Enum533 =
+                0,"No check and clear",
+                1,"Type compatible V1.0 device",
+                2,"Type compatible V1.1 device",
+                3,"Type compatible V1.1 device with Backup + Restore",
+                4,"Type compatible V1.1 device with Restore";
+        Param534 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0000,                 $ Descriptor
+                0xC7,                   $ Data Type
+                2,                      $ Data Size in bytes
+                "Vendor ID (Port 6)",   $ name
+                "",                     $ units
+                "",                     $ help string
+                0x00,0x7FFF,0x00,       $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Param535 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0000,                 $ Descriptor
+                0xC8,                   $ Data Type
+                4,                      $ Data Size in bytes
+                "Device ID (Port 6)",   $ name
+                "",                     $ units
+                "",                     $ help string
+                0x0,0x00FFFFFF,0x0,     $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Param536 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0000,                 $ Descriptor
+                0xC2,                   $ Data Type
+                1,                      $ Data Size in bytes
+                "Fail Safe Mode (Port 6)",    $ name
+                "",                     $ units
+                "",                     $ help string
+                0,3,0,                  $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Enum536 =
+                0,"No Fail Safe",
+                1,"Fail Safe Reset Value",
+                2,"Fail Safe Old Value",
+                3,"Fail Safe with Pattern";
+        Param537 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0000,                 $ Descriptor
+                0xC2,                   $ Data Type
+                1,                      $ Data Size in bytes
+                "Fail Safe Value DO (Port 6)",    $ name
+                "",                     $ units
+                "",                     $ help string
+                0,2,1,                  $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Enum537 =
+                0,"Fail Safe Reset Value",
+                1,"Fail Safe Old Value",
+                2,"Fail Safe Set Value";
+        Param630 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0000,                 $ Descriptor
+                0xC2,                   $ Data Type
+                1,                      $ Data Size in bytes
+                "Port Mode (Port 7)",   $ name
+                "",                     $ units
+                "",                     $ help string
+                0,3,3,                  $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Enum630 =
+                0,"Disabled",
+                1,"Digital Input (Pin 4)",
+                2,"Digital Output (Pin 4)",
+                3,"IO-Link (Pin 4)";
+        Param631 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0000,                 $ Descriptor
+                0xC6,                   $ Data Type
+                1,                      $ Data Size in bytes
+                "Port Cycle Time (Port 7)",    $ name
+                "",                     $ units
+                "",                     $ help string
+                0,7,0,                  $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Enum631 =
+                0,"As fast as possible",
+                1,"2 ms",
+                2,"4 ms",
+                3,"8 ms",
+                4,"16 ms",
+                5,"32 ms",
+                6,"64 ms",
+                7,"128 ms";
+        Param632 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0000,                 $ Descriptor
+                0xC2,                   $ Data Type
+                1,                      $ Data Size in bytes
+                "Swap (Port 7)",        $ name
+                "",                     $ units
+                "",                     $ help string
+                0,1,1,                  $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Enum632 =
+                0,"Disabled",
+                1,"Enabled";
+        Param633 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0000,                 $ Descriptor
+                0xC2,                   $ Data Type
+                1,                      $ Data Size in bytes
+                "Validation / Data Storage (Port 7)",    $ name
+                "",                     $ units
+                "",                     $ help string
+                0,4,0,                  $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Enum633 =
+                0,"No check and clear",
+                1,"Type compatible V1.0 device",
+                2,"Type compatible V1.1 device",
+                3,"Type compatible V1.1 device with Backup + Restore",
+                4,"Type compatible V1.1 device with Restore";
+        Param634 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0000,                 $ Descriptor
+                0xC7,                   $ Data Type
+                2,                      $ Data Size in bytes
+                "Vendor ID (Port 7)",   $ name
+                "",                     $ units
+                "",                     $ help string
+                0x00,0x7FFF,0x00,       $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Param635 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0000,                 $ Descriptor
+                0xC8,                   $ Data Type
+                4,                      $ Data Size in bytes
+                "Device ID (Port 7)",   $ name
+                "",                     $ units
+                "",                     $ help string
+                0x0,0x00FFFFFF,0x0,     $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Param636 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0000,                 $ Descriptor
+                0xC2,                   $ Data Type
+                1,                      $ Data Size in bytes
+                "Fail Safe Mode (Port 7)",    $ name
+                "",                     $ units
+                "",                     $ help string
+                0,3,0,                  $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Enum636 =
+                0,"No Fail Safe",
+                1,"Fail Safe Reset Value",
+                2,"Fail Safe Old Value",
+                3,"Fail Safe with Pattern";
+        Param637 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0000,                 $ Descriptor
+                0xC2,                   $ Data Type
+                1,                      $ Data Size in bytes
+                "Fail Safe Value DO (Port 7)",    $ name
+                "",                     $ units
+                "",                     $ help string
+                0,2,1,                  $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Enum637 =
+                0,"Fail Safe Reset Value",
+                1,"Fail Safe Old Value",
+                2,"Fail Safe Set Value";
+        Param730 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0000,                 $ Descriptor
+                0xC2,                   $ Data Type
+                1,                      $ Data Size in bytes
+                "Port Mode (Port 8)",   $ name
+                "",                     $ units
+                "",                     $ help string
+                0,3,3,                  $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Enum730 =
+                0,"Disabled",
+                1,"Digital Input (Pin 4)",
+                2,"Digital Output (Pin 4)",
+                3,"IO-Link (Pin 4)";
+        Param731 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0000,                 $ Descriptor
+                0xC6,                   $ Data Type
+                1,                      $ Data Size in bytes
+                "Port Cycle Time (Port 8)",    $ name
+                "",                     $ units
+                "",                     $ help string
+                0,7,0,                  $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Enum731 =
+                0,"As fast as possible",
+                1,"2 ms",
+                2,"4 ms",
+                3,"8 ms",
+                4,"16 ms",
+                5,"32 ms",
+                6,"64 ms",
+                7,"128 ms";
+        Param732 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0000,                 $ Descriptor
+                0xC2,                   $ Data Type
+                1,                      $ Data Size in bytes
+                "Swap (Port 8)",        $ name
+                "",                     $ units
+                "",                     $ help string
+                0,1,1,                  $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Enum732 =
+                0,"Disabled",
+                1,"Enabled";
+        Param733 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0000,                 $ Descriptor
+                0xC2,                   $ Data Type
+                1,                      $ Data Size in bytes
+                "Validation / Data Storage (Port 8)",    $ name
+                "",                     $ units
+                "",                     $ help string
+                0,4,0,                  $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Enum733 =
+                0,"No check and clear",
+                1,"Type compatible V1.0 device",
+                2,"Type compatible V1.1 device",
+                3,"Type compatible V1.1 device with Backup + Restore",
+                4,"Type compatible V1.1 device with Restore";
+        Param734 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0000,                 $ Descriptor
+                0xC7,                   $ Data Type
+                2,                      $ Data Size in bytes
+                "Vendor ID (Port 8)",   $ name
+                "",                     $ units
+                "",                     $ help string
+                0x00,0x7FFF,0x00,       $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Param735 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0000,                 $ Descriptor
+                0xC8,                   $ Data Type
+                4,                      $ Data Size in bytes
+                "Device ID (Port 8)",   $ name
+                "",                     $ units
+                "",                     $ help string
+                0x0,0x00FFFFFF,0x0,     $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Param736 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0000,                 $ Descriptor
+                0xC2,                   $ Data Type
+                1,                      $ Data Size in bytes
+                "Fail Safe Mode (Port 8)",    $ name
+                "",                     $ units
+                "",                     $ help string
+                0,3,0,                  $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Enum736 =
+                0,"No Fail Safe",
+                1,"Fail Safe Reset Value",
+                2,"Fail Safe Old Value",
+                3,"Fail Safe with Pattern";
+        Param737 =
+                0,                      $ reserved, shall equal 0
+                ,,                      $ Link Path Size, Link Path
+                0x0000,                 $ Descriptor
+                0xC2,                   $ Data Type
+                1,                      $ Data Size in bytes
+                "Fail Safe Value DO (Port 8)",    $ name
+                "",                     $ units
+                "",                     $ help string
+                0,2,1,                  $ min, max, default data values
+                ,,,,                    $ mult, div, base, offset scaling
+                ,,,,                    $ mult, div, base, offset links
+                ;                       $ decimal places
+        Enum737 =
+                0,"Fail Safe Reset Value",
+                1,"Fail Safe Old Value",
+                2,"Fail Safe Set Value";
+
+[Assembly]
+        Object_Name = "Assembly Object";
+        Object_Class_Code = 0x04;
+        Assem100 =
+                "Assembly 100 Input ",
+                "20 04 24 64 30 03",
+                446,
+                0x0000,
+                ,,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3;
+
+        Assem101 =
+                "Assembly 101 Input ",
+                "20 04 24 65 30 03",
+                318,
+                0x0000,
+                ,,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3;
+
+        Assem102 =
+                "Assembly 102 Input ",
+                "20 04 24 66 30 03",
+                276,
+                0x0000,
+                ,,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3,
+                16,Param3;
+
+        Assem150 =
+                "Assembly 150 Out ",
+                "20 04 24 96 30 03",
+                302,
+                0x0001,
+                ,,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4;
+
+        Assem151 =
+                "Assembly 151 Out ",
+                "20 04 24 97 30 03",
+                258,
+                0x0001,
+                ,,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4,
+                16,Param4;
+
+        Assem199 =
+                "Config Assembly",
+                "20 04 24 C7 30 03",
+                98,
+                0x0001,
+                ,,
+                8,Param28,
+                8,Param29,
+                8,Param30,
+                8,Param31,
+                8,Param32,
+                8,Param33,
+                16,Param34,
+                32,Param35,
+                8,Param36,
+                8,Param37,
+                8,Param130,
+                8,Param131,
+                8,Param132,
+                8,Param133,
+                16,Param134,
+                32,Param135,
+                8,Param136,
+                8,Param137,
+                8,Param230,
+                8,Param231,
+                8,Param232,
+                8,Param233,
+                16,Param234,
+                32,Param235,
+                8,Param236,
+                8,Param237,
+                8,Param330,
+                8,Param331,
+                8,Param332,
+                8,Param333,
+                16,Param334,
+                32,Param335,
+                8,Param336,
+                8,Param337,
+                8,Param430,
+                8,Param431,
+                8,Param432,
+                8,Param433,
+                16,Param434,
+                32,Param435,
+                8,Param436,
+                8,Param437,
+                8,Param530,
+                8,Param531,
+                8,Param532,
+                8,Param533,
+                16,Param534,
+                32,Param535,
+                8,Param536,
+                8,Param537,
+                8,Param630,
+                8,Param631,
+                8,Param632,
+                8,Param633,
+                16,Param634,
+                32,Param635,
+                8,Param636,
+                8,Param637,
+                8,Param730,
+                8,Param731,
+                8,Param732,
+                8,Param733,
+                16,Param734,
+                32,Param735,
+                8,Param736,
+                8,Param737;
+
+[Connection Manager]
+        Object_Name = "Connection Manager Object";
+        Object_Class_Code = 0x06;
+        Connection1 =
+                0x04010002,             $ Trigger and Transport
+                0x44640405,             $ Connnection Parameters
+                Param19,Param2,Assem150,$ O->T RPI, size, format
+                Param19,Param1,Assem100,$ T->O RPI, size, format
+                ,,                      $ proxy config size, format
+                98,Assem199,            $ target config size, format
+                "Exclusive Owner IO-Acyc-Diag",    $ Connection Name
+                " In/Out Data",         $ help string
+                "20 04 24 C7 2C 96 2C 64";    $ Path
+
+        Connection2 =
+                0x04010002,             $ Trigger and Transport
+                0x44640405,             $ Connnection Parameters
+                Param19,Param2,Assem150,$ O->T RPI, size, format
+                Param19,Param11,Assem101,    $ T->O RPI, size, format
+                ,,                      $ proxy config size, format
+                98,Assem199,            $ target config size, format
+                "Exclusive Owner IO-Acyc",    $ Connection Name
+                " In/Out Data",         $ help string
+                "20 04 24 C7 2C 96 2C 65";    $ Path
+
+        Connection3 =
+                0x04010002,             $ Trigger and Transport
+                0x44640405,             $ Connnection Parameters
+                Param19,Param13,Assem151,    $ O->T RPI, size, format
+                Param19,Param12,Assem102,    $ T->O RPI, size, format
+                ,,                      $ proxy config size, format
+                98,Assem199,            $ target config size, format
+                "Exclusive Owner IO",   $ Connection Name
+                " In/Out Data",         $ help string
+                "20 04 24 C7 2C 97 2C 66";    $ Path
+
+        Connection4 =
+                0x02010002,             $ Trigger and Transport
+                0x44640305,             $ Connnection Parameters
+                ,0,,                    $ O->T RPI, size, format
+                Param19,Param1,Assem100,$ T->O RPI, size, format
+                ,,                      $ proxy config size, format
+                98,Assem199,            $ target config size, format
+                "Input only",           $ Connection Name
+                "",                     $ help string
+                "20 04 24 C7 2C C1 2C 64";    $ Path
+
+        Connection5 =
+                0x01010002,             $ Trigger and Transport
+                0x44240305,             $ Connnection Parameters
+                ,0,,                    $ O->T RPI, size, format
+                Param19,Param1,Assem100,$ T->O RPI, size, format
+                ,,                      $ proxy config size, format
+                ,,                      $ target config size, format
+                "Listen Only",          $ Connection Name
+                "Listen only connection",    $ help string
+                "20 04 24 C7 2C C0 2C 64";    $ Path
+
+[Port]
+        Object_Name = "Port Object";
+        Object_Class_Code = 0xF4;
+        Port1 =
+                TCP,
+                "Port 1",
+                "20 F5 24 01",
+                2,
+                0;
+
+[Capacity]
+        ConnOverhead = .004;            $ Connection Overhead
+        MaxIOConnections = 3;           $ Maximum number of Class 1 Connections
+        MaxMsgConnections = 6;          $ Maximum number of Class 3 Connections
+        TSpec1 = TxRx, 10, 2000;        $ packets per sec @ 10 bytes
+        TSpec2 = TxRx, 504, 1500;       $ packets per sec @ 504 bytes
+
+[DLR Class]
+        Revision = 3;
+        Object_Name = "Device Level Ring Object";
+        Object_Class_Code = 0x47;
+        MaxInst = 1;
+        Number_Of_Static_Instances = 1;
+        Max_Number_Of_Dynamic_Instances = 0;
+
+[TCP/IP Interface Class]
+        Revision = 4;
+        Object_Name = "TCP/IP Interface Object";
+        Object_Class_Code = 0xF5;
+        MaxInst = 1;
+        Number_Of_Static_Instances = 1;
+        Max_Number_Of_Dynamic_Instances = 0;
+
+[Ethernet Link Class]
+        Revision = 4;
+        Object_Name = "Ethernet Link Object";
+        Object_Class_Code = 0xF6;
+        MaxInst = 2;
+        Number_Of_Static_Instances = 2;
+        Max_Number_Of_Dynamic_Instances = 0;
+        InterfaceLabel1 = "X21";
+        InterfaceLabel2 = "X22";
+
+$ ****************************************************************************
+$ EOF
+$ ****************************************************************************

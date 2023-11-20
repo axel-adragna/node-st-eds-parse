@@ -1,0 +1,11 @@
+{
+  "name": "st-eds-parse",
+  "version": "1.0.0",
+  "description": "Parse ODVA EDS Files",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT"
+}
