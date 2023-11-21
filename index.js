@@ -1,10 +1,10 @@
 const fs = require('fs');
 
 let eds = {};
-let array = fs.readFileSync('test-eds/ifm_IOL_Master_AL1322.eds').toString().replace(/\r\n/g,'\n').split("\n");
+let array = fs.readFileSync('test-eds/00010003012C0100.eds').toString().replace(/\r\n/g,'\n').split("\n");
 
 let stage1 = removeBlankLines(removeComments(array)).map(line =>{return removeSpaces(line)});
-let stage2 = stage1.join('').split(";");
+let stage2 = ((stage1.join('')[stage1.join('').length-1] === ';') ? stage1.join('').slice(0,-1) : stage1.join('')).split(";");
 let stage3 = []
 
 stage2.forEach(line => {
@@ -32,7 +32,7 @@ stage3.forEach(line => {
     }
 });
 
-console.log(eds,getConfigData(eds, 1).configInstance)
+console.log(eds,getConfigData(eds, 1),getConfigData(eds, 1).configInstance.data.toString('hex'))
 
 function parameter(p, v) {
     if (typeof p === 'string' && p.slice(0,5) === 'Param') {
@@ -78,7 +78,7 @@ function removeSpaces(str) {
 }
 
 function removeBlankLines (a) {
- return a.filter(line => line.length !== 0);
+ return a.filter(line => line.trim().length !== 0);
 }
 
 function removeComments (lines) {
@@ -106,11 +106,12 @@ function removeComments (lines) {
 }
 
 function getConfigData(eds, conn) {
-
+    let configType = 9
+    if (eds.ConnectionManager['Connection'+conn.toString()].split(',')[11].length > 1) configType = 11;
     let config = {
         configInstance: {
-            assembly: parseInt(eds.ConnectionManager['Connection'+conn.toString()].split(',')[11].slice(5)),
-            size: parseInt(eds.Assembly[eds.ConnectionManager['Connection'+conn.toString()].split(',')[11]].split(',')[2])
+            assembly: parseInt(eds.ConnectionManager['Connection'+conn.toString()].split(',')[configType].slice(5)),
+            size: parseInt(eds.Assembly[eds.ConnectionManager['Connection'+conn.toString()].split(',')[configType]].split(',')[2])
         },
         outputInstance: {
             assembly: parseInt(eds.ConnectionManager['Connection'+conn.toString()].split(',')[4].slice(5)),
@@ -127,22 +128,20 @@ function getConfigData(eds, conn) {
 
     let offset = 0
     for(let i=6; i < configAssembly.length; i+=2) {
-        if(eds.Params[configAssembly[i+1]].dataValues) {
             switch (configAssembly[i]) {
                 case '8':
-                    buf.writeInt8(parseInt(eds.Params[configAssembly[i+1]].dataValues.default),offset);
+                    if (eds.Params[configAssembly[i+1]]) buf.writeInt8(parseInt(eds.Params[configAssembly[i+1]].dataValues.default),offset);
                     offset+=1;
                     break;
                 case '16':
-                    buf.writeInt16LE(parseInt(eds.Params[configAssembly[i+1]].dataValues.default),offset);
+                    if (eds.Params[configAssembly[i+1]]) buf.writeInt16LE(parseInt(eds.Params[configAssembly[i+1]].dataValues.default),offset);
                     offset+=2;
                     break;
                 case '32':
-                    buf.writeInt32LE(parseInt(eds.Params[configAssembly[i+1]].dataValues.default),offset);
+                    if (eds.Params[configAssembly[i+1]]) buf.writeInt32LE(parseInt(eds.Params[configAssembly[i+1]].dataValues.default),offset);
                     offset+=4;
                     break;
             } 
-        }     
     }
 
     config.configInstance.data = buf
