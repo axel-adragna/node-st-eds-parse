@@ -32,7 +32,9 @@ stage3.forEach(line => {
     }
 });
 
-console.log(eds,getConfigData(eds, 1),getConfigData(eds, 1).configInstance.data.toString('hex'))
+//console.log(eds,getConfigData(eds, 1),getConfigData(eds, 1).configInstance.data.toString('hex'))
+
+console.log(splitQuotes('$Jason " IS $ " a StuD $ "Fudge$" $', '$'))
 
 function parameter(p, v) {
     if (typeof p === 'string' && p.slice(0,5) === 'Param') {
@@ -146,4 +148,27 @@ function getConfigData(eds, conn) {
 
     config.configInstance.data = buf
     return config;
+}
+
+function splitQuotes(str, sep) {
+    let array = [];
+    let item = '';
+    let quotes = 0;
+    for (i = 0; i < str.length; i++) {
+        if (str[i] === sep && !(quotes % 2)) {
+            if (item.length > 0) {
+                array.push(item);
+            }
+            item = '';
+        } else {
+            item = item + str[i]
+            if (str[i] === '"') {
+                quotes++;
+            }
+        }
+    }
+    if (item.length > 0) {
+        array.push(item);
+    }
+    return array;
 }
