@@ -25,14 +25,14 @@ stage3.forEach(line => {
         category = line.slice(1,line.search(']'));
         eds[category] = {};
     } else {
-        let item = line.split('=')
+        let item = splitQuotes(line, '=')
         if (typeof item[1] === 'string' && item[1][0] === '"' && item[1][item[1]-1] === '"') item[1] = item[1].slice(1,-1)
         eds[category][item[0]] = item[1];
         eds[category][item[0]] = parameter(item[0],eds[category][item[0]])
     }
 });
 
-//console.log(eds,getConfigData(eds, 1),getConfigData(eds, 1).configInstance.data.toString('hex'))
+console.log(eds,getConfigData(eds, 15))
 
 console.log(splitQuotes('$Jason " IS $ " a StuD $ "Fudge$" $', '$'))
 
@@ -156,9 +156,7 @@ function splitQuotes(str, sep) {
     let quotes = 0;
     for (i = 0; i < str.length; i++) {
         if (str[i] === sep && !(quotes % 2)) {
-            if (item.length > 0) {
-                array.push(item);
-            }
+            array.push(item);
             item = '';
         } else {
             item = item + str[i]
