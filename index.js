@@ -1,5 +1,18 @@
 const fs = require('fs');
+const {edsToObj, splitQuotes} = require('./edsToObj'); 
+const {connection}  = require('./edsTypes')
 
+//let array = edsToObj(fs.readFileSync('test-eds/00010003012C0100.eds').toString())
+let eds = edsToObj(fs.readFileSync('test-eds/ifm_IOL_Master_AL1322.eds').toString())
+
+Object.keys(eds.ConnectionManager).forEach(item => {
+    if (item.slice(0,10) === 'Connection') {
+        eds.ConnectionManager[item] = connection(splitQuotes(eds.ConnectionManager[item], ','))
+    }
+})
+
+console.log(eds)
+/** 
 let eds = {};
 let array = fs.readFileSync('test-eds/00010003012C0100.eds').toString().replace(/\r\n/g,'\n').split("\n");
 
@@ -75,37 +88,6 @@ function parameter(p, v) {
     }
 }
 
-function removeSpaces(str) {
-    return str.replace(/([^"]+)|("[^"]+")/g, (x,y,z) => {return (y) ? y.replace(/\s/g, '') : z})
-}
-
-function removeBlankLines (a) {
- return a.filter(line => line.trim().length !== 0);
-}
-
-function removeComments (lines) {
-    let commentPosition = str => {
-        let quotes = 0
-        let position = -1
-        for (let i = 0; i < str.length; i++) {
-            if (str[i] === '"') quotes++;
-            if (str[i] === '$' && !(quotes % 2)) {
-                position = i;
-                break;
-            }
-        }
-        return position;
-    }
-    
-    return lines.map(line => {
-        let newLine = line.trim()
-        let cp = commentPosition(newLine)
-        if (cp > -1) {
-            newLine = newLine.slice(0,cp)
-        }
-        return newLine.trim()
-    })
-}
 
 function getConfigData(eds, conn) {
     let configType = 9
@@ -149,24 +131,4 @@ function getConfigData(eds, conn) {
     config.configInstance.data = buf
     return config;
 }
-
-function splitQuotes(str, sep) {
-    let array = [];
-    let item = '';
-    let quotes = 0;
-    for (i = 0; i < str.length; i++) {
-        if (str[i] === sep && !(quotes % 2)) {
-            array.push(item);
-            item = '';
-        } else {
-            item = item + str[i]
-            if (str[i] === '"') {
-                quotes++;
-            }
-        }
-    }
-    if (item.length > 0) {
-        array.push(item);
-    }
-    return array;
-}
+*/
