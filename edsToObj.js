@@ -1,4 +1,4 @@
-exports.edsToObj = function(edsString) {
+exports.EDSToObj = function(edsString) {
     let obj = {};
     let lineArray = edsString.replace(/\r\n/g,'\n').split("\n");
     lineArray = removeComments(lineArray);

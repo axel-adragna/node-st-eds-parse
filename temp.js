@@ -1,6 +1,5 @@
-let testConfigData = '0304030001000000000000000001030001\
-000000000000000001030001000000000000000001030001000000000\
-0000000010300010000000000000000010300010000000000000000010\
-30001000000000000000001030001000000000000000001';
+let EdsParse = require('./index');
+let fs = require('fs');
+let eds = EdsParse.ParseEDS(fs.readFileSync('test-eds/ifm_IOL_Master_AL1322.eds').toString());
 
- exports.testConfigData = testConfigData
+console.log(eds, EdsParse.GetAssembly(eds, 199).params);
