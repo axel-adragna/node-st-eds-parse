@@ -34,11 +34,12 @@ exports.parameter = array => {
         scalingMult: array[12],
         scalingDiv: array[13],
         scalingBase: array[14],
-        linksMult: array[15],
-        linksDiv: array[16],
-        linksBase: array[17],
-        linksOffset: array[18],
-        decimalPlaces: parseInt(array[19])
+        scalingOffset: array[15],
+        linksMult: array[16],
+        linksDiv: array[17],
+        linksBase: array[18],
+        linksOffset: array[19],
+        decimalPlaces: parseInt(array[20])
     }
 }
 
@@ -56,10 +57,10 @@ exports.enum = array => {
 exports.assembly = array => {
     let params = [];
     for(let i = 6; i < array.length; i+=2) {
-        params.push({
-            name: array[i+1],
-            size: parseInt(array[i])
-        })
+            params.push({
+                name: array[i+1],
+                size: parseInt(array[i])
+            })   
     }
     return {
         name: array[0],

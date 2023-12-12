@@ -1,0 +1,643 @@
+$ GS4_CM_ENETIP_Rev4_5 provided by Automation Direct
+
+[File]
+        DescText = "GS4 EtherNet/IP Card";
+        CreateDate = 08-24-2017;
+        CreateTime = 15:57:11;
+        ModDate = 07-25-2023;
+        ModTime = 11:22:00;
+        Revision = 4.5;
+
+[Device]
+        VendCode = 660;
+        VendName = "Automationdirect.com";
+        ProdType = 12;									
+        ProdTypeStr = "Communications Adapter";
+        ProdCode = 516;
+        MajRev = 1;
+        MinRev = 1;
+        ProdName = "GS4 EtherNet/IP Card";
+        Catalog = "GS4-CM-ENETIP";
+
+[Device Classification]
+        Class1 = EtherNetIP;
+
+[Params]
+        Param1 =
+                0,				$ reserved; shall equal 0
+                ,,				$ path size, path
+                0x0000,				$ descriptor
+                0xC6,				$ data type: USINT
+                1,				$ data size in bytes
+                "Run/Stop/JOG Cmd",		$ name
+                "",				$ units string
+                "Output: Word 0, Bits 0-1",	$ help string
+                0,3,0,				$ min/max/default
+                ,,,,
+                ,,,,
+                ;
+
+	Enum1 =
+		0, "No function",
+		1, "Stop",
+		2, "Run",
+		3, "Enable JOG";
+
+	Param2 = 
+		0,				$ reserved; shall equal 0
+		,,				$ path size, path
+		0x0000,				$ descriptor
+		0xC6,				$ data type: USINT
+		1,				$ data size in bytes
+		"Forward/Reverse Cmd",		$ name
+		"",				$ units string
+		"Output: Word 0, Bits 4-5",	$ help string
+		0,3,0,				$ min/max/default
+		,,,,
+		,,,,
+		;
+
+	Enum2 =
+		0, "No function",
+		1, "Forward command",
+		2, "Reverse command",
+		3, "No function";
+
+	Param3 = 
+		0,				$ reserved; shall equal 0
+		,,				$ path size, path
+		0x0000,				$ descriptor
+		0xC6,				$ data type: USINT
+		1,				$ data size in bytes
+		"Nth Accel/Decel",		$ name
+		"",				$ units string
+		"Output: Word 0, Bits 6-7",	$ help string
+		0,3,0,				$ min/max/default
+		,,,,
+		,,,,
+		;
+
+	Enum3 = 
+		0, "1st Accel/Decel",
+		1, "2nd Accel/Decel",
+		2, "3rd Accel/Decel",
+		3, "4th Accel/Decel";
+
+	Param4 = 
+		0,				$ reserved; shall equal 0
+		,,				$ path size, path
+		0x0000,				$ descriptor
+		0xC6,				$ data type: USINT
+		1,				$ data size in bytes
+		"Nth Step Speed Frequency",	$ name
+		"",				$ units string
+		"Output: Word 0, Bits 8-11",	$ help string
+		0,15,0,				$ min/max/default
+		,,,,
+		,,,,
+		;
+
+	Enum4 = 
+		0, "Master Speed",
+		1, "1st Step Speed Frequency",
+		2, "2nd Step Speed Frequency",
+		3, "3rd Step Speed Frequency",
+		4, "4th Step Speed Frequency",
+		5, "5th Step Speed Frequency",
+		6, "6th Step Speed Frequency",
+		7, "7th Step Speed Frequency",
+		8, "8th Step Speed Frequency",
+		9, "9th Step Speed Frequency",
+		10, "10th Step Speed Frequency",
+		11, "11th Step Speed Frequency",
+		12, "12th Step Speed Frequency",
+		13, "13th Step Speed Frequency",
+		14, "14th Step Speed Frequency",
+		15, "15th Step Speed Frequency";
+
+	Param5 = 
+		0,				$ reserved; shall equal 0
+		,,				$ path size, path
+		0x0000,				$ descriptor
+		0xC6,				$ data type: USINT
+		1,				$ data size in bytes
+		"Enable bit function 6-11",	$ name
+		"",				$ units string
+		"Output: Word 0, Bit 12",	$ help string
+		0,1,0,				$ min/max/default
+		,,,,
+		,,,,
+		;
+
+	Param7 = 
+		0,				$ reserved; shall equal 0
+		,,				$ path size, path
+		0x0000,				$ descriptor
+		0xC7,				$ data type: UINT
+		2,				$ data size in bytes
+		"Frequency Command",		$ name
+		"",				$ units string
+		"Output: Word 1",		$ help string
+		0,65535,0,			$ min/max/default
+		,,,,
+		,,,,
+		;
+
+	Param8 =
+		0,				$ reserved; shall equal 0
+		,,				$ path size, path
+		0x0000,				$ descriptor
+		0xC1,				$ data type: BOOL
+		1,				$ data size in bytes
+		"External Fault Trigger",	$ name
+		"",				$ units string
+		"Output: Word 2, Bit 0",	$ help string
+		0,1,0,				$ min/max/default
+		,,,,
+		,,,,
+		;
+
+	Param9 =
+		0,				$ reserved; shall equal 0
+		,,				$ path size, path
+		0x0000,				$ descriptor
+		0xC1,				$ data type: BOOL
+		1,				$ data size in bytes
+		"Reset Command",		$ name
+		"",				$ units string
+		"Output: Word 2, Bit 1",	$ help string
+		0,1,0,				$ min/max/default
+		,,,,
+		,,,,
+		;
+		
+
+	Param10 =
+		0,				$ reserved; shall equal 0
+		,,				$ path size, path
+		0x0000,				$ descriptor
+		0xC1,				$ data type: BOOL
+		1,				$ data size in bytes
+		"External Interrupt",		$ name
+		"",				$ units string
+		"Output: Word 2, Bit 2",	$ help string
+		0,1,0,				$ min/max/default
+		,,,,
+		,,,,
+		;
+		
+	Param20 =
+		0,				$ reserved; shall equal 0
+		,,				$ path size, path
+		0x0000,				$ descriptor
+		0xC7,				$ data type: UINT
+		2,				$ data size in bytes
+		"Fault Code",			$ name
+		"",				$ units string
+		"Input: Word 0",		$ help string
+		0,0,0,				$ min/max/default
+		,,,,
+		,,,,
+		;
+
+	Param21 =
+		0,				$ reserved; shall equal 0
+		,,				$ path size, path
+		0x0000,				$ descriptor
+		0xC6,				$ data type: USINT
+		1,				$ data size in bytes
+		"Stop/Standby/Run status",	$ name
+		"",				$ units string
+		"Input: Word 1, Bits 0-1",	$ help string
+		0,3,0,				$ min/max/default
+		,,,,
+		,,,,
+		;
+
+	Enum21 =
+		0, "Stop",
+		1, "Decel during Stop",
+		2, "Standby",
+		3, "Run";
+
+	Param22 =
+		0,				$ reserved; shall equal 0
+		,,				$ path size, path
+		0x0000,				$ descriptor
+		0xC1,				$ data type: BOOL
+		1,				$ data size in bytes
+		"JOG Active status",		$ name
+		"",				$ units string
+		"Input: Word 1, Bit 2",		$ help string
+		0,1,0,				$ min/max/default
+		,,,,
+		,,,,
+		;
+
+	Param23 =
+		0,				$ reserved; shall equal 0
+		,,				$ path size, path
+		0x0000,				$ descriptor
+		0xC6,				$ data type: USINT
+		1,				$ data size in bytes
+		"Forward/Reverse status",	$ name
+		"",				$ units string
+		"Input: Word 1, Bits 3-4",	$ help string
+		0,3,0,				$ min/max/default
+		,,,,
+		,,,,
+		;
+
+	Enum23 =
+		0, "Forward",
+		1, "Transition from REV to FWD",
+		2, "Transition from FWD to REV",
+		3, "Reverse";
+
+	Param24 =
+		0,				$ reserved; shall equal 0
+		,,				$ path size, path
+		0x0000,				$ descriptor
+		0xC1,				$ data type: BOOL
+		1,				$ data size in bytes
+		"Freq from Comm",		$ name
+		"",				$ units string
+		"Input: Byte 1, Bit 8",		$ help string
+		0,1,0				$ min/max/default
+		,,,,
+		,,,,
+		;
+
+	Param25 =
+		0,				$ reserved; shall equal 0
+		,,				$ path size, path
+		0x0000,				$ descriptor
+		0xC1,				$ data type: BOOL
+		1,				$ data size in bytes
+		"Freq from Analog/Discrete",	$ name
+		"",				$ units string
+		"Input: Word 1, Bit 9",		$ help string
+		0,1,0,				$ min/max/default
+		,,,,
+		,,,,
+		;
+
+	Param26 =
+		0,				$ reserved; shall equal 0
+		,,				$ path size, path
+		0x0000,				$ descriptor
+		0xC1,				$ data type: BOOL
+		1,				$ data size in bytes
+		"Command from Comm/Keypad",	$ name
+		"",				$ units string
+		"Input: Word 1, Bit 10",	$ help string
+		0,1,0,				$ min/max/default
+		,,,,
+		,,,,
+		;
+
+	Param27 =
+		0,				$ reserved; shall equal 0
+		,,				$ path size, path
+		0x0000,				$ descriptor
+		0xC1,				$ data type: BOOL
+		1,				$ data size in bytes
+		"Parameters Locked",		$ name
+		"",				$ units string
+		"Input: Word 1, Bit 11",	$ help string
+		0,1,0,				$ min/max/default
+		,,,,
+		,,,,
+		;
+
+	Param28 =
+		0,				$ reserved; shall equal 0
+		,,				$ path size, path
+		0x0000,				$ descriptor
+		0xC1,				$ data type: BOOL
+		1,				$ data size in bytes
+		"Running status",		$ name
+		"",				$ units string
+		"Input: Word 1, Bit 12",	$ help string
+		0,1,0,				$ min/max/default
+		,,,,
+		,,,,
+		;
+
+	Enum28 =
+		0, "Drive stopped",
+		1, "Drive running (including standby)";
+
+	Param29 =
+		0,				$ reserved; shall equal 0
+		,,				$ path size, path
+		0x0000,				$ descriptor
+		0xC7,				$ data type: UINT
+		2,				$ data size in bytes
+		"Freq Commanded/PID Setpoint",	$ name
+		"",				$ units string
+		"Input: Word 2",		$ help string
+		0,0,0,				$ min/max/default
+		,,,,
+		,,,,
+		;
+
+	Param30 =
+		0,				$ reserved; shall equal 0
+		,,				$ path size, path
+		0x0000,				$ descriptor
+		0xC7,				$ data type: UINT
+		2,				$ data size in bytes
+		"Output Frequency",		$ name
+		"",				$ units string
+		"Input: Word 3",		$ help string
+		0,0,0,				$ min/max/default
+		,,,,				
+		,,,,
+		;
+
+	Param31 =
+		0,				$ reserved; shall equal 0
+		,,				$ path size, path
+		0x0000,				$ descriptor
+		0xC7,				$ data type: UINT
+		2,				$ data size in bytes
+		"Output Current",		$ name
+		"",				$ units string
+		"Input: Word 4",		$ help string
+		0,0,0,				$ min/max/default
+		,,,,				
+		,,,,
+		;
+
+	Param32 =
+		0,				$ reserved; shall equal 0
+		,,				$ path size, path
+		0x0000,				$ descriptor
+		0xC7,				$ data type: UINT
+		2,				$ data size in bytes
+		"DC Bus Voltage",		$ name
+		"",				$ units string
+		"Input: Word 5",		$ help string
+		0,0,0,				$ min/max/default
+		,,,,				
+		,,,,
+		;
+
+	Param33 =
+		0,				$ reserved; shall equal 0
+		,,				$ path size, path
+		0x0000,				$ descriptor
+		0xC7,				$ data type: UINT
+		2,				$ data size in bytes
+		"Output Voltage",		$ name
+		"",				$ units string
+		"Input: Word 6",		$ help string
+		0,0,0,				$ min/max/default
+		,,,,				
+		,,,,
+		;
+
+	Param34 =
+		0,				$ reserved; shall equal 0
+		,,				$ path size, path
+		0x0000,				$ descriptor
+		0xC7,				$ data type: UINT
+		2,				$ data size in bytes
+		"Multi-Speed/PID Step Number",	$ name
+		"",				$ units string
+		"Input: Word 7",		$ help string
+		0,0,0,				$ min/max/default
+		,,,,				
+		,,,,
+		;
+
+	Param35 =
+		0,				$ reserved; shall equal 0
+		,,				$ path size, path
+		0x0000,				$ descriptor
+		0xC7,				$ data type: UINT
+		2,				$ data size in bytes
+		"Warning Codes",		$ name
+		"",				$ units string
+		"Input: Word 8",		$ help string
+		0,0,0,				$ min/max/default
+		,,,,
+		,,,,
+		;
+
+
+
+	Param36 =
+		0,				$ reserved; shall equal 0
+		,,				$ path size, path
+		0x0000,				$ descriptor
+		0xC7,				$ data type: UINT
+		2,				$ data size in bytes
+		"Digital Input Counter Value",	$ name
+		"",				$ units string
+		"Input: Word 9",		$ help string
+		0,0,0,				$ min/max/default
+		,,,,				
+		,,,,
+		;
+
+	Param37 =
+		0,				$ reserved; shall equal 0
+		,,				$ path size, path
+		0x0000,				$ descriptor
+		0xC7,				$ data type: UINT
+		2,				$ data size in bytes
+		"Power Factor Angle",		$ name
+		"",				$ units string
+		"Input: Word 10",		$ help string
+		0,0,0,				$ min/max/default
+		,,,,				
+		,,,,
+		;
+
+
+	Param39 =
+		0,				$ reserved; shall equal 0
+		,,				$ path size, path
+		0x0000,				$ descriptor
+		0xC7,				$ data type: UINT
+		2,				$ data size in bytes
+		"Actual Motor Speed (rpm)",	$ name
+		"",				$ units string
+		"Input: Word 12",		$ help string
+		0,0,0,				$ min/max/default
+		,,,,				
+		,,,,
+		;
+
+	Param40 =
+		0,				$ reserved; shall equal 0
+		,,				$ path size, path
+		0x0000,				$ descriptor
+		0xC7,				$ data type: UINT
+		2,				$ data size in bytes
+		"Power Output",			$ name
+		"",				$ units string
+		"Input: Word 15",		$ help string
+		0,0,0,				$ min/max/default
+		,,,,				
+		,,,,
+		;
+
+
+	Param100 = 
+		0,				$ reserved; shall equal 0
+		,"",				$ path size, path
+		0x0000,				$ decriptor
+		0xC8,				$ data type: UDINT
+		4,				$ data size in bytes
+		"RPI",				$ name
+		"microseconds",			$ units string
+		"cyclical update interval",	$ help string
+		20000,3000000,250000,		$ min/max/default
+		,,,,				
+		,,,,				
+		0;				
+	
+	Param101 = 
+		0,				$ reserved; shall equal 0
+		,,				$ path size, path
+		0x0000,				$ descriptor
+		0xC7,				$ data type: UINT
+		2,				$ data size in bytes
+		"Output Data Size",		$ name
+		"",				$ units string
+		"",				$ help string
+		6,6,6,				$ min/max/default
+		,,,,				
+		,,,,				
+		0;				
+
+	Param102 = 
+		0,				$ reserved; shall equal 0
+		,,				$ path size, path
+		0x0000,				$ descriptor
+		0xC7,				$ data type: UINT
+		2,				$ data size in bytes
+		"Input Data Size",		$ name
+		"",				$ units string
+		"",				$ help string
+		32,32,32,			$ min/max/default
+		,,,,				
+		,,,,				
+		0;
+
+
+	Param200 = 
+		0,				$ reserved; shall equal 0
+		,,				$ path size, path
+		0x0000,				$ descriptor
+		0xC7,				$ data type: UINT
+		2,				$ data size in bytes
+		"reserved",			$ name
+		"",				$ units string
+		"",				$ help string
+		0,0,0,				$ min/max/default
+		,,,,
+		,,,,
+		;
+
+[Assembly]
+        Object_Name = "Assembly Object";
+        Object_Class_Code = 0x04;
+
+        Assem100 =
+                "Commands to GS4",		$ Output Assembly Instance
+                "20 04 24 64 30 03",
+                6,
+                0x0001,				
+                ,,				$ reserved
+		2,Param1,			$ Run/Stop/JOG Cmd
+		2,Param200,			$ reserved
+		2,Param2,			$ Forward/Reverse Cmd
+		2,Param3,			$ Nth Accel/Decel
+		4,Param4,			$ Nth Step Speed Freq
+		1,Param5,			$ Enable Bit Function 6-11
+		3,Param200,			$ reserved
+		16,Param7,			$ Frequency Command
+		1,Param8,			$ External Fault Trigger
+		1,Param9,			$ Reset Command
+		1,Param10,			$ External Interruption
+		13,Param200;			$ reserved
+		
+
+        Assem101 =
+                "Monitor GS4 Status",		$ Input Assembly Instance
+                "20 04 24 65 30 03",
+                32,
+                0x0001,				
+                ,,				$ reserved
+		16,Param20,			$ Fault Code
+		2,Param21,			$ Stop/Standby/Run status
+		1,Param22,			$ JOG Active status
+		2,Param23,			$ Forward/Reverse status
+		3,Param200,			$ reserved
+		1,Param24,			$ Freq from Comm
+		1,Param25,			$ Freq from Analog/Discrete
+		1,Param26,			$ Command from Comm/Keypad
+		1,Param27,			$ Parameters Locked
+		1,Param28,			$ Running status
+		3,Param200,			$ reserved
+		16,Param29,			$ Freq Commanded/PID Setpoint
+		16,Param30,			$ Output Frequency
+		16,Param31,			$ Output Current
+		16,Param32,			$ DC Bus Voltage
+		16,Param33,			$ Output Voltage
+		16,Param34,			$ Multi-Speed/PID Step Number
+		16,Param35,			$ Warning Codes
+		16,Param36,			$ Digital Input Counter Value
+		16,Param37,			$ Power Factor Angle
+		16,Param200,			$ reserved
+		16,Param39,			$ Actual Motor Speed (rpm)
+		16,Param200,			$ reserved
+		16,Param200,			$ reserved
+		16,Param40;			$ Power Output
+
+[Connection Manager]
+        Object_Name = "Connection Manager Object";
+        Object_Class_Code = 0x06;
+
+        Connection1 =	
+		0x04010002,			$ triggers & transport
+		0x44640405,			$ connection parameters
+                Param100,Param101,Assem100,	$ O->T RPI, size, format
+                Param100,Param102,Assem101,	$ T->O RPI, size, format
+                ,,                      	$ proxy config size, format
+                ,,                      	$ target config size, format
+                "Drive Control and Status",	$ Connection Name
+                "",                     	$ help string
+                "20 04 24 66 2C 64 2C 65";	$ Path	
+
+        Connection2 =	
+		0x01010002,			$ triggers & transport
+		0x44240305,			$ connection parameters
+                ,0,,				$ O->T RPI, size, format
+                Param100,Param102,Assem101,	$ T->O RPI, size, format
+                ,,                      	$ proxy config size, format
+                ,,                      	$ target config size, format
+                "Drive Status (Listen-Only)",	$ Connection Name
+                "",                     	$ help string
+                "20 04 24 66 2C C7 2C 65";	$ Path			
+		
+
+[TCP/IP Interface Class]
+        Revision = 1;
+        Object_Name = "TCP/IP Interface Object";
+        Object_Class_Code = 0xF5;
+        MaxInst = 1;
+        Number_Of_Static_Instances = 1;
+        Max_Number_Of_Dynamic_Instances = 0;
+
+[Ethernet Link Class]
+        Revision = 1;
+        Object_Name = "Ethernet Link Object";
+        Object_Class_Code = 0xF6;
+        MaxInst = 2;
+        Number_Of_Static_Instances = 1;
+        Max_Number_Of_Dynamic_Instances = 0;	

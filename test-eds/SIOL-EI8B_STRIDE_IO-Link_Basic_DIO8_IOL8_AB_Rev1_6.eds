@@ -1,0 +1,5501 @@
+[File]
+	DescText = "EDS-File for STRIDE IO-Link Basic DIO8 IOL8 (AB version)";
+	CreateDate = 12-06-2021;
+	CreateTime = 09:16:00;
+	ModDate = 08-15-2023;
+	ModTime = 06:11:30;
+	Revision = 1.6;
+	HomeURL = "https://www.automationdirect.com";
+
+[Device]
+	VendCode = 640;
+	VendName = "Murrelektronik GmbH";
+	ProdType = 12;
+	ProdTypeStr = "Communications Adapter";
+	ProdCode = 46020;
+	MajRev = 1;
+	MinRev = 5;
+	ProdName = "STRIDE IO-Link Basic DIO8 IOL8";
+	Catalog = "SIOL-EI8B";
+	Icon = "STRIDE.ico";
+	IconContents =
+		"AAABAAEARigQAAEABADoBwAAFgAAACgAAABGAAAAUAAAAAEABAAAAAAAAAAA"
+		"AGAAAABgAAAAEAAAAAAAAAAAAAAAAACAAACAAAAAgIAAgAAAAIAAgACAgAAA"
+		"gICAAMDAwAAAAP8AAP8AAAD//wD/AAAA/wD/AP//AAD///8A////////////"
+		"//////////////////////////////////8A////////////////////////"
+		"//////////////////////8A////////////////////////////////////"
+		"//////////8A///////////////////wAAAP//////////////////////8A"
+		"//////////////////AAAAAAD/////////////////////8A////////////"
+		"/////wAAAAAAAP////////////////////8A/////////////////wDwAAAP"
+		"AP////////////////////8A/////////////////w9/AAD38P//////////"
+		"//////////8A/////////////////wDwAAAPAP////////////////////8A"
+		"/////////////////wAA//8AAP////////////////////8A////////////"
+		"/////wAAAAAAAP////////////////////8A/////////////////wD/AAD/"
+		"AP////////////////////8A/////////////////w938A938P//////////"
+		"//////////8A/////////////////w938A938P////////////////////8A"
+		"/////////////////wD/AAD/AP////////////////////8A////////////"
+		"/////wAAAAAAAP////////////////////8A/////////////////wAKqqqg"
+		"AP////////////////////8A/////////////////wAAAAAAAP//////////"
+		"//////////8A/////////////////wAAAAAAAP////////////////////8A"
+		"/////////////////wAAAAAAAP////////////////////8A////////////"
+		"/////wDwAAAPAP////////////////////8A/////////////////wsLAACw"
+		"sP////////////////////8A/////////////////wAAAAAAAP//////////"
+		"//////////8A/////////////////wAAAAAAAP////////////////////8A"
+		"/////////////////wDwAAAPAP////////////////////8A////////////"
+		"/////wsLAACwsP////////////////////8A/////////////////wAAAAAA"
+		"AP////////////////////8A/////////////////wAAAAAAAP//////////"
+		"//////////8A/////////////////wDwAAAPAP////////////////////8A"
+		"/////////////////wsLAACwsP////////////////////8A////////////"
+		"/////wAAAAAAAP////////////////////8A/////////////////wAAAAAA"
+		"AP////////////////////8A/////////////////wDwAAAPAP//////////"
+		"//////////8A/////////////////wsLAACwsP////////////////////8A"
+		"/////////////////wAAAAAAAP////////////////////8A////////////"
+		"//////AAAAAAD/////////////////////8A///////////////////wAAAP"
+		"//////////////////////8A////////////////////////////////////"
+		"//////////8A//////////////////////////////////////////////8A"
+		"//////////////////////////////////////////////8AAAAAAAAAAAAA"
+		"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+		"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+		"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+		"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+		"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+		"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+		"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+		"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+		"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+		"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+		"AAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+
+[Device Classification]
+	Class1 = EtherNetIP;
+
+[Params]
+
+$	********************************
+$	* Configuration Parameters starts at:	1
+$	* Input Data starts at:			200
+$	* Output Data starts at:		300
+$	********************************
+
+$	================================
+$	SECTION: CONFIGURATION DATA
+$	================================
+	
+	Param1 = 
+		0,
+		,,
+		0x0000,
+		0xC6,
+		1,
+		"Pin/Port based IO layout for digital channels",
+		"",
+		"0: Port (default), 1: Pin",
+		0,1,0,
+		,,,,
+		,,,,
+		;
+
+	Enum1 = 
+		0,"Port based",
+		1,"Pin based";
+
+$	********************************
+$	* Global Diagnostic Parameters
+$	********************************
+
+	Param3 = 
+		0,
+		,,
+		0x0000,
+		0xC6,
+		1,
+		"Diag-Param - Global Diagnostic Report",
+		"",
+		"0: Disabled, 1: Enabled (default)",
+		0,1,1,
+		,,,,
+		,,,,
+		;
+
+	Enum3 = 
+		0,"Global Diagnostic Reporting Disabled",
+		1,"Global Diagnostic Reporting Enabled";
+
+	Param4 =
+		0,
+		,,
+		0x0000,
+		0xC6,
+		1,
+		"Diag-Param - Under Voltage Sensor Supply Diagnostic Message",
+		"",
+		"0: Do Not Report, 1: Report (default)",
+		0,1,1
+		,,,,
+		,,,,
+		;
+
+	Enum4 = 
+		0,"Do Not Report",
+		1,"Report";
+
+	Param6 =
+		0,
+		,,
+		0x0000,
+		0xC6,
+		1,
+		"Diag-Param - Under Voltage Actuator Supply Diagnostic Message",
+		"",
+		"0: Do Not Report, 1: Report (default)",
+		0,1,1,
+		,,,,
+		,,,,
+		;
+
+	Enum6 = 
+		0,"Do Not Report",
+		1,"Report";
+
+	Param8 = 
+		0,
+		,,
+		0x0000,
+		0xC6,
+		1,
+		"Diag-Param - No Actuator Supply Diagnostic Message",
+		"",
+		"0: Do Not Report, 1: Report (default)",
+		0,1,1,
+		,,,,
+		,,,,
+		;
+
+	Enum8 = 
+		0,"Do Not Report",
+		1, "Report";
+
+	Param9 = 
+		0,
+		,,
+		0x0000,
+		0xC6,
+		1,
+		"Diag-Param - LED Indication for Suppressed Diagnostic Messages",
+		"",
+		"0: No LED Indication (default), 1: LED Indication",
+		0,1,0,
+		,,,,
+		,,,,
+		;
+
+	Enum9 = 
+		0,"No LED Indication",
+		1,"LED Indication";
+
+	Param10 = 
+		0,
+		,,
+		0x0000,
+		0xC6,
+		1,
+		"Diag-Param - Diagnostic Message Acknowledgement",
+		"",
+		"0: Disabled (default), 1: Enabled",
+		0,1,0,
+		,,,,
+		,,,,
+		;
+
+	Enum10 = 
+		0,"Disabled",
+		1,"Enabled";
+
+$	********************************
+$	* Port Based Diagnostic Parameters
+$	********************************
+
+	Param11 = 
+		0,
+		,,
+		0x0000,
+		0xC6,
+		1,
+		"Diag-Param - Port X0 Diagnostic Report",
+		"",
+		"0: Report All Diagnostic Messages (default), 1: Report All Diagnostic Messages Except For Wire Break, 2: Report Only Wire Break Diagnostic Messages",
+		0,2,0,
+		,,,,
+		,,,,
+		;
+
+	Enum11 = 
+		0,"Report All Diagnostic Messages",
+		1,"Report All Diagnostic Messages Except for Wire Break",
+		2,"Report Only Wire Break Diagnostic Messages";
+
+	Param12 = 
+		0,
+		,,
+		0x0000,
+		0xC6,
+		1,
+		"Diag-Param - Port X1 Diagnostic Report",
+		"",
+		"0: Report All Diagnostic Messages (default), 1: Report All Diagnostic Messages Except For Wire Break, 2: Report Only Wire Break Diagnostic Messages",
+		0,2,0,
+		,,,,
+		,,,,
+		;
+
+	Enum12 = 
+		0,"Report All Diagnostic Messages",
+		1,"Report All Diagnostic Messages Except for Wire Break",
+		2,"Report Only Wire Break Diagnostic Messages";
+
+	Param13 = 
+		0,
+		,,
+		0x0000,
+		0xC6,
+		1,
+		"Diag-Param - Port X2 Diagnostic Report",
+		"",
+		"0: Report All Diagnostic Messages (default), 1: Report All Diagnostic Messages Except For Wire Break, 2: Report Only Wire Break Diagnostic Messages",
+		0,2,0,
+		,,,,
+		,,,,
+		;
+
+	Enum13 = 
+		0,"Report All Diagnostic Messages",
+		1,"Report All Diagnostic Messages Except for Wire Break",
+		2,"Report Only Wire Break Diagnostic Messages";
+
+	Param14 = 
+		0,
+		,,
+		0x0000,
+		0xC6,
+		1,
+		"Diag-Param - Port X3 Diagnostic Report",
+		"",
+		"0: Report All Diagnostic Messages (default), 1: Report All Diagnostic Messages Except For Wire Break, 2: Report Only Wire Break Diagnostic Messages",
+		0,2,0,
+		,,,,
+		,,,,
+		;
+
+	Enum14 = 
+		0,"Report All Diagnostic Messages",
+		1,"Report All Diagnostic Messages Except for Wire Break",
+		2,"Report Only Wire Break Diagnostic Messages";
+
+	Param15 = 
+		0,
+		,,
+		0x0000,
+		0xC6,
+		1,
+		"Diag-Param - Port X4 Diagnostic Report",
+		"",
+		"0: Report All Diagnostic Messages (default), 1: Report All Diagnostic Messages Except For Wire Break, 2: Report Only Wire Break Diagnostic Messages",
+		0,2,0,
+		,,,,
+		,,,,
+		;
+
+	Enum15 = 
+		0,"Report All Diagnostic Messages",
+		1,"Report All Diagnostic Messages Except for Wire Break",
+		2,"Report Only Wire Break Diagnostic Messages";
+
+	Param16 = 
+		0,
+		,,
+		0x0000,
+		0xC6,
+		1,
+		"Diag-Param - Port X5 Diagnostic Report",
+		"",
+		"0: Report All Diagnostic Messages (default), 1: Report All Diagnostic Messages Except For Wire Break, 2: Report Only Wire Break Diagnostic Messages",
+		0,2,0,
+		,,,,
+		,,,,
+		;
+
+	Enum16 = 
+		0,"Report All Diagnostic Messages",
+		1,"Report All Diagnostic Messages Except for Wire Break",
+		2,"Report Only Wire Break Diagnostic Messages";
+
+	Param17 = 
+		0,
+		,,
+		0x0000,
+		0xC6,
+		1,
+		"Diag-Param - Port X6 Diagnostic Report",
+		"",
+		"0: Report All Diagnostic Messages (default), 1: Report All Diagnostic Messages Except For Wire Break, 2: Report Only Wire Break Diagnostic Messages",
+		0,2,0,
+		,,,,
+		,,,,
+		;
+
+	Enum17 = 
+		0,"Report All Diagnostic Messages",
+		1,"Report All Diagnostic Messages Except for Wire Break",
+		2,"Report Only Wire Break Diagnostic Messages";
+
+	Param18 = 
+		0,
+		,,
+		0x0000,
+		0xC6,
+		1,
+		"Diag-Param - Port X7 Diagnostic Report",
+		"",
+		"0: Report All Diagnostic Messages (default), 1: Report All Diagnostic Messages Except For Wire Break, 2: Report Only Wire Break Diagnostic Messages",
+		0,2,0,
+		,,,,
+		,,,,
+		;
+
+	Enum18 = 
+		0,"Report All Diagnostic Messages",
+		1,"Report All Diagnostic Messages Except for Wire Break",
+		2,"Report Only Wire Break Diagnostic Messages";
+
+$	********************************
+$	* Port X0 Configuration Parameters
+$	********************************
+
+	Param19 = 
+		0,
+		,,
+		0x0000,
+		0xC6,
+		1,
+		"IO-Link Port X0 - IO-Link Function Pin 4",
+		"",
+		"0: Deactivated, 1: IO-Link Manual Configuration, 2: IO-Link Autostart (default), 3: Digital Input NO, 4: Digital Output, 97: Digital Input NC",
+		0,97,2,
+		,,,,
+		,,,,
+		;
+
+	Enum19 = 
+		0,"Deactivated",
+		1,"IO-Link Manual Configuration",
+		2,"IO-Link Autostart",
+		3,"Digital Input NO",
+		4,"Digital Output",
+		97,"Digital Input NC";
+
+	Param20 = 
+		0,
+		,,
+		0x0000,
+		0xC6,
+		1,
+		"IO-Link Port X0 - Validation & Backup",
+		"",
+		"0: No Device check, 1: Type compatible Device V1.0, 2: Type compatible Device V1.1, 3: Type compatible Device V1.1, Backup & Restore, 4: Type compatible Device V1.1, Restore",
+		0,4,0,
+		,,,,
+		,,,,
+		;
+
+	Enum20 = 
+		0,"No Device check",
+		1,"Type compatible Device V1.0",
+		2,"Type compatible Device V1.1",
+		3,"Type compatible Device V1.1, Backup & Restore",
+		4,"Type compatible Device V1.1, Restore";
+
+	Param21 = 
+		0,
+		,,
+		0x0000,
+		0xC6,
+		1,
+		"IO-Link Port X0 - Behavior Pin 2 (Ch10)",
+		"",
+		"0: Automatic Mode (DIO), 1: Digital Input NO, 2: Digital Output, 5: AUX Power, 6: Digital Input NC, 7: Deactivated",
+		0,7,0,
+		,,,,
+		,,,,
+		;
+
+	Enum21 = 
+		0,"Automatic Mode (DIO)",
+		1,"Digital Input NO",
+		2,"Digital Output",
+		5,"AUX Power",
+		6,"Digital Input NC",
+		7,"Deactivated";
+
+	Param22 = 
+		0,
+		,,
+		0x0000,
+		0xD1,
+		1,
+		"IO-Link Port X0 - PortCycleTime",
+		"",
+		"0: As fast a possible, 1-255: Bit0..5 Multiplier / Bit6..7 TimeBase [ms]",
+		0,255,0,
+		,,,,
+		,,,,
+		;
+
+	Param23 = 
+		0,
+		,,
+		0x00000,
+		0xD2,
+		2,
+		"IO-Link Port X0 - Vendor ID",
+		"",
+		"Vendor ID of the attached IO-Link device for use with validation setting",
+		0x00,0xFFFF,0x00,
+		,,,,
+		,,,,
+		;
+
+	
+	Param24 = 
+		0,
+		,,
+		0x0000,
+		0xD3,
+		4,
+		"IO-Link Port X0 - Device ID",
+		"",
+		"Device ID of the attached IO-Link device for use with validation setting",
+		0x00,0xFFFFFFFF,0x00,
+		,,,,
+		,,,,
+		;
+
+	Param25 = 
+		0,
+		,,
+		0x0000,
+		0xC6,
+		1,
+		"IO-Link Port X0 - IO-Link Process Data Swap",
+		"",
+		"0: No Swap (default), 1: 16-bit Swap, 2: 32-bit Swap, 3: Full Swap",
+		0,3,0,
+		,,,,
+		,,,,
+		;
+
+	Enum25 = 
+		0,"No Swap",
+		1,"16-bit Swap",
+		2,"32-bit Swap",
+		3,"Full Swap";
+
+	Param26 = 
+		0,
+		,,
+		0x0000,
+		0xC6,
+		1,
+		"IO-Link Port X0 - IO-Link Event Integration",
+		"",
+		"0: Standard Integration, 1: Murrelektronik Integration, 2: Murrelektronik IO-Link Extended Integration",
+		0,2,0,
+		,,,,
+		,,,,
+		;
+
+	Enum26 = 
+		0,"Standard Integration",
+		1,"Murrelektronik Integration",
+		2,"Murrelektronik IO-Link Extended Integration";
+
+	Param27 = 
+		0,
+		,,
+		0x0000,
+		0xC6,
+		1,
+		"IO-Link Port X0 - Digital Input Signal Filter Pin 4",
+		"",
+		"0: No Filter (default), 1: 1ms, 2: 3ms, 3: 5ms, 4: 10ms, 5: 15ms",
+		0,5,0,
+		,,,,
+		,,,,
+		;
+
+	Enum27 = 
+		0,"No Filter (default)",
+		1,"1ms",
+		2,"3ms",
+		3,"5ms",
+		4,"10ms",
+		5,"15ms";
+
+	Param28 = 
+		0,
+		,,
+		0x0000,
+		0xC6,
+		1,
+		"IO-Link Port X0 - Digital Input Signal Filter Pin 2",
+		"",
+		"0: No Filter (default), 1: 1ms, 2: 3ms, 3: 5ms, 4: 10ms, 5: 15ms",
+		0,5,0,
+		,,,,
+		,,,,
+		;
+
+	Enum28 = 
+		0,"No Filter (default)",
+		1,"1ms",
+		2,"3ms",
+		3,"5ms",
+		4,"10ms",
+		5,"15ms";
+
+	Param31 = 
+		0,
+		,,
+		0x0000,
+		0xC6,
+		1,
+		"IO-Link Port X0 - Digital Port Function Configuration Pin 1",
+		"",
+		"0: Deactivated, 1: L+ (US) Sensor Supply (default)",
+		0,1,1,
+		,,,,
+		,,,,
+		;
+
+	Enum31 = 
+		0,"Deactivated",
+		1,"L+ (US) Sensory Supply";
+
+	Param35 = 
+		0,
+		,,
+		0x0000,
+		0xC6,
+		1,
+		"IO-Link Port X0 - Output Fault Recovery Mode Pin 2",
+		"",
+		"0: Automatic Recovery, 1: Manual Recovery",
+		0,1,0,
+		,,,,
+		,,,,
+		;
+
+	Enum35 = 
+		0,"Automatic Recovery",
+		1,"Manual Recovery";
+
+	Param36 = 
+		0,
+		,,
+		0x0000,
+		0xC6,
+		1,
+		"IO-Link Port X0 - Output Fault Recovery Mode Pin 4",
+		"",
+		"0: Automatic Recovery, 1: Manual Recovery",
+		0,1,0,
+		,,,,
+		,,,,
+		;
+
+	Enum36 = 
+		0,"Automatic Recovery",
+		1,"Manual Recovery";
+
+	Param37 = 
+		0,
+		,,
+		0x0000,
+		0xC6,
+		1,
+		"IO-Link Port X0 - IO-Link Input Length",
+		"",
+		"0 to 32 bytes",
+		0,32,0,
+		,,,,
+		,,,,
+		;
+
+	Param38 = 
+		0,
+		,,
+		0x0000,
+		0xC6,
+		1,
+		"IO-Link Port X0 - IO-Link Port Output Length",
+		"",
+		"0 to 32 bytes",
+		0,32,0,
+		,,,,
+		,,,,
+		;
+
+$	********************************
+$	* Port X1 Configuration Parameters
+$	********************************	
+
+	Param39 = 
+		0,
+		,,
+		0x0000,
+		0xC6,
+		1,
+		"IO-Link Port X1 - IO-Link Function Pin 4",
+		"",
+		"0: Deactivated, 1: IO-Link Manual Configuration, 2: IO-Link Autostart (default), 3: Digital Input NO, 4: Digital Output, 97: Digital Input NC",
+		0,97,2,
+		,,,,
+		,,,,
+		;
+
+	Enum39 = 
+		0,"Deactivated",
+		1,"IO-Link Manual Configuration",
+		2,"IO-Link Autostart",
+		3,"Digital Input NO",
+		4,"Digital Output",
+		97,"Digital Input NC";
+
+	Param40 = 
+		0,
+		,,
+		0x0000,
+		0xC6,
+		1,
+		"IO-Link Port X1 - Validation & Backup",
+		"",
+		"0: No Device check, 1: Type compatible Device V1.0, 2: Type compatible Device V1.1, 3: Type compatible Device V1.1, Backup & Restore, 4: Type compatible Device V1.1, Restore",
+		0,4,0,
+		,,,,
+		,,,,
+		;
+
+	Enum40 = 
+		0,"No Device check",
+		1,"Type compatible Device V1.0",
+		2,"Type compatible Device V1.1",
+		3,"Type compatible Device V1.1, Backup & Restore",
+		4,"Type compatible Device V1.1, Restore";
+
+	Param41 = 
+		0,
+		,,
+		0x0000,
+		0xC6,
+		1,
+		"IO-Link Port X1 - Behavior Pin 2 (Ch10)",
+		"",
+		"0: Automatic Mode (DIO), 1: Digital Input NO, 2: Digital Output, 5: AUX Power, 6: Digital Input NC, 7: Deactivated",
+		0,7,0,
+		,,,,
+		,,,,
+		;
+
+	Enum41 = 
+		0,"Automatic Mode (DIO)",
+		1,"Digital Input NO",
+		2,"Digital Output",
+		5,"AUX Power",
+		6,"Digital Input NC",
+		7,"Deactivated";
+
+	Param42 = 
+		0,
+		,,
+		0x0000,
+		0xD1,
+		1,
+		"IO-Link Port X1 - PortCycleTime",
+		"",
+		"0: As fast a possible, 1-255: Bit0..5 Multiplier / Bit6..7 TimeBase [ms]",
+		0,255,0,
+		,,,,
+		,,,,
+		;
+
+	Param43 = 
+		0,
+		,,
+		0x00000,
+		0xD2,
+		2,
+		"IO-Link Port X1 - Vendor ID",
+		"",
+		"Vendor ID of the attached IO-Link device for use with validation setting",
+		0x00,0xFFFF,0x00,
+		,,,,
+		,,,,
+		;
+
+	
+	Param44 = 
+		0,
+		,,
+		0x0000,
+		0xD3,
+		4,
+		"IO-Link Port X1 - Device ID",
+		"",
+		"Device ID of the attached IO-Link device for use with validation setting",
+		0x00,0xFFFFFFFF,0x00,
+		,,,,
+		,,,,
+		;
+
+	Param45 = 
+		0,
+		,,
+		0x0000,
+		0xC6,
+		1,
+		"IO-Link Port X1 - IO-Link Process Data Swap",
+		"",
+		"0: No Swap (default), 1: 16-bit Swap, 2: 32-bit Swap, 3: Full Swap",
+		0,3,0,
+		,,,,
+		,,,,
+		;
+
+	Enum45 = 
+		0,"No Swap",
+		1,"16-bit Swap",
+		2,"32-bit Swap",
+		3,"Full Swap";
+
+	Param46 = 
+		0,
+		,,
+		0x0000,
+		0xC6,
+		1,
+		"IO-Link Port X1 - IO-Link Event Integration",
+		"",
+		"0: Standard Integration, 1: Murrelektronik Integration, 2: Murrelektronik IO-Link Extended Integration",
+		0,2,0,
+		,,,,
+		,,,,
+		;
+
+	Enum46 = 
+		0,"Standard Integration",
+		1,"Murrelektronik Integration",
+		2,"Murrelektronik IO-Link Extended Integration";
+
+	Param47 = 
+		0,
+		,,
+		0x0000,
+		0xC6,
+		1,
+		"IO-Link Port X1 - Digital Input Signal Filter Pin 4",
+		"",
+		"0: No Filter (default), 1: 1ms, 2: 3ms, 3: 5ms, 4: 10ms, 5: 15ms",
+		0,5,0,
+		,,,,
+		,,,,
+		;
+
+	Enum47 = 
+		0,"No Filter (default)",
+		1,"1ms",
+		2,"3ms",
+		3,"5ms",
+		4,"10ms",
+		5,"15ms";
+
+	Param48 = 
+		0,
+		,,
+		0x0000,
+		0xC6,
+		1,
+		"IO-Link Port X1 - Digital Input Signal Filter Pin 2",
+		"",
+		"0: No Filter (default), 1: 1ms, 2: 3ms, 3: 5ms, 4: 10ms, 5: 15ms",
+		0,5,0,
+		,,,,
+		,,,,
+		;
+
+	Enum48 =
+		0,"No Filter (default)",
+		1,"1ms",
+		2,"3ms",
+		3,"5ms",
+		4,"10ms",
+		5,"15ms";
+
+	Param51 = 
+		0,
+		,,
+		0x0000,
+		0xC6,
+		1,
+		"IO-Link Port X1 - Digital Port Function Configuration Pin 1",
+		"",
+		"0: Deactivated, 1: L+ (US) Sensor Supply (default)",
+		0,1,1,
+		,,,,
+		,,,,
+		;
+
+	Enum51 = 
+		0,"Deactivated",
+		1,"L+ (US) Sensory Supply";
+
+	Param55 = 
+		0,
+		,,
+		0x0000,
+		0xC6,
+		1,
+		"IO-Link Port X1 - Output Fault Recovery Mode Pin 2",
+		"",
+		"0: Automatic Recovery, 1: Manual Recovery",
+		0,1,0,
+		,,,,
+		,,,,
+		;
+
+	Enum55 = 
+		0,"Automatic Recovery",
+		1,"Manual Recovery";
+
+	Param56 = 
+		0,
+		,,
+		0x0000,
+		0xC6,
+		1,
+		"IO-Link Port X1 - Output Fault Recovery Mode Pin 4",
+		"",
+		"0: Automatic Recovery, 1: Manual Recovery",
+		0,1,0,
+		,,,,
+		,,,,
+		;
+
+	Enum56 = 
+		0,"Automatic Recovery",
+		1,"Manual Recovery";
+
+	Param57 = 
+		0,
+		,,
+		0x0000,
+		0xC6,
+		1,
+		"IO-Link Port X1 - IO-Link Input Length",
+		"",
+		"0 to 32 bytes",
+		0,32,0,
+		,,,,
+		,,,,
+		;
+
+	Param58 = 
+		0,
+		,,
+		0x0000,
+		0xC6,
+		1,
+		"IO-Link Port X1 - IO-Link Output Length",
+		"",
+		"0 to 32 bytes",
+		0,32,0,
+		,,,,
+		,,,,
+		;
+
+$	********************************
+$	* Port X2 Configuration Parameters
+$	********************************	
+
+	Param59 = 
+		0,
+		,,
+		0x0000,
+		0xC6,
+		1,
+		"IO-Link Port X2 - IO-Link Function Pin 4",
+		"",
+		"0: Deactivated, 1: IO-Link Manual Configuration, 2: IO-Link Autostart (default), 3: Digital Input NO, 4: Digital Output, 97: Digital Input NC",
+		0,97,2,
+		,,,,
+		,,,,
+		;
+
+	Enum59 = 
+		0,"Deactivated",
+		1,"IO-Link Manual Configuration",
+		2,"IO-Link Autostart",
+		3,"Digital Input NO",
+		4,"Digital Output",
+		97,"Digital Input NC";
+
+	Param60 = 
+		0,
+		,,
+		0x0000,
+		0xC6,
+		1,
+		"IO-Link Port X2 - Validation & Backup",
+		"",
+		"0: No Device check, 1: Type compatible Device V1.0, 2: Type compatible Device V1.1, 3: Type compatible Device V1.1, Backup & Restore, 4: Type compatible Device V1.1, Restore",
+		0,4,0,
+		,,,,
+		,,,,
+		;
+
+	Enum60 = 
+		0,"No Device check",
+		1,"Type compatible Device V1.0",
+		2,"Type compatible Device V1.1",
+		3,"Type compatible Device V1.1, Backup & Restore",
+		4,"Type compatible Device V1.1, Restore";
+
+	Param61 = 
+		0,
+		,,
+		0x0000,
+		0xC6,
+		1,
+		"IO-Link Port X2 - Behavior Pin 2 (Ch10)",
+		"",
+		"0: Automatic Mode (DIO), 1: Digital Input NO, 2: Digital Output, 5: AUX Power, 6: Digital Input NC, 7: Deactivated",
+		0,7,0,
+		,,,,
+		,,,,
+		;
+
+	Enum61 = 
+		0,"Automatic Mode (DIO)",
+		1,"Digital Input NO",
+		2,"Digital Output",
+		5,"AUX Power",
+		6,"Digital Input NC",
+		7,"Deactivated";
+
+	Param62 = 
+		0,
+		,,
+		0x0000,
+		0xD1,
+		1,
+		"IO-Link Port X2 - PortCycleTime",
+		"",
+		"0: As fast a possible, 1-255: Bit0..5 Multiplier / Bit6..7 TimeBase [ms]",
+		0,255,0,
+		,,,,
+		,,,,
+		;
+
+	Param63 = 
+		0,
+		,,
+		0x00000,
+		0xD2,
+		2,
+		"IO-Link Port X2 - Vendor ID",
+		"",
+		"Vendor ID of the attached IO-Link device for use with validation setting",
+		0x00,0xFFFF,0x00,
+		,,,,
+		,,,,
+		;
+
+	
+	Param64 = 
+		0,
+		,,
+		0x0000,
+		0xD3,
+		4,
+		"IO-Link Port X2 - Device ID",
+		"",
+		"Device ID of the attached IO-Link device for use with validation setting",
+		0x00,0xFFFFFFFF,0x00,
+		,,,,
+		,,,,
+		;
+
+	Param65 = 
+		0,
+		,,
+		0x0000,
+		0xC6,
+		1,
+		"IO-Link Port X2 - IO-Link Process Data Swap",
+		"",
+		"0: No Swap (default), 1: 16-bit Swap, 2: 32-bit Swap, 3: Full Swap",
+		0,3,0,
+		,,,,
+		,,,,
+		;
+
+	Enum65 = 
+		0,"No Swap",
+		1,"16-bit Swap",
+		2,"32-bit Swap",
+		3,"Full Swap";
+
+	Param66 = 
+		0,
+		,,
+		0x0000,
+		0xC6,
+		1,
+		"IO-Link Port X2 - IO-Link Event Integration",
+		"",
+		"0: Standard Integration, 1: Murrelektronik Integration, 2: Murrelektronik IO-Link Extended Integration",
+		0,2,0,
+		,,,,
+		,,,,
+		;
+
+	Enum66 = 
+		0,"Standard Integration",
+		1,"Murrelektronik Integration",
+		2,"Murrelektronik IO-Link Extended Integration";
+
+	Param67 = 
+		0,
+		,,
+		0x0000,
+		0xC6,
+		1,
+		"IO-Link Port X2 - Digital Input Signal Filter Pin 4",
+		"",
+		"0: No Filter (default), 1: 1ms, 2: 3ms, 3: 5ms, 4: 10ms, 5: 15ms",
+		0,5,0,
+		,,,,
+		,,,,
+		;
+
+	Enum67 =
+		0,"No Filter (default)",
+		1,"1ms",
+		2,"3ms",
+		3,"5ms",
+		4,"10ms",
+		5,"15ms";
+
+	Param68 = 
+		0,
+		,,
+		0x0000,
+		0xC6,
+		1,
+		"IO-Link Port X2 - Digital Input Signal Filter Pin 2",
+		"",
+		"0: No Filter (default), 1: 1ms, 2: 3ms, 3: 5ms, 4: 10ms, 5: 15ms",
+		0,5,0,
+		,,,,
+		,,,,
+		;
+
+	Enum68 = 
+		0,"No Filter (default)",
+		1,"1ms",
+		2,"3ms",
+		3,"5ms",
+		4,"10ms",
+		5,"15ms";
+
+	Param71 = 
+		0,
+		,,
+		0x0000,
+		0xC6,
+		1,
+		"IO-Link Port X2 - Digital Port Function Configuration Pin 1",
+		"",
+		"0: Deactivated, 1: L+ (US) Sensor Supply (default)",
+		0,1,1,
+		,,,,
+		,,,,
+		;
+
+	Enum71 = 
+		0,"Deactivated",
+		1,"L+ (US) Sensory Supply";
+
+	Param75 = 
+		0,
+		,,
+		0x0000,
+		0xC6,
+		1,
+		"IO-Link Port X2 - Output Fault Recovery Mode Pin 2",
+		"",
+		"0: Automatic Recovery, 1: Manual Recovery",
+		0,1,0,
+		,,,,
+		,,,,
+		;
+
+	Enum75 = 
+		0,"Automatic Recovery",
+		1,"Manual Recovery";
+
+	Param76 = 
+		0,
+		,,
+		0x0000,
+		0xC6,
+		1,
+		"IO-Link Port X2 - Output Fault Recovery Mode Pin 4",
+		"",
+		"0: Automatic Recovery, 1: Manual Recovery",
+		0,1,0,
+		,,,,
+		,,,,
+		;
+
+	Enum76 = 
+		0,"Automatic Recovery",
+		1,"Manual Recovery";
+
+	Param77 = 
+		0,
+		,,
+		0x0000,
+		0xC6,
+		1,
+		"IO-Link Port X2 - IO-Link Input Length",
+		"",
+		"0 to 32 bytes",
+		0,32,0,
+		,,,,
+		,,,,
+		;
+
+	Param78 = 
+		0,
+		,,
+		0x0000,
+		0xC6,
+		1,
+		"IO-Link Port X2 - IO-Link Output Length",
+		"",
+		"0 to 32 bytes",
+		0,32,0,
+		,,,,
+		,,,,
+		;
+
+$	********************************
+$	* Port X3 Configuration Parameters
+$	********************************	
+
+	Param79 = 
+		0,
+		,,
+		0x0000,
+		0xC6,
+		1,
+		"IO-Link Port X3 - IO-Link Function Pin 4",
+		"",
+		"0: Deactivated, 1: IO-Link Manual Configuration, 2: IO-Link Autostart (default), 3: Digital Input NO, 4: Digital Output, 97: Digital Input NC",
+		0,97,2,
+		,,,,
+		,,,,
+		;
+
+	Enum79 = 
+		0,"Deactivated",
+		1,"IO-Link Manual Configuration",
+		2,"IO-Link Autostart",
+		3,"Digital Input NO",
+		4,"Digital Output",
+		97,"Digital Input NC";
+
+	Param80 = 
+		0,
+		,,
+		0x0000,
+		0xC6,
+		1,
+		"IO-Link Port X3 - Validation & Backup",
+		"",
+		"0: No Device check, 1: Type compatible Device V1.0, 2: Type compatible Device V1.1, 3: Type compatible Device V1.1, Backup & Restore, 4: Type compatible Device V1.1, Restore",
+		0,4,0,
+		,,,,
+		,,,,
+		;
+
+	Enum80 = 
+		0,"No Device check",
+		1,"Type compatible Device V1.0",
+		2,"Type compatible Device V1.1",
+		3,"Type compatible Device V1.1, Backup & Restore",
+		4,"Type compatible Device V1.1, Restore";
+
+	Param81 = 
+		0,
+		,,
+		0x0000,
+		0xC6,
+		1,
+		"IO-Link Port X3 - Behavior Pin 2 (Ch10)",
+		"",
+		"0: Automatic Mode (DIO), 1: Digital Input NO, 2: Digital Output, 5: AUX Power, 6: Digital Input NC, 7: Deactivated",
+		0,7,0,
+		,,,,
+		,,,,
+		;
+
+	Enum81 = 
+		0,"Automatic Mode (DIO)",
+		1,"Digital Input NO",
+		2,"Digital Output",
+		5,"AUX Power",
+		6,"Digital Input NC",
+		7,"Deactivated";
+
+	Param82 = 
+		0,
+		,,
+		0x0000,
+		0xD1,
+		1,
+		"IO-Link Port X3 - PortCycleTime",
+		"",
+		"0: As fast a possible, 1-255: Bit0..5 Multiplier / Bit6..7 TimeBase [ms]",
+		0,255,0,
+		,,,,
+		,,,,
+		;
+
+	Param83 = 
+		0,
+		,,
+		0x00000,
+		0xD2,
+		2,
+		"IO-Link Port X3 - Vendor ID",
+		"",
+		"Vendor ID of the attached IO-Link device for use with validation setting",
+		0x00,0xFFFF,0x00,
+		,,,,
+		,,,,
+		;
+
+	
+	Param84 = 
+		0,
+		,,
+		0x0000,
+		0xD3,
+		4,
+		"IO-Link Port X3 - Device ID",
+		"",
+		"Device ID of the attached IO-Link device for use with validation setting",
+		0x00,0xFFFFFFFF,0x00,
+		,,,,
+		,,,,
+		;
+
+	Param85 = 
+		0,
+		,,
+		0x0000,
+		0xC6,
+		1,
+		"IO-Link Port X3 - IO-Link Process Data Swap",
+		"",
+		"0: No Swap (default), 1: 16-bit Swap, 2: 32-bit Swap, 3: Full Swap",
+		0,3,0,
+		,,,,
+		,,,,
+		;
+
+	Enum85 = 
+		0,"No Swap",
+		1,"16-bit Swap",
+		2,"32-bit Swap",
+		3,"Full Swap";
+
+	Param86 = 
+		0,
+		,,
+		0x0000,
+		0xC6,
+		1,
+		"IO-Link Port X3 - IO-Link Event Integration",
+		"",
+		"0: Standard Integration, 1: Murrelektronik Integration, 2: Murrelektronik IO-Link Extended Integration",
+		0,2,0,
+		,,,,
+		,,,,
+		;
+
+	Enum86 = 
+		0,"Standard Integration",
+		1,"Murrelektronik Integration",
+		2,"Murrelektronik IO-Link Extended Integration";
+
+	Param87 = 
+		0,
+		,,
+		0x0000,
+		0xC6,
+		1,
+		"IO-Link Port X3 - Digital Input Signal Filter Pin 4",
+		"",
+		"0: No Filter (default), 1: 1ms, 2: 3ms, 3: 5ms, 4: 10ms, 5: 15ms",
+		0,5,0,
+		,,,,
+		,,,,
+		;
+
+	Enum87 =
+		0,"No Filter (default)", 
+		1,"1ms",
+		2,"3ms",
+		3,"5ms",
+		4,"10ms",
+		5,"15ms";
+
+	Param88 = 
+		0,
+		,,
+		0x0000,
+		0xC6,
+		1,
+		"IO-Link Port X3 - Digital Input Signal Filter Pin 2",
+		"",
+		"0: No Filter (default), 1: 1ms, 2: 3ms, 3: 5ms, 4: 10ms, 5: 15ms",
+		0,5,0,
+		,,,,
+		,,,,
+		;
+
+	Enum88 =
+		0,"No Filter (default)", 
+		1,"1ms",
+		2,"3ms",
+		3,"5ms",
+		4,"10ms",
+		5,"15ms";
+
+	Param91 = 
+		0,
+		,,
+		0x0000,
+		0xC6,
+		1,
+		"IO-Link Port X3 - Digital Port Function Configuration Pin 1",
+		"",
+		"0: Deactivated, 1: L+ (US) Sensor Supply (default)",
+		0,1,1,
+		,,,,
+		,,,,
+		;
+
+	Enum91 = 
+		0,"Deactivated",
+		1,"L+ (US) Sensory Supply";
+
+	Param95 = 
+		0,
+		,,
+		0x0000,
+		0xC6,
+		1,
+		"IO-Link Port X3 - Output Fault Recovery Mode Pin 2",
+		"",
+		"0: Automatic Recovery, 1: Manual Recovery",
+		0,1,0,
+		,,,,
+		,,,,
+		;
+
+	Enum95 = 
+		0,"Automatic Recovery",
+		1,"Manual Recovery";
+
+	Param96 = 
+		0,
+		,,
+		0x0000,
+		0xC6,
+		1,
+		"IO-Link Port X3 - Output Fault Recovery Mode Pin 4",
+		"",
+		"0: Automatic Recovery, 1: Manual Recovery",
+		0,1,0,
+		,,,,
+		,,,,
+		;
+
+	Enum96 = 
+		0,"Automatic Recovery",
+		1,"Manual Recovery";
+
+	Param97 = 
+		0,
+		,,
+		0x0000,
+		0xC6,
+		1,
+		"IO-Link Port X3 - IO-Link Input Length",
+		"",
+		"0 to 32 bytes",
+		0,32,0,
+		,,,,
+		,,,,
+		;
+
+	Param98 = 
+		0,
+		,,
+		0x0000,
+		0xC6,
+		1,
+		"IO-Link Port X3 - IO-Link Output Length",
+		"",
+		"0 to 32 bytes",
+		0,32,0,
+		,,,,
+		,,,,
+		;
+
+$	********************************
+$	* Port X4 Configuration Parameters
+$	********************************	
+
+	Param99 = 
+		0,
+		,,
+		0x0000,
+		0xC6,
+		1,
+		"IO-Link Port X4 - IO-Link Function Pin 4",
+		"",
+		"0: Deactivated, 1: IO-Link Manual Configuration, 2: IO-Link Autostart (default), 3: Digital Input NO, 4: Digital Output, 97: Digital Input NC",
+		0,97,2,
+		,,,,
+		,,,,
+		;
+
+	Enum99 = 
+		0,"Deactivated",
+		1,"IO-Link Manual Configuration",
+		2,"IO-Link Autostart",
+		3,"Digital Input NO",
+		4,"Digital Output",
+		97,"Digital Input NC";
+
+	Param100 = 
+		0,
+		,,
+		0x0000,
+		0xC6,
+		1,
+		"IO-Link Port X4 - Validation & Backup",
+		"",
+		"0: No Device check, 1: Type compatible Device V1.0, 2: Type compatible Device V1.1, 3: Type compatible Device V1.1, Backup & Restore, 4: Type compatible Device V1.1, Restore",
+		0,4,0,
+		,,,,
+		,,,,
+		;
+
+	Enum100 = 
+		0,"No Device check",
+		1,"Type compatible Device V1.0",
+		2,"Type compatible Device V1.1",
+		3,"Type compatible Device V1.1, Backup & Restore",
+		4,"Type compatible Device V1.1, Restore";
+
+	Param101 = 
+		0,
+		,,
+		0x0000,
+		0xC6,
+		1,
+		"IO-Link Port X4 - Behavior Pin 2 (Ch10)",
+		"",
+		"0: Automatic Mode (DIO), 1: Digital Input NO, 2: Digital Output, 5: AUX Power, 6: Digital Input NC, 7: Deactivated",
+		0,7,0,
+		,,,,
+		,,,,
+		;
+
+	Enum101 = 
+		0,"Automatic Mode (DIO)",
+		1,"Digital Input NO",
+		2,"Digital Output",
+		5,"AUX Power",
+		6,"Digital Input NC",
+		7,"Deactivated";
+
+	Param102 = 
+		0,
+		,,
+		0x0000,
+		0xD1,
+		1,
+		"IO-Link Port X4 - PortCycleTime",
+		"",
+		"0: As fast a possible, 1-255: Bit0..5 Multiplier / Bit6..7 TimeBase [ms]",
+		0,255,0,
+		,,,,
+		,,,,
+		;
+
+	Param103 = 
+		0,
+		,,
+		0x00000,
+		0xD2,
+		2,
+		"IO-Link Port X4 - Vendor ID",
+		"",
+		"Vendor ID of the attached IO-Link device for use with validation setting",
+		0x00,0xFFFF,0x00,
+		,,,,
+		,,,,
+		;
+
+	
+	Param104 = 
+		0,
+		,,
+		0x0000,
+		0xD3,
+		4,
+		"IO-Link Port X4 - Device ID",
+		"",
+		"Device ID of the attached IO-Link device for use with validation setting",
+		0x00,0xFFFFFFFF,0x00,
+		,,,,
+		,,,,
+		;
+
+	Param105 = 
+		0,
+		,,
+		0x0000,
+		0xC6,
+		1,
+		"IO-Link Port X4 - IO-Link Process Data Swap",
+		"",
+		"0: No Swap (default), 1: 16-bit Swap, 2: 32-bit Swap, 3: Full Swap",
+		0,3,0,
+		,,,,
+		,,,,
+		;
+
+	Enum105 = 
+		0,"No Swap",
+		1,"16-bit Swap",
+		2,"32-bit Swap",
+		3,"Full Swap";
+
+	Param106 = 
+		0,
+		,,
+		0x0000,
+		0xC6,
+		1,
+		"IO-Link Port X4 - IO-Link Event Integration",
+		"",
+		"0: Standard Integration, 1: Murrelektronik Integration, 2: Murrelektronik IO-Link Extended Integration",
+		0,2,0,
+		,,,,
+		,,,,
+		;
+
+	Enum106 = 
+		0,"Standard Integration",
+		1,"Murrelektronik Integration",
+		2,"Murrelektronik IO-Link Extended Integration";
+
+	Param107 = 
+		0,
+		,,
+		0x0000,
+		0xC6,
+		1,
+		"IO-Link Port X4 - Digital Input Signal Filter Pin 4",
+		"",
+		"0: No Filter (default), 1: 1ms, 2: 3ms, 3: 5ms, 4: 10ms, 5: 15ms",
+		0,5,0,
+		,,,,
+		,,,,
+		;
+
+	Enum107 =
+		0,"No Filter (default)", 
+		1,"1ms",
+		2,"3ms",
+		3,"5ms",
+		4,"10ms",
+		5,"15ms";
+
+	Param108 = 
+		0,
+		,,
+		0x0000,
+		0xC6,
+		1,
+		"IO-Link Port X4 - Digital Input Signal Filter Pin 2",
+		"",
+		"0: No Filter (default), 1: 1ms, 2: 3ms, 3: 5ms, 4: 10ms, 5: 15ms",
+		0,5,0,
+		,,,,
+		,,,,
+		;
+
+	Enum108 =
+		0,"No Filter (default)", 
+		1,"1ms",
+		2,"3ms",
+		3,"5ms",
+		4,"10ms",
+		5,"15ms";
+
+	Param111 = 
+		0,
+		,,
+		0x0000,
+		0xC6,
+		1,
+		"IO-Link Port X4 - Digital Port Function Configuration Pin 1",
+		"",
+		"0: Deactivated, 1: L+ (US) Sensor Supply (default)",
+		0,1,1,
+		,,,,
+		,,,,
+		;
+
+	Enum111 = 
+		0,"Deactivated",
+		1,"L+ (US) Sensory Supply";
+
+	Param115 = 
+		0,
+		,,
+		0x0000,
+		0xC6,
+		1,
+		"IO-Link Port X4 - Output Fault Recovery Mode Pin 2",
+		"",
+		"0: Automatic Recovery, 1: Manual Recovery",
+		0,1,0,
+		,,,,
+		,,,,
+		;
+
+	Enum115 = 
+		0,"Automatic Recovery",
+		1,"Manual Recovery";
+
+	Param116 = 
+		0,
+		,,
+		0x0000,
+		0xC6,
+		1,
+		"IO-Link Port X4 - Output Fault Recovery Mode Pin 4",
+		"",
+		"0: Automatic Recovery, 1: Manual Recovery",
+		0,1,0,
+		,,,,
+		,,,,
+		;
+
+	Enum116 = 
+		0,"Automatic Recovery",
+		1,"Manual Recovery";
+
+	Param117 = 
+		0,
+		,,
+		0x0000,
+		0xC6,
+		1,
+		"IO-Link Port X4 - IO-Link Input Length",
+		"",
+		"0 to 32 bytes",
+		0,32,0,
+		,,,,
+		,,,,
+		;
+
+	Param118 = 
+		0,
+		,,
+		0x0000,
+		0xC6,
+		1,
+		"IO-Link Port X4 - IO-Link Output Length",
+		"",
+		"0 to 32 bytes",
+		0,32,0,
+		,,,,
+		,,,,
+		;
+
+$	********************************
+$	* Port X5 Configuration Parameters
+$	********************************	
+
+	Param119 = 
+		0,
+		,,
+		0x0000,
+		0xC6,
+		1,
+		"IO-Link Port X5 - IO-Link Function Pin 4",
+		"",
+		"0: Deactivated, 1: IO-Link Manual Configuration, 2: IO-Link Autostart (default), 3: Digital Input NO, 4: Digital Output, 97: Digital Input NC",
+		0,97,2,
+		,,,,
+		,,,,
+		;
+
+	Enum119 = 
+		0,"Deactivated",
+		1,"IO-Link Manual Configuration",
+		2,"IO-Link Autostart",
+		3,"Digital Input NO",
+		4,"Digital Output",
+		97,"Digital Input NC";
+
+	Param120 = 
+		0,
+		,,
+		0x0000,
+		0xC6,
+		1,
+		"IO-Link Port X5 - Validation & Backup",
+		"",
+		"0: No Device check, 1: Type compatible Device V1.0, 2: Type compatible Device V1.1, 3: Type compatible Device V1.1, Backup & Restore, 4: Type compatible Device V1.1, Restore",
+		0,4,0,
+		,,,,
+		,,,,
+		;
+
+	Enum120 = 
+		0,"No Device check",
+		1,"Type compatible Device V1.0",
+		2,"Type compatible Device V1.1",
+		3,"Type compatible Device V1.1, Backup & Restore",
+		4,"Type compatible Device V1.1, Restore";
+
+	Param121 = 
+		0,
+		,,
+		0x0000,
+		0xC6,
+		1,
+		"IO-Link Port X5 - Behavior Pin 2 (Ch10)",
+		"",
+		"0: Automatic Mode (DIO), 1: Digital Input NO, 2: Digital Output, 5: AUX Power, 6: Digital Input NC, 7: Deactivated",
+		0,7,0,
+		,,,,
+		,,,,
+		;
+
+	Enum121 = 
+		0,"Automatic Mode (DIO)",
+		1,"Digital Input NO",
+		2,"Digital Output",
+		5,"AUX Power",
+		6,"Digital Input NC",
+		7,"Deactivated";
+
+	Param122 = 
+		0,
+		,,
+		0x0000,
+		0xD1,
+		1,
+		"IO-Link Port X5 - PortCycleTime",
+		"",
+		"0: As fast a possible, 1-255: Bit0..5 Multiplier / Bit6..7 TimeBase [ms]",
+		0,255,0,
+		,,,,
+		,,,,
+		;
+
+	Param123 = 
+		0,
+		,,
+		0x00000,
+		0xD2,
+		2,
+		"IO-Link Port X5 - Vendor ID",
+		"",
+		"Vendor ID of the attached IO-Link device for use with validation setting",
+		0x00,0xFFFF,0x00,
+		,,,,
+		,,,,
+		;
+
+	
+	Param124 = 
+		0,
+		,,
+		0x0000,
+		0xD3,
+		4,
+		"IO-Link Port X5 - Device ID",
+		"",
+		"Device ID of the attached IO-Link device for use with validation setting",
+		0x00,0xFFFFFFFF,0x00,
+		,,,,
+		,,,,
+		;
+
+	Param125 = 
+		0,
+		,,
+		0x0000,
+		0xC6,
+		1,
+		"IO-Link Port X5 - IO-Link Process Data Swap",
+		"",
+		"0: No Swap (default), 1: 16-bit Swap, 2: 32-bit Swap, 3: Full Swap",
+		0,3,0,
+		,,,,
+		,,,,
+		;
+
+	Enum125 = 
+		0,"No Swap",
+		1,"16-bit Swap",
+		2,"32-bit Swap",
+		3,"Full Swap";
+
+	Param126 = 
+		0,
+		,,
+		0x0000,
+		0xC6,
+		1,
+		"IO-Link Port X5 - IO-Link Event Integration",
+		"",
+		"0: Standard Integration, 1: Murrelektronik Integration, 2: Murrelektronik IO-Link Extended Integration",
+		0,2,0,
+		,,,,
+		,,,,
+		;
+
+	Enum126 = 
+		0,"Standard Integration",
+		1,"Murrelektronik Integration",
+		2,"Murrelektronik IO-Link Extended Integration";
+
+	Param127 = 
+		0,
+		,,
+		0x0000,
+		0xC6,
+		1,
+		"IO-Link Port X5 - Digital Input Signal Filter Pin 4",
+		"",
+		"0: No Filter (default), 1: 1ms, 2: 3ms, 3: 5ms, 4: 10ms, 5: 15ms",
+		0,5,0,
+		,,,,
+		,,,,
+		;
+
+	Enum127 =
+		0,"No Filter (default)", 
+		1,"1ms",
+		2,"3ms",
+		3,"5ms",
+		4,"10ms",
+		5,"15ms";
+
+	Param128 = 
+		0,
+		,,
+		0x0000,
+		0xC6,
+		1,
+		"IO-Link Port X5 - Digital Input Signal Filter Pin 2",
+		"",
+		"0: No Filter (default), 1: 1ms, 2: 3ms, 3: 5ms, 4: 10ms, 5: 15ms",
+		0,5,0,
+		,,,,
+		,,,,
+		;
+
+	Enum128 =
+		0,"No Filter (default)", 
+		1,"1ms",
+		2,"3ms",
+		3,"5ms",
+		4,"10ms",
+		5,"15ms";
+
+	Param131 = 
+		0,
+		,,
+		0x0000,
+		0xC6,
+		1,
+		"IO-Link Port X5 - Digital Port Function Configuration Pin 1",
+		"",
+		"0: Deactivated, 1: L+ (US) Sensor Supply (default)",
+		0,1,1,
+		,,,,
+		,,,,
+		;
+
+	Enum131 = 
+		0,"Deactivated",
+		1,"L+ (US) Sensory Supply";
+
+	Param135 = 
+		0,
+		,,
+		0x0000,
+		0xC6,
+		1,
+		"IO-Link Port X5 - Output Fault Recovery Mode Pin 2",
+		"",
+		"0: Automatic Recovery, 1: Manual Recovery",
+		0,1,0,
+		,,,,
+		,,,,
+		;
+
+	Enum135 = 
+		0,"Automatic Recovery",
+		1,"Manual Recovery";
+
+	Param136 = 
+		0,
+		,,
+		0x0000,
+		0xC6,
+		1,
+		"IO-Link Port X5 - Output Fault Recovery Mode Pin 4",
+		"",
+		"0: Automatic Recovery, 1: Manual Recovery",
+		0,1,0,
+		,,,,
+		,,,,
+		;
+
+	Enum136 = 
+		0,"Automatic Recovery",
+		1,"Manual Recovery";
+
+	Param137 = 
+		0,
+		,,
+		0x0000,
+		0xC6,
+		1,
+		"IO-Link Port X5 - IO-Link Input Length",
+		"",
+		"0 to 32 bytes",
+		0,32,0,
+		,,,,
+		,,,,
+		;
+
+	Param138 = 
+		0,
+		,,
+		0x0000,
+		0xC6,
+		1,
+		"IO-Link Port X5 - IO-Link Output Length",
+		"",
+		"0 to 32 bytes",
+		0,32,0,
+		,,,,
+		,,,,
+		;
+
+$	********************************
+$	* Port X6 Configuration Parameters
+$	********************************	
+
+	Param139 = 
+		0,
+		,,
+		0x0000,
+		0xC6,
+		1,
+		"IO-Link Port X6 - IO-Link Function Pin 4",
+		"",
+		"0: Deactivated, 1: IO-Link Manual Configuration, 2: IO-Link Autostart (default), 3: Digital Input NO, 4: Digital Output, 97: Digital Input NC",
+		0,97,2,
+		,,,,
+		,,,,
+		;
+
+	Enum139 = 
+		0,"Deactivated",
+		1,"IO-Link Manual Configuration",
+		2,"IO-Link Autostart",
+		3,"Digital Input NO",
+		4,"Digital Output",
+		97,"Digital Input NC";
+
+	Param140 = 
+		0,
+		,,
+		0x0000,
+		0xC6,
+		1,
+		"IO-Link Port X6 - Validation & Backup",
+		"",
+		"0: No Device check, 1: Type compatible Device V1.0, 2: Type compatible Device V1.1, 3: Type compatible Device V1.1, Backup & Restore, 4: Type compatible Device V1.1, Restore",
+		0,4,0,
+		,,,,
+		,,,,
+		;
+
+	Enum140 = 
+		0,"No Device check",
+		1,"Type compatible Device V1.0",
+		2,"Type compatible Device V1.1",
+		3,"Type compatible Device V1.1, Backup & Restore",
+		4,"Type compatible Device V1.1, Restore";
+
+	Param141 = 
+		0,
+		,,
+		0x0000,
+		0xC6,
+		1,
+		"IO-Link Port X6 - Behavior Pin 2 (Ch10)",
+		"",
+		"0: Automatic Mode (DIO), 1: Digital Input NO, 2: Digital Output, 5: AUX Power, 6: Digital Input NC, 7: Deactivated",
+		0,7,0,
+		,,,,
+		,,,,
+		;
+
+	Enum141 = 
+		0,"Automatic Mode (DIO)",
+		1,"Digital Input NO",
+		2,"Digital Output",
+		5,"AUX Power",
+		6,"Digital Input NC",
+		7,"Deactivated";
+
+	Param142 = 
+		0,
+		,,
+		0x0000,
+		0xD1,
+		1,
+		"IO-Link Port X6 - PortCycleTime",
+		"",
+		"0: As fast a possible, 1-255: Bit0..5 Multiplier / Bit6..7 TimeBase [ms]",
+		0,255,0,
+		,,,,
+		,,,,
+		;
+
+	Param143 = 
+		0,
+		,,
+		0x00000,
+		0xD2,
+		2,
+		"IO-Link Port X6 - Vendor ID",
+		"",
+		"Vendor ID of the attached IO-Link device for use with validation setting",
+		0x00,0xFFFF,0x00,
+		,,,,
+		,,,,
+		;
+
+	
+	Param144 = 
+		0,
+		,,
+		0x0000,
+		0xD3,
+		4,
+		"IO-Link Port X6 - Device ID",
+		"",
+		"Device ID of the attached IO-Link device for use with validation setting",
+		0x00,0xFFFFFFFF,0x00,
+		,,,,
+		,,,,
+		;
+
+	Param145 = 
+		0,
+		,,
+		0x0000,
+		0xC6,
+		1,
+		"IO-Link Port X6 - IO-Link Process Data Swap",
+		"",
+		"0: No Swap (default), 1: 16-bit Swap, 2: 32-bit Swap, 3: Full Swap",
+		0,3,0,
+		,,,,
+		,,,,
+		;
+
+	Enum145 = 
+		0,"No Swap",
+		1,"16-bit Swap",
+		2,"32-bit Swap",
+		3,"Full Swap";
+
+	Param146 = 
+		0,
+		,,
+		0x0000,
+		0xC6,
+		1,
+		"IO-Link Port X6 - IO-Link Event Integration",
+		"",
+		"0: Standard Integration, 1: Murrelektronik Integration, 2: Murrelektronik IO-Link Extended Integration",
+		0,2,0,
+		,,,,
+		,,,,
+		;
+
+	Enum146 = 
+		0,"Standard Integration",
+		1,"Murrelektronik Integration",
+		2,"Murrelektronik IO-Link Extended Integration";
+
+	Param147 = 
+		0,
+		,,
+		0x0000,
+		0xC6,
+		1,
+		"IO-Link Port X6 - Digital Input Signal Filter Pin 4",
+		"",
+		"0: No Filter (default), 1: 1ms, 2: 3ms, 3: 5ms, 4: 10ms, 5: 15ms",
+		0,5,0,
+		,,,,
+		,,,,
+		;
+
+	Enum147 = 
+		0,"No Filter (default)",
+		1,"1ms",
+		2,"3ms",
+		3,"5ms",
+		4,"10ms",
+		5,"15ms";
+
+	Param148 = 
+		0,
+		,,
+		0x0000,
+		0xC6,
+		1,
+		"IO-Link Port X6 - Digital Input Signal Filter Pin 2",
+		"",
+		"0: No Filter (default), 1: 1ms, 2: 3ms, 3: 5ms, 4: 10ms, 5: 15ms",
+		0,5,0,
+		,,,,
+		,,,,
+		;
+
+	Enum148 =
+		0,"No Filter (default)", 
+		1,"1ms",
+		2,"3ms",
+		3,"5ms",
+		4,"10ms",
+		5,"15ms";
+
+	Param151 = 
+		0,
+		,,
+		0x0000,
+		0xC6,
+		1,
+		"IO-Link Port X6 - Digital Port Function Configuration Pin 1",
+		"",
+		"0: Deactivated, 1: L+ (US) Sensor Supply (default)",
+		0,1,1,
+		,,,,
+		,,,,
+		;
+
+	Enum151 = 
+		0,"Deactivated",
+		1,"L+ (US) Sensory Supply";
+
+	Param155 = 
+		0,
+		,,
+		0x0000,
+		0xC6,
+		1,
+		"IO-Link Port X6 - Output Fault Recovery Mode Pin 2",
+		"",
+		"0: Automatic Recovery, 1: Manual Recovery",
+		0,1,0,
+		,,,,
+		,,,,
+		;
+
+	Enum155 = 
+		0,"Automatic Recovery",
+		1,"Manual Recovery";
+
+	Param156 = 
+		0,
+		,,
+		0x0000,
+		0xC6,
+		1,
+		"IO-Link Port X6 - Output Fault Recovery Mode Pin 4",
+		"",
+		"0: Automatic Recovery, 1: Manual Recovery",
+		0,1,0,
+		,,,,
+		,,,,
+		;
+
+	Enum156 = 
+		0,"Automatic Recovery",
+		1,"Manual Recovery";
+
+	Param157 = 
+		0,
+		,,
+		0x0000,
+		0xC6,
+		1,
+		"IO-Link Port X6 - IO-Link Input Length",
+		"",
+		"0 to 32 bytes",
+		0,32,0,
+		,,,,
+		,,,,
+		;
+
+	Param158 = 
+		0,
+		,,
+		0x0000,
+		0xC6,
+		1,
+		"IO-Link Port X6 - IO-Link Output Length",
+		"",
+		"0 to 32 bytes",
+		0,32,0,
+		,,,,
+		,,,,
+		;
+
+$	********************************
+$	* Port X7 Configuration Parameters
+$	********************************	
+
+	Param159 = 
+		0,
+		,,
+		0x0000,
+		0xC6,
+		1,
+		"IO-Link Port X7 - IO-Link Function Pin 4",
+		"",
+		"0: Deactivated, 1: IO-Link Manual Configuration, 2: IO-Link Autostart (default), 3: Digital Input NO, 4: Digital Output, 97: Digital Input NC",
+		0,97,2,
+		,,,,
+		,,,,
+		;
+
+	Enum159 = 
+		0,"Deactivated",
+		1,"IO-Link Manual Configuration",
+		2,"IO-Link Autostart",
+		3,"Digital Input NO",
+		4,"Digital Output",
+		97,"Digital Input NC";
+
+	Param160 = 
+		0,
+		,,
+		0x0000,
+		0xC6,
+		1,
+		"IO-Link Port X7 - Validation & Backup",
+		"",
+		"0: No Device check, 1: Type compatible Device V1.0, 2: Type compatible Device V1.1, 3: Type compatible Device V1.1, Backup & Restore, 4: Type compatible Device V1.1, Restore",
+		0,4,0,
+		,,,,
+		,,,,
+		;
+
+	Enum160 = 
+		0,"No Device check",
+		1,"Type compatible Device V1.0",
+		2,"Type compatible Device V1.1",
+		3,"Type compatible Device V1.1, Backup & Restore",
+		4,"Type compatible Device V1.1, Restore";
+
+	Param161 = 
+		0,
+		,,
+		0x0000,
+		0xC6,
+		1,
+		"IO-Link Port X7 - Behavior Pin 2 (Ch10)",
+		"",
+		"0: Automatic Mode (DIO), 1: Digital Input NO, 2: Digital Output, 5: AUX Power, 6: Digital Input NC, 7: Deactivated",
+		0,7,0,
+		,,,,
+		,,,,
+		;
+
+	Enum161 = 
+		0,"Automatic Mode (DIO)",
+		1,"Digital Input NO",
+		2,"Digital Output",
+		5,"AUX Power",
+		6,"Digital Input NC",
+		7,"Deactivated";
+
+	Param162 = 
+		0,
+		,,
+		0x0000,
+		0xD1,
+		1,
+		"IO-Link Port X7 - PortCycleTime",
+		"",
+		"0: As fast a possible, 1-255: Bit0..5 Multiplier / Bit6..7 TimeBase [ms]",
+		0,255,0,
+		,,,,
+		,,,,
+		;
+
+	Param163 = 
+		0,
+		,,
+		0x00000,
+		0xD2,
+		2,
+		"IO-Link Port X7 - Vendor ID",
+		"",
+		"Vendor ID of the attached IO-Link device for use with validation setting",
+		0x00,0xFFFF,0x00,
+		,,,,
+		,,,,
+		;
+
+	
+	Param164 = 
+		0,
+		,,
+		0x0000,
+		0xD3,
+		4,
+		"IO-Link Port X7 - Device ID",
+		"",
+		"Device ID of the attached IO-Link device for use with validation setting",
+		0x00,0xFFFFFFFF,0x00,
+		,,,,
+		,,,,
+		;
+
+	Param165 = 
+		0,
+		,,
+		0x0000,
+		0xC6,
+		1,
+		"IO-Link Port X7 - IO-Link Process Data Swap",
+		"",
+		"0: No Swap (default), 1: 16-bit Swap, 2: 32-bit Swap, 3: Full Swap",
+		0,3,0,
+		,,,,
+		,,,,
+		;
+
+	Enum165 = 
+		0,"No Swap",
+		1,"16-bit Swap",
+		2,"32-bit Swap",
+		3,"Full Swap";
+
+	Param166 = 
+		0,
+		,,
+		0x0000,
+		0xC6,
+		1,
+		"IO-Link Port X7 - IO-Link Event Integration",
+		"",
+		"0: Standard Integration, 1: Murrelektronik Integration, 2: Murrelektronik IO-Link Extended Integration",
+		0,2,0,
+		,,,,
+		,,,,
+		;
+
+	Enum166 = 
+		0,"Standard Integration",
+		1,"Murrelektronik Integration",
+		2,"Murrelektronik IO-Link Extended Integration";
+
+	Param167 = 
+		0,
+		,,
+		0x0000,
+		0xC6,
+		1,
+		"IO-Link Port X7 - Digital Input Signal Filter Pin 4",
+		"",
+		"0: No Filter (default), 1: 1ms, 2: 3ms, 3: 5ms, 4: 10ms, 5: 15ms",
+		0,5,0,
+		,,,,
+		,,,,
+		;
+
+	Enum167 = 
+		0,"No Filter (default)",
+		1,"1ms",
+		2,"3ms",
+		3,"5ms",
+		4,"10ms",
+		5,"15ms";
+
+	Param168 = 
+		0,
+		,,
+		0x0000,
+		0xC6,
+		1,
+		"IO-Link Port X7 - Digital Input Signal Filter Pin 2",
+		"",
+		"0: No Filter (default), 1: 1ms, 2: 3ms, 3: 5ms, 4: 10ms, 5: 15ms",
+		0,5,0,
+		,,,,
+		,,,,
+		;
+
+	Enum168 = 
+		0,"No Filter (default)",
+		1,"1ms",
+		2,"3ms",
+		3,"5ms",
+		4,"10ms",
+		5,"15ms";
+
+	Param171 = 
+		0,
+		,,
+		0x0000,
+		0xC6,
+		1,
+		"IO-Link Port X7 - Digital Port Function Configuration Pin 1",
+		"",
+		"0: Deactivated, 1: L+ (US) Sensor Supply (default)",
+		0,1,1,
+		,,,,
+		,,,,
+		;
+
+	Enum171 = 
+		0,"Deactivated",
+		1,"L+ (US) Sensory Supply";
+
+	Param175 = 
+		0,
+		,,
+		0x0000,
+		0xC6,
+		1,
+		"IO-Link Port X7 - Output Fault Recovery Mode Pin 2",
+		"",
+		"0: Automatic Recovery, 1: Manual Recovery",
+		0,1,0,
+		,,,,
+		,,,,
+		;
+
+	Enum175 = 
+		0,"Automatic Recovery",
+		1,"Manual Recovery";
+
+	Param176 = 
+		0,
+		,,
+		0x0000,
+		0xC6,
+		1,
+		"IO-Link Port X7 - Output Fault Recovery Mode Pin 4",
+		"",
+		"0: Automatic Recovery, 1: Manual Recovery",
+		0,1,0,
+		,,,,
+		,,,,
+		;
+
+	Enum176 = 
+		0,"Automatic Recovery",
+		1,"Manual Recovery";
+
+	Param177 = 
+		0,
+		,,
+		0x0000,
+		0xC6,
+		1,
+		"IO-Link Port X7 - IO-Link Input Length",
+		"",
+		"0 to 32 bytes",
+		0,32,0,
+		,,,,
+		,,,,
+		;
+
+	Param178 = 
+		0,
+		,,
+		0x0000,
+		0xC6,
+		1,
+		"IO-Link Port X7 - IO-Link Output Length",
+		"",
+		"0 to 32 bytes",
+		0,32,0,
+		,,,,
+		,,,,
+		;
+
+$	********************************
+$	* Web Interface
+$	********************************
+
+	Param188 = 
+		0,
+		,,
+		0x0000,
+		0xC6,
+		1,
+		"Use of WebUI",
+		"",
+		"Enables/Disables access and display of the WebUI, 0: Disabled, 1: Enabled (default)",
+		0,1,1,
+		,,,,
+		,,,,
+		;
+
+	Enum188 = 
+		0,"Disabled",
+		1,"Enabled";
+
+$	================================
+$	SECTION: T->O DATA
+$	================================
+
+$	********************************
+$	* Digital I/O and State
+$	********************************
+
+	Param200 = 
+		0,
+		,,
+		0x0010,
+		0xC7,
+		2,
+		"Digital Input Data",
+		"",
+		"Displays the Digital Input Data",
+		0x00,0xFFFF,0x00,
+		,,,,
+		,,,,
+		;
+
+	Param201 = 
+		0,
+		,,
+		0x0010,
+		0xC7,
+		2,
+		"Digital Input Qualifiers",
+		"",
+		"Displays the Digital Input Qualifiers",
+		0x00,0xFFFF,0x00,
+		,,,,
+		,,,,
+		;
+
+	Param202 = 
+		0,
+		,,
+		0x0010,
+		0xC7,
+		2,
+		"Digital Output Qualifiers",
+		"",
+		"Displays the Digital Output Qualifiers",
+		0x00,0xFFFF,0x00,
+		,,,,
+		,,,,
+		;
+
+	Param203 = 
+		0,
+		,,
+		0x0110,
+		0xC8,
+		4,
+		"System State",
+		"",
+		"Displays the state of the module",
+		0x00,0x00000FFF,0x00,
+		,,,,
+		,,,,
+		;
+
+	Enum203 = 
+		0x0001,	"Undervoltage bus/sensor supply",
+		0x0002,	"Undervoltage actuator supply",
+		0x0004,	"No actuator supply",
+		0x0008,	"External error",
+		0x0010,	"At least one channel has a sensor short circuit",
+		0x0020,	"At least one channel has an actuator short circuit",
+		0x0040,	"At least one channel has an actuator warning",
+		0x0080,	"At least one analog channel has an error",
+		0x0100,	"Internal communication error",
+		0x0200,	"At least one IO-Link channel has an event",
+		0x0400,	"Overvoltage bus/sensor supply",
+		0x0800,	"Overvoltage actuator supply";
+
+$	********************************
+$	* Port Based Input Data
+$	********************************
+
+	Param204 = 
+		0,
+		,,
+		0x0010,
+		0xC6,
+		1,
+		"IO-Link Port X0 - Input Data",
+		"",
+		"",
+		0,255,0,
+		,,,,
+		,,,,
+		;
+
+	Param205 = 
+		0,
+		,,
+		0x0010,
+		0xC6,
+		1,
+		"IO-Link Port X1 - Input Data",
+		"",
+		"",
+		0,255,0,
+		,,,,
+		,,,,
+		;
+
+	Param206 = 
+		0,
+		,,
+		0x0010,
+		0xC6,
+		1,
+		"IO-Link Port X2 - Input Data",
+		"",
+		"",
+		0,255,0,
+		,,,,
+		,,,,
+		;
+
+	Param207 = 
+		0,
+		,,
+		0x0010,
+		0xC6,
+		1,
+		"IO-Link Port X3 - Input Data",
+		"",
+		"",
+		0,255,0,
+		,,,,
+		,,,,
+		;
+
+	Param208 = 
+		0,
+		,,
+		0x0010,
+		0xC6,
+		1,
+		"IO-Link Port X4 - Input Data",
+		"",
+		"",
+		0,255,0,
+		,,,,
+		,,,,
+		;
+
+	Param209 = 
+		0,
+		,,
+		0x0010,
+		0xC6,
+		1,
+		"IO-Link Port X5 - Input Data",
+		"",
+		"",
+		0,255,0,
+		,,,,
+		,,,,
+		;
+
+	Param210 = 
+		0,
+		,,
+		0x0010,
+		0xC6,
+		1,
+		"IO-Link Port X6 - Input Data",
+		"",
+		"",
+		0,255,0,
+		,,,,
+		,,,,
+		;
+
+	Param211 = 
+		0,
+		,,
+		0x0010,
+		0xC6,
+		1,
+		"IO-Link Port X7 - Input Data",
+		"",
+		"",
+		0,255,0,
+		,,,,
+		,,,,
+		;
+
+$	********************************
+$	* Port Based Status
+$	********************************
+
+	Param213 = 
+		0,
+		,,
+		0x0110,
+		0xC7,
+		2,
+		"IO-Link Port X0 - Status",
+		"",
+		"0: Disconnected, 1: Connected",
+		0,1,0,
+		,,,,
+		,,,,
+		;
+
+	Enum213 = 
+		0,"Disconnected",
+		1,"Connected";
+
+	Param214 = 
+		0,
+		,,
+		0x0110,
+		0xC7,
+		2,
+		"IO-Link Port X1 - Status",
+		"",
+		"0: Disconnected, 1: Connected",
+		0,1,0,
+		,,,,
+		,,,,
+		;
+
+	Enum214 = 
+		0,"Disconnected",
+		1,"Connected";
+
+	Param215 = 
+		0,
+		,,
+		0x0110,
+		0xC7,
+		2,
+		"IO-Link Port X2 - Status",
+		"",
+		"0: Disconnected, 1: Connected",
+		0,1,0,
+		,,,,
+		,,,,
+		;
+
+	Enum215 = 
+		0,"Disconnected",
+		1,"Connected";
+
+	Param216 = 
+		0,
+		,,
+		0x0110,
+		0xC7,
+		2,
+		"IO-Link Port X3 - Status",
+		"",
+		"0: Disconnected, 1: Connected",
+		0,1,0,
+		,,,,
+		,,,,
+		;
+
+	Enum216 = 
+		0,"Disconnected",
+		1,"Connected";
+
+	Param217 = 
+		0,
+		,,
+		0x0110,
+		0xC7,
+		2,
+		"IO-Link Port X4 - Status",
+		"",
+		"0: Disconnected, 1: Connected",
+		0,1,0,
+		,,,,
+		,,,,
+		;
+
+	Enum217 = 
+		0,"Disconnected",
+		1,"Connected";
+
+	Param218 = 
+		0,
+		,,
+		0x0110,
+		0xC7,
+		2,
+		"IO-Link Port X5 - Status",
+		"",
+		"0: Disconnected, 1: Connected",
+		0,1,0,
+		,,,,
+		,,,,
+		;
+
+	Enum218 = 
+		0,"Disconnected",
+		1,"Connected";
+
+	Param219 = 
+		0,
+		,,
+		0x0110,
+		0xC7,
+		2,
+		"IO-Link Port X6 - Status",
+		"",
+		"0: Disconnected, 1: Connected",
+		0,1,0,
+		,,,,
+		,,,,
+		;
+
+	Enum219 = 
+		0,"Disconnected",
+		1,"Connected";
+
+	Param220 = 
+		0,
+		,,
+		0x0110,
+		0xC7,
+		2,
+		"IO-Link Port X7 - Status",
+		"",
+		"0: Disconnected, 1: Connected",
+		0,1,0,
+		,,,,
+		,,,,
+		;
+
+	Enum220 = 
+		0,"Disconnected",
+		1,"Connected";	
+
+$	********************************
+$	* Diagnostic Message Parameters
+$	********************************
+
+$	********************************
+$	* Diagnostic Message 1
+$	********************************
+
+	Param221 = 
+		0,
+		,,
+		0x0010,
+		0xC6,
+		1,
+		"Diagnotic Message 1 - Last IP Octet",
+		"",
+		"The last IP address octet of the module that reported the diagnostic message",
+		0,255,0,
+		,,,,
+		,,,,
+		;
+
+	Param222 = 
+		0,
+		,,
+		0x0110,
+		0xC6,
+		1,
+		"Diagnostic Message 1 - Error Code Identification",
+		"",
+		"0: Default Code, 128: IO-Link Master Event Code, 129: IO-Link Device Event Code, 130: Murrelektronik IO-Link Device Event Code",
+		0,130,0,
+		,,,,
+		,,,,
+		;
+
+	Enum222 = 
+		0,"Default Code",
+		128,"IO-Link Master Event Code", 
+		129,"IO-Link Device Event Code", 
+		130,"Murrelektronik IO-Link Device Event Code";
+
+	Param223 = 
+		0,
+		,,
+		0x0010,
+		0xC6,
+		1,
+		"Diagnostic Message 1 - Channel Number IO-Link Master",
+		"",
+		"Channel number that the fault occured. If Error Code Identification is set to any IO-Link error then this shows the IO-Link master port",
+		0,17,0,
+		,,,,
+		,,,,
+		;
+
+	Enum223 = 
+		0,"Channel 00/IO-Link Port X0",
+		1,"Channel 01/IO-Link Port X1",
+		2,"Channel 02/IO-Link Port X2",
+		3,"Channel 03/IO-Link Port X3",
+		4,"Channel 04/IO-Link Port X4",
+		5,"Channel 05/IO-Link Port X5",
+		6,"Channel 06/IO-Link Port X6",
+		7,"Channel 07/IO-Link Port X7",
+		10,"Channel 10",
+		11,"Channel 11",
+		12,"Channel 12",
+		13,"Channel 13",
+		14,"Channel 14",
+		15,"Channel 15",
+		16,"Channel 16",
+		17,"Channel 17";
+
+	Param224 = 
+		0,
+		,,
+		0x0010,
+		0xC6,
+		1,
+		"Diagnostic Message 1 - Channel Number IO-Link Device",
+		"",
+		"Shows the IO-Link Device channel number where the fault occured (if Error Code Identification is set to Murrelektronik IO-Link Device Event Code error",
+		0,17,0,
+		,,,,
+		,,,,
+		;
+
+	Param225 = 
+		0,
+		,,
+		0x0010,
+		0xC6,
+		1,
+		"Diagnostic Message 1 - Error Code Byte 1",
+		"",
+		"If Error Code Identification is set to Default Code this is the global error code. If Error Code Identification is set to an IO-Link code this is the LSB of the IO-Link Event Code",
+		,,0,
+		,,,,
+		,,,,
+		;
+
+	Param226 = 
+		0,
+		,,
+		0x0010,
+		0xC6,
+		1,
+		"Diagnostic Message 1 - Error Code Byte 2",
+		"",
+		"If Error Code Identification is set to Default Code this is the global error code. If Error Code Identification is set to an IO-Link code this is the LSB of the IO-Link Event Code",
+		,,0,
+		,,,,
+		,,,,
+		;
+
+	Param227 = 
+		0,
+		,,
+		0x0010,
+		0xC6,
+		1,
+		"Diagnostic Message 1 - Severity and Coming/Going display",
+		"",
+		"Bit0 shows if the diagnostic message is coming (value = 1) or going (value = 0). Bit6 and Bit7 show if it is a Minor Fault (value = 1), a Major Fault (value = 2) or an Information (value = 3)",
+		,,0,
+		,,,,
+		,,,,
+		;
+
+$	********************************
+$	* Diagnostic Message 2
+$	********************************
+
+	Param228 = 
+		0,
+		,,
+		0x0010,
+		0xC6,
+		1,
+		"Diagnotic Message 2 - Last IP Octet",
+		"",
+		"The last IP address octet of the module that reported the diagnostic message",
+		0,255,0,
+		,,,,
+		,,,,
+		;
+
+	Param229 = 
+		0,
+		,,
+		0x0110,
+		0xC6,
+		1,
+		"Diagnostic Message 2 - Error Code Identification",
+		"",
+		"0: Default Code, 128: IO-Link Master Event Code, 129: IO-Link Device Event Code, 130: Murrelektronik IO-Link Device Event Code",
+		0,130,0,
+		,,,,
+		,,,,
+		;
+
+	Enum229 = 
+		0,"Default Code",
+		128,"IO-Link Master Event Code", 
+		129,"IO-Link Device Event Code", 
+		130,"Murrelektronik IO-Link Device Event Code";
+
+	Param230 = 
+		0,
+		,,
+		0x0010,
+		0xC6,
+		1,
+		"Diagnostic Message 2 - Channel Number IO-Link Master",
+		"",
+		"Channel number that the fault occured. If Error Code Identification is set to any IO-Link error then this shows the IO-Link master port",
+		0,17,0,
+		,,,,
+		,,,,
+		;
+
+	Enum230 = 
+		0,"Channel 00/IO-Link Port X0",
+		1,"Channel 01/IO-Link Port X1",
+		2,"Channel 02/IO-Link Port X2",
+		3,"Channel 03/IO-Link Port X3",
+		4,"Channel 04/IO-Link Port X4",
+		5,"Channel 05/IO-Link Port X5",
+		6,"Channel 06/IO-Link Port X6",
+		7,"Channel 07/IO-Link Port X7",
+		10,"Channel 10",
+		11,"Channel 11",
+		12,"Channel 12",
+		13,"Channel 13",
+		14,"Channel 14",
+		15,"Channel 15",
+		16,"Channel 16",
+		17,"Channel 17";
+
+	Param231 = 
+		0,
+		,,
+		0x0010,
+		0xC6,
+		1,
+		"Diagnostic Message 2 - Channel Number IO-Link Device",
+		"",
+		"Shows the IO-Link Device channel number where the fault occured (if Error Code Identification is set to Murrelektronik IO-Link Device Event Code error",
+		0,17,0,
+		,,,,
+		,,,,
+		;
+
+	Param232 = 
+		0,
+		,,
+		0x0010,
+		0xC6,
+		1,
+		"Diagnostic Message 2 - Error Code Byte 1",
+		"",
+		"If Error Code Identification is set to Default Code this is the global error code. If Error Code Identification is set to an IO-Link code this is the LSB of the IO-Link Event Code",
+		,,0,
+		,,,,
+		,,,,
+		;
+
+	Param233 = 
+		0,
+		,,
+		0x0010,
+		0xC6,
+		1,
+		"Diagnostic Message 2 - Error Code Byte 2",
+		"",
+		"If Error Code Identification is set to Default Code this is the global error code. If Error Code Identification is set to an IO-Link code this is the LSB of the IO-Link Event Code",
+		,,0,
+		,,,,
+		,,,,
+		;
+
+	Param234 = 
+		0,
+		,,
+		0x0010,
+		0xC6,
+		1,
+		"Diagnostic Message 2 - Severity and Coming/Going display",
+		"",
+		"Bit0 shows if the diagnostic message is coming (value = 1) or going (value = 0). Bit6 and Bit7 show if it is a Minor Fault (value = 1), a Major Fault (value = 2) or an Information (value = 3)",
+		,,0,
+		,,,,
+		,,,,
+		;
+
+$	********************************
+$	* Diagnostic Message 3
+$	********************************
+
+	Param235 = 
+		0,
+		,,
+		0x0010,
+		0xC6,
+		1,
+		"Diagnotic Message 3 - Last IP Octet",
+		"",
+		"The last IP address octet of the module that reported the diagnostic message",
+		0,255,0,
+		,,,,
+		,,,,
+		;
+
+	Param236 = 
+		0,
+		,,
+		0x0110,
+		0xC6,
+		1,
+		"Diagnostic Message 3 - Error Code Identification",
+		"",
+		"0: Default Code, 128: IO-Link Master Event Code, 129: IO-Link Device Event Code, 130: Murrelektronik IO-Link Device Event Code",
+		0,130,0,
+		,,,,
+		,,,,
+		;
+
+	Enum236 = 
+		0,"Default Code",
+		128,"IO-Link Master Event Code", 
+		129,"IO-Link Device Event Code", 
+		130,"Murrelektronik IO-Link Device Event Code";
+
+	Param237 = 
+		0,
+		,,
+		0x0010,
+		0xC6,
+		1,
+		"Diagnostic Message 3 - Channel Number IO-Link Master",
+		"",
+		"Channel number that the fault occured. If Error Code Identification is set to any IO-Link error then this shows the IO-Link master port",
+		0,17,0,
+		,,,,
+		,,,,
+		;
+
+	Enum237 = 
+		0,"Channel 00/IO-Link Port X0",
+		1,"Channel 01/IO-Link Port X1",
+		2,"Channel 02/IO-Link Port X2",
+		3,"Channel 03/IO-Link Port X3",
+		4,"Channel 04/IO-Link Port X4",
+		5,"Channel 05/IO-Link Port X5",
+		6,"Channel 06/IO-Link Port X6",
+		7,"Channel 07/IO-Link Port X7",
+		10,"Channel 10",
+		11,"Channel 11",
+		12,"Channel 12",
+		13,"Channel 13",
+		14,"Channel 14",
+		15,"Channel 15",
+		16,"Channel 16",
+		17,"Channel 17";
+
+	Param238 = 
+		0,
+		,,
+		0x0010,
+		0xC6,
+		1,
+		"Diagnostic Message 3 - Channel Number IO-Link Device",
+		"",
+		"Shows the IO-Link Device channel number where the fault occured (if Error Code Identification is set to Murrelektronik IO-Link Device Event Code error",
+		0,17,0,
+		,,,,
+		,,,,
+		;
+
+	Param239 = 
+		0,
+		,,
+		0x0010,
+		0xC6,
+		1,
+		"Diagnostic Message 3 - Error Code Byte 1",
+		"",
+		"If Error Code Identification is set to Default Code this is the global error code. If Error Code Identification is set to an IO-Link code this is the LSB of the IO-Link Event Code",
+		,,0,
+		,,,,
+		,,,,
+		;
+
+	Param240 = 
+		0,
+		,,
+		0x0010,
+		0xC6,
+		1,
+		"Diagnostic Message 3 - Error Code Byte 2",
+		"",
+		"If Error Code Identification is set to Default Code this is the global error code. If Error Code Identification is set to an IO-Link code this is the LSB of the IO-Link Event Code",
+		,,0,
+		,,,,
+		,,,,
+		;
+
+	Param241 = 
+		0,
+		,,
+		0x0010,
+		0xC6,
+		1,
+		"Diagnostic Message 3 - Severity and Coming/Going display",
+		"",
+		"Bit0 shows if the diagnostic message is coming (value = 1) or going (value = 0). Bit6 and Bit7 show if it is a Minor Fault (value = 1), a Major Fault (value = 2) or an Information (value = 3)",
+		,,0,
+		,,,,
+		,,,,
+		;
+
+$	********************************
+$	* Diagnostic Message 4
+$	********************************
+
+	Param242 = 
+		0,
+		,,
+		0x0010,
+		0xC6,
+		1,
+		"Diagnotic Message 4 - Last IP Octet",
+		"",
+		"The last IP address octet of the module that reported the diagnostic message",
+		0,255,0,
+		,,,,
+		,,,,
+		;
+
+	Param243 = 
+		0,
+		,,
+		0x0110,
+		0xC6,
+		1,
+		"Diagnostic Message 4 - Error Code Identification",
+		"",
+		"0: Default Code, 128: IO-Link Master Event Code, 129: IO-Link Device Event Code, 130: Murrelektronik IO-Link Device Event Code",
+		0,130,0,
+		,,,,
+		,,,,
+		;
+
+	Enum243 = 
+		0,"Default Code",
+		128,"IO-Link Master Event Code", 
+		129,"IO-Link Device Event Code", 
+		130,"Murrelektronik IO-Link Device Event Code";
+
+	Param244 = 
+		0,
+		,,
+		0x0010,
+		0xC6,
+		1,
+		"Diagnostic Message 4 - Channel Number IO-Link Master",
+		"",
+		"Channel number that the fault occured. If Error Code Identification is set to any IO-Link error then this shows the IO-Link master port",
+		0,17,0,
+		,,,,
+		,,,,
+		;
+
+	Enum244 = 
+		0,"Channel 00/IO-Link Port X0",
+		1,"Channel 01/IO-Link Port X1",
+		2,"Channel 02/IO-Link Port X2",
+		3,"Channel 03/IO-Link Port X3",
+		4,"Channel 04/IO-Link Port X4",
+		5,"Channel 05/IO-Link Port X5",
+		6,"Channel 06/IO-Link Port X6",
+		7,"Channel 07/IO-Link Port X7",
+		10,"Channel 10",
+		11,"Channel 11",
+		12,"Channel 12",
+		13,"Channel 13",
+		14,"Channel 14",
+		15,"Channel 15",
+		16,"Channel 16",
+		17,"Channel 17";
+
+	Param245 = 
+		0,
+		,,
+		0x0010,
+		0xC6,
+		1,
+		"Diagnostic Message 4 - Channel Number IO-Link Device",
+		"",
+		"Shows the IO-Link Device channel number where the fault occured (if Error Code Identification is set to Murrelektronik IO-Link Device Event Code error",
+		0,17,0,
+		,,,,
+		,,,,
+		;
+
+	Param246 = 
+		0,
+		,,
+		0x0010,
+		0xC6,
+		1,
+		"Diagnostic Message 4 - Error Code Byte 1",
+		"",
+		"If Error Code Identification is set to Default Code this is the global error code. If Error Code Identification is set to an IO-Link code this is the LSB of the IO-Link Event Code",
+		,,0,
+		,,,,
+		,,,,
+		;
+
+	Param247 = 
+		0,
+		,,
+		0x0010,
+		0xC6,
+		1,
+		"Diagnostic Message 4 - Error Code Byte 2",
+		"",
+		"If Error Code Identification is set to Default Code this is the global error code. If Error Code Identification is set to an IO-Link code this is the LSB of the IO-Link Event Code",
+		,,0,
+		,,,,
+		,,,,
+		;
+
+	Param248 = 
+		0,
+		,,
+		0x0010,
+		0xC6,
+		1,
+		"Diagnostic Message 4 - Severity and Coming/Going display",
+		"",
+		"Bit0 shows if the diagnostic message is coming (value = 1) or going (value = 0). Bit6 and Bit7 show if it is a Minor Fault (value = 1), a Major Fault (value = 2) or an Information (value = 3)",
+		,,0,
+		,,,,
+		,,,,
+		;
+
+$	********************************
+$	* Diagnostic Message 5
+$	********************************
+
+	Param249 = 
+		0,
+		,,
+		0x0010,
+		0xC6,
+		1,
+		"Diagnotic Message 5 - Last IP Octet",
+		"",
+		"The last IP address octet of the module that reported the diagnostic message",
+		0,255,0,
+		,,,,
+		,,,,
+		;
+
+	Param250 = 
+		0,
+		,,
+		0x0110,
+		0xC6,
+		1,
+		"Diagnostic Message 5 - Error Code Identification",
+		"",
+		"0: Default Code, 128: IO-Link Master Event Code, 129: IO-Link Device Event Code, 130: Murrelektronik IO-Link Device Event Code",
+		0,130,0,
+		,,,,
+		,,,,
+		;
+
+	Enum250 = 
+		0,"Default Code",
+		128,"IO-Link Master Event Code", 
+		129,"IO-Link Device Event Code", 
+		130,"Murrelektronik IO-Link Device Event Code";
+
+	Param251 = 
+		0,
+		,,
+		0x0010,
+		0xC6,
+		1,
+		"Diagnostic Message 5 - Channel Number IO-Link Master",
+		"",
+		"Channel number that the fault occured. If Error Code Identification is set to any IO-Link error then this shows the IO-Link master port",
+		0,17,0,
+		,,,,
+		,,,,
+		;
+
+	Enum251 = 
+		0,"Channel 00/IO-Link Port X0",
+		1,"Channel 01/IO-Link Port X1",
+		2,"Channel 02/IO-Link Port X2",
+		3,"Channel 03/IO-Link Port X3",
+		4,"Channel 04/IO-Link Port X4",
+		5,"Channel 05/IO-Link Port X5",
+		6,"Channel 06/IO-Link Port X6",
+		7,"Channel 07/IO-Link Port X7",
+		10,"Channel 10",
+		11,"Channel 11",
+		12,"Channel 12",
+		13,"Channel 13",
+		14,"Channel 14",
+		15,"Channel 15",
+		16,"Channel 16",
+		17,"Channel 17";
+
+	Param252 = 
+		0,
+		,,
+		0x0010,
+		0xC6,
+		1,
+		"Diagnostic Message 5 - Channel Number IO-Link Device",
+		"",
+		"Shows the IO-Link Device channel number where the fault occured (if Error Code Identification is set to Murrelektronik IO-Link Device Event Code error",
+		0,17,0,
+		,,,,
+		,,,,
+		;
+
+	Param253 = 
+		0,
+		,,
+		0x0010,
+		0xC6,
+		1,
+		"Diagnostic Message 5 - Error Code Byte 1",
+		"",
+		"If Error Code Identification is set to Default Code this is the global error code. If Error Code Identification is set to an IO-Link code this is the LSB of the IO-Link Event Code",
+		,,0,
+		,,,,
+		,,,,
+		;
+
+	Param254 = 
+		0,
+		,,
+		0x0010,
+		0xC6,
+		1,
+		"Diagnostic Message 5 - Error Code Byte 2",
+		"",
+		"If Error Code Identification is set to Default Code this is the global error code. If Error Code Identification is set to an IO-Link code this is the LSB of the IO-Link Event Code",
+		,,0,
+		,,,,
+		,,,,
+		;
+
+	Param255 = 
+		0,
+		,,
+		0x0010,
+		0xC6,
+		1,
+		"Diagnostic Message 5 - Severity and Coming/Going display",
+		"",
+		"Bit0 shows if the diagnostic message is coming (value = 1) or going (value = 0). Bit6 and Bit7 show if it is a Minor Fault (value = 1), a Major Fault (value = 2) or an Information (value = 3)",
+		,,0,
+		,,,,
+		,,,,
+		;
+
+$	********************************
+$	* Diagnostic Message 6
+$	********************************
+
+	Param256 = 
+		0,
+		,,
+		0x0010,
+		0xC6,
+		1,
+		"Diagnotic Message 6 - Last IP Octet",
+		"",
+		"The last IP address octet of the module that reported the diagnostic message",
+		0,255,0,
+		,,,,
+		,,,,
+		;
+
+	Param257 = 
+		0,
+		,,
+		0x0110,
+		0xC6,
+		1,
+		"Diagnostic Message 6 - Error Code Identification",
+		"",
+		"0: Default Code, 128: IO-Link Master Event Code, 129: IO-Link Device Event Code, 130: Murrelektronik IO-Link Device Event Code",
+		0,130,0,
+		,,,,
+		,,,,
+		;
+
+	Enum257 = 
+		0,"Default Code",
+		128,"IO-Link Master Event Code", 
+		129,"IO-Link Device Event Code", 
+		130,"Murrelektronik IO-Link Device Event Code";
+
+	Param258 = 
+		0,
+		,,
+		0x0010,
+		0xC6,
+		1,
+		"Diagnostic Message 6 - Channel Number IO-Link Master",
+		"",
+		"Channel number that the fault occured. If Error Code Identification is set to any IO-Link error then this shows the IO-Link master port",
+		0,17,0,
+		,,,,
+		,,,,
+		;
+
+	Enum258 = 
+		0,"Channel 00/IO-Link Port X0",
+		1,"Channel 01/IO-Link Port X1",
+		2,"Channel 02/IO-Link Port X2",
+		3,"Channel 03/IO-Link Port X3",
+		4,"Channel 04/IO-Link Port X4",
+		5,"Channel 05/IO-Link Port X5",
+		6,"Channel 06/IO-Link Port X6",
+		7,"Channel 07/IO-Link Port X7",
+		10,"Channel 10",
+		11,"Channel 11",
+		12,"Channel 12",
+		13,"Channel 13",
+		14,"Channel 14",
+		15,"Channel 15",
+		16,"Channel 16",
+		17,"Channel 17";
+
+	Param259 = 
+		0,
+		,,
+		0x0010,
+		0xC6,
+		1,
+		"Diagnostic Message 6 - Channel Number IO-Link Device",
+		"",
+		"Shows the IO-Link Device channel number where the fault occured (if Error Code Identification is set to Murrelektronik IO-Link Device Event Code error",
+		0,17,0,
+		,,,,
+		,,,,
+		;
+
+	Param260 = 
+		0,
+		,,
+		0x0010,
+		0xC6,
+		1,
+		"Diagnostic Message 6 - Error Code Byte 1",
+		"",
+		"If Error Code Identification is set to Default Code this is the global error code. If Error Code Identification is set to an IO-Link code this is the LSB of the IO-Link Event Code",
+		,,0,
+		,,,,
+		,,,,
+		;
+
+	Param261 = 
+		0,
+		,,
+		0x0010,
+		0xC6,
+		1,
+		"Diagnostic Message 6 - Error Code Byte 2",
+		"",
+		"If Error Code Identification is set to Default Code this is the global error code. If Error Code Identification is set to an IO-Link code this is the LSB of the IO-Link Event Code",
+		,,0,
+		,,,,
+		,,,,
+		;
+
+	Param262 = 
+		0,
+		,,
+		0x0010,
+		0xC6,
+		1,
+		"Diagnostic Message 6 - Severity and Coming/Going display",
+		"",
+		"Bit0 shows if the diagnostic message is coming (value = 1) or going (value = 0). Bit6 and Bit7 show if it is a Minor Fault (value = 1), a Major Fault (value = 2) or an Information (value = 3)",
+		,,0,
+		,,,,
+		,,,,
+		;
+
+$	********************************
+$	* Diagnostic Message 7
+$	********************************
+
+	Param263 = 
+		0,
+		,,
+		0x0010,
+		0xC6,
+		1,
+		"Diagnotic Message 7 - Last IP Octet",
+		"",
+		"The last IP address octet of the module that reported the diagnostic message",
+		0,255,0,
+		,,,,
+		,,,,
+		;
+
+	Param264 = 
+		0,
+		,,
+		0x0110,
+		0xC6,
+		1,
+		"Diagnostic Message 7 - Error Code Identification",
+		"",
+		"0: Default Code, 128: IO-Link Master Event Code, 129: IO-Link Device Event Code, 130: Murrelektronik IO-Link Device Event Code",
+		0,130,0,
+		,,,,
+		,,,,
+		;
+
+	Enum264 = 
+		0,"Default Code",
+		128,"IO-Link Master Event Code", 
+		129,"IO-Link Device Event Code", 
+		130,"Murrelektronik IO-Link Device Event Code";
+
+	Param265 = 
+		0,
+		,,
+		0x0010,
+		0xC6,
+		1,
+		"Diagnostic Message 7 - Channel Number IO-Link Master",
+		"",
+		"Channel number that the fault occured. If Error Code Identification is set to any IO-Link error then this shows the IO-Link master port",
+		0,17,0,
+		,,,,
+		,,,,
+		;
+
+	Enum265 = 
+		0,"Channel 00/IO-Link Port X0",
+		1,"Channel 01/IO-Link Port X1",
+		2,"Channel 02/IO-Link Port X2",
+		3,"Channel 03/IO-Link Port X3",
+		4,"Channel 04/IO-Link Port X4",
+		5,"Channel 05/IO-Link Port X5",
+		6,"Channel 06/IO-Link Port X6",
+		7,"Channel 07/IO-Link Port X7",
+		10,"Channel 10",
+		11,"Channel 11",
+		12,"Channel 12",
+		13,"Channel 13",
+		14,"Channel 14",
+		15,"Channel 15",
+		16,"Channel 16",
+		17,"Channel 17";
+
+	Param266 = 
+		0,
+		,,
+		0x0010,
+		0xC6,
+		1,
+		"Diagnostic Message 7 - Channel Number IO-Link Device",
+		"",
+		"Shows the IO-Link Device channel number where the fault occured (if Error Code Identification is set to Murrelektronik IO-Link Device Event Code error",
+		0,17,0,
+		,,,,
+		,,,,
+		;
+
+	Param267 = 
+		0,
+		,,
+		0x0010,
+		0xC6,
+		1,
+		"Diagnostic Message 7 - Error Code Byte 1",
+		"",
+		"If Error Code Identification is set to Default Code this is the global error code. If Error Code Identification is set to an IO-Link code this is the LSB of the IO-Link Event Code",
+		,,0,
+		,,,,
+		,,,,
+		;
+
+	Param268 = 
+		0,
+		,,
+		0x0010,
+		0xC6,
+		1,
+		"Diagnostic Message 7 - Error Code Byte 2",
+		"",
+		"If Error Code Identification is set to Default Code this is the global error code. If Error Code Identification is set to an IO-Link code this is the LSB of the IO-Link Event Code",
+		,,0,
+		,,,,
+		,,,,
+		;
+
+	Param269 = 
+		0,
+		,,
+		0x0010,
+		0xC6,
+		1,
+		"Diagnostic Message 7 - Severity and Coming/Going display",
+		"",
+		"Bit0 shows if the diagnostic message is coming (value = 1) or going (value = 0). Bit6 and Bit7 show if it is a Minor Fault (value = 1), a Major Fault (value = 2) or an Information (value = 3)",
+		,,0,
+		,,,,
+		,,,,
+		;
+
+$	********************************
+$	* Diagnostic Message 8
+$	********************************
+
+	Param270 = 
+		0,
+		,,
+		0x0010,
+		0xC6,
+		1,
+		"Diagnotic Message 8 - Last IP Octet",
+		"",
+		"The last IP address octet of the module that reported the diagnostic message",
+		0,255,0,
+		,,,,
+		,,,,
+		;
+
+	Param271 = 
+		0,
+		,,
+		0x0110,
+		0xC6,
+		1,
+		"Diagnostic Message 8 - Error Code Identification",
+		"",
+		"0: Default Code, 128: IO-Link Master Event Code, 129: IO-Link Device Event Code, 130: Murrelektronik IO-Link Device Event Code",
+		0,130,0,
+		,,,,
+		,,,,
+		;
+
+	Enum271 = 
+		0,"Default Code",
+		128,"IO-Link Master Event Code", 
+		129,"IO-Link Device Event Code", 
+		130,"Murrelektronik IO-Link Device Event Code";
+
+	Param272 = 
+		0,
+		,,
+		0x0010,
+		0xC6,
+		1,
+		"Diagnostic Message 8 - Channel Number IO-Link Master",
+		"",
+		"Channel number that the fault occured. If Error Code Identification is set to any IO-Link error then this shows the IO-Link master port",
+		0,17,0,
+		,,,,
+		,,,,
+		;
+
+	Enum272 = 
+		0,"Channel 00/IO-Link Port X0",
+		1,"Channel 01/IO-Link Port X1",
+		2,"Channel 02/IO-Link Port X2",
+		3,"Channel 03/IO-Link Port X3",
+		4,"Channel 04/IO-Link Port X4",
+		5,"Channel 05/IO-Link Port X5",
+		6,"Channel 06/IO-Link Port X6",
+		7,"Channel 07/IO-Link Port X7",
+		10,"Channel 10",
+		11,"Channel 11",
+		12,"Channel 12",
+		13,"Channel 13",
+		14,"Channel 14",
+		15,"Channel 15",
+		16,"Channel 16",
+		17,"Channel 17";
+
+	Param273 = 
+		0,
+		,,
+		0x0010,
+		0xC6,
+		1,
+		"Diagnostic Message 8 - Channel Number IO-Link Device",
+		"",
+		"Shows the IO-Link Device channel number where the fault occured (if Error Code Identification is set to Murrelektronik IO-Link Device Event Code error",
+		0,17,0,
+		,,,,
+		,,,,
+		;
+
+	Param274 = 
+		0,
+		,,
+		0x0010,
+		0xC6,
+		1,
+		"Diagnostic Message 8 - Error Code Byte 1",
+		"",
+		"If Error Code Identification is set to Default Code this is the global error code. If Error Code Identification is set to an IO-Link code this is the LSB of the IO-Link Event Code",
+		,,0,
+		,,,,
+		,,,,
+		;
+
+	Param275 = 
+		0,
+		,,
+		0x0010,
+		0xC6,
+		1,
+		"Diagnostic Message 8 - Error Code Byte 2",
+		"",
+		"If Error Code Identification is set to Default Code this is the global error code. If Error Code Identification is set to an IO-Link code this is the LSB of the IO-Link Event Code",
+		,,0,
+		,,,,
+		,,,,
+		;
+
+	Param276 = 
+		0,
+		,,
+		0x0010,
+		0xC6,
+		1,
+		"Diagnostic Message 8 - Severity and Coming/Going display",
+		"",
+		"Bit0 shows if the diagnostic message is coming (value = 1) or going (value = 0). Bit6 and Bit7 show if it is a Minor Fault (value = 1), a Major Fault (value = 2) or an Information (value = 3)",
+		,,0,
+		,,,,
+		,,,,
+		;
+	Param291 = 
+		0,
+		,,
+		0x0010,
+		0xC6,
+		1,
+		"Diagnostic Message 1 - Reserved",
+		"",
+		"<reserved for future use>",
+		0,0,0,
+		,,,,
+		,,,,
+		;
+
+	Param292 = 
+		0,
+		,,
+		0x0010,
+		0xC6,
+		1,
+		"Diagnostic Message 2 - Reserved",
+		"",
+		"<reserved for future use>",
+		0,0,0,
+		,,,,
+		,,,,
+		;
+
+	Param293 = 
+		0,
+		,,
+		0x0010,
+		0xC6,
+		1,
+		"Diagnostic Message 3 - Reserved",
+		"",
+		"<reserved for future use>",
+		0,0,0,
+		,,,,
+		,,,,
+		;
+
+	Param294 = 
+		0,
+		,,
+		0x0010,
+		0xC6,
+		1,
+		"Diagnostic Message 4 - Reserved",
+		"",
+		"<reserved for future use>",
+		0,0,0,
+		,,,,
+		,,,,
+		;
+
+	Param295 = 
+		0,
+		,,
+		0x0010,
+		0xC6,
+		1,
+		"Diagnostic Message 5 - Reserved",
+		"",
+		"<reserved for future use>",
+		0,0,0,
+		,,,,
+		,,,,
+		;
+
+	Param296 = 
+		0,
+		,,
+		0x0010,
+		0xC6,
+		1,
+		"Diagnostic Message 6 - Reserved",
+		"",
+		"<reserved for future use>",
+		0,0,0,
+		,,,,
+		,,,,
+		;
+
+	Param297 = 
+		0,
+		,,
+		0x0010,
+		0xC6,
+		1,
+		"Diagnostic Message 7 - Reserved",
+		"",
+		"<reserved for future use>",
+		0,0,0,
+		,,,,
+		,,,,
+		;
+
+	Param298 = 
+		0,
+		,,
+		0x0010,
+		0xC6,
+		1,
+		"Diagnostic Message 8 - Reserved",
+		"",
+		"<reserved for future use>",
+		0,0,0,
+		,,,,
+		,,,,
+		;
+
+$	================================
+$	SECTION: O->T DATA
+$	================================
+
+	Param300 = 
+		0,
+		,,
+		0x0000,
+		0xC7,
+		2,
+		"Digital Output Data",
+		"",
+		"",
+		0x00,0xFFFF,0x00,
+		,,,,
+		,,,,
+		;
+
+$	********************************
+$	* Port Based Output Data
+$	********************************
+
+	Param303 = 
+		0,
+		,,
+		0x0000,
+		0xC6,
+		1,
+		"IO-Link Port X0 - Output Data",
+		"",
+		"",
+		0,255,0,
+		,,,,
+		,,,,
+		;
+
+	Param304 = 
+		0,
+		,,
+		0x0000,
+		0xC6,
+		1,
+		"IO-Link Port X1 - Output Data",
+		"",
+		"",
+		0,255,0,
+		,,,,
+		,,,,
+		;
+
+	Param305 = 
+		0,
+		,,
+		0x0000,
+		0xC6,
+		1,
+		"IO-Link Port X2 - Output Data",
+		"",
+		"",
+		0,255,0,
+		,,,,
+		,,,,
+		;
+
+	Param306 = 
+		0,
+		,,
+		0x0000,
+		0xC6,
+		1,
+		"IO-Link Port X3 - Output Data",
+		"",
+		"",
+		0,255,0,
+		,,,,
+		,,,,
+		;
+
+	Param307 = 
+		0,
+		,,
+		0x0000,
+		0xC6,
+		1,
+		"IO-Link Port X4 - Output Data",
+		"",
+		"",
+		0,255,0,
+		,,,,
+		,,,,
+		;
+
+	Param308 = 
+		0,
+		,,
+		0x0000,
+		0xC6,
+		1,
+		"IO-Link Port X5 - Output Data",
+		"",
+		"",
+		0,255,0,
+		,,,,
+		,,,,
+		;
+
+	Param309 = 
+		0,
+		,,
+		0x0000,
+		0xC6,
+		1,
+		"IO-Link Port X6 - Output Data",
+		"",
+		"",
+		0,255,0,
+		,,,,
+		,,,,
+		;
+
+	Param310 = 
+		0,
+		,,
+		0x0000,
+		0xC6,
+		1,
+		"IO-Link Port X7 - Output Data",
+		"",
+		"",
+		0,255,0,
+		,,,,
+		,,,,
+		;
+
+	Param312 = 
+		0,
+		,,
+		0x0000,
+		0xC7,
+		2,
+		"Diagnostic Acknowledgement",
+		"",
+		"Diagnostic Acknowledgement",
+		0,255,0,
+		,,,,
+		,,,,
+		;
+
+$	================================
+$	SECTION: MISC
+$	================================
+
+	Param500 = 
+		0,
+		,,
+		0x0000,
+		0xC8,
+		4,
+		"RPI",
+		"microseconds",
+		"cyclical update interval",
+		10000,3000000,250000,
+		,,,,
+		,,,,
+		;
+
+[Groups]
+
+	Group1 = 
+		"General Configuration",
+		1,
+		1;
+
+	Group2 = 
+		"Diagnostic Configuration",
+		14,
+		3,4,6,8,9,10,11,12,13,14,15,16,17,18;
+
+	Group3 =
+		"Configuration IOL Port X0",
+		15,
+		19,20,21,22,23,24,25,26,27,28,31,35,
+		36,37,38;	
+
+	Group4 =
+		"Configuration IOL Port X1",
+		15,
+		39,40,41,42,43,44,45,46,47,48,51,55,
+		56,57,58;
+		
+	Group5 =
+		"Configuration IOL Port X2",
+		15,
+		59,60,61,62,63,64,65,66,67,68,71,75,
+		76,77,78;
+
+	Group6 =
+		"Configuration IOL Port X3",
+		15,
+		79,80,81,82,83,84,85,86,87,88,91,95,
+		96,97,98;
+
+	Group7 =
+		"Configuration IOL Port X4",
+		15,
+		99,100,101,102,103,104,105,106,107,
+		108,111,115,116,117,118;
+
+	Group8 =
+		"Configuration IOL Port X5",
+		15,
+		119,120,121,122,123,124,125,126,127,
+		128,131,135,136,137,138;
+
+	Group9 =
+		"Configuration IOL Port X6",
+		15,
+		139,140,141,142,143,144,145,146,147,
+		148,151,155,156,157,158;
+
+	Group10 =
+		"Configuration IOL Port X7",
+		15,
+		159,160,161,162,163,164,165,166,167,
+		168,171,175,176,177,178;
+
+	Group11 = 
+		"WebUI Configuration",
+		1,
+		188;
+
+	
+
+[Assembly]
+	Object_Name = "Assembly Object";
+	Object_Class_Code = 0x04;
+
+$	********************************
+$	* Sub Assemblies
+$	********************************
+
+	Assem1 = 
+		"Config Sub-Assem: Diagnostics",		$ Diagnostics
+		,
+		18,
+		0x0000,
+		,,
+		8,Param3,					$ Diag-Param - Global Diagnostic Report
+		8,Param4,					$ Diag-Param - Under Voltage Sensor Supply Diagnostic Message
+		16,17500,					$ Vendor: Fixed value
+		8,Param6,					$ Diag-Param - Under Voltage Actuator Supply Diagnostic Message
+		16,17500,					$ Vendor: Fixed value
+		8,Param8,					$ Diag-Param - No Actuator Supply Diagnostic Message
+		8,Param9,					$ Diag-Param - LED Indication For Suppressed Diagnostic Messages
+		8,Param10,					$ Diag-Param - Diagnostic Message Acknowledgement
+		8,Param11,					$ Diag-Param - Port X0 Diagnostic Report
+		8,Param12,					$ Diag-Param - Port X1 Diagnostic Report
+		8,Param13,					$ Diag-Param - Port X2 Diagnostic Report
+		8,Param14,					$ Diag-Param - Port X3 Diagnostic Report
+		8,Param15,					$ Diag-Param - Port X4 Diagnostic Report
+		8,Param16,					$ Diag-Param - Port X5 Diagnostic Report
+		8,Param17,					$ Diag-Param - Port X6 Diagnostic Report
+		8,Param18;					$ Diag-Param - Port X7 Diagnostic Report
+
+	Assem10 = 
+		"Config Sub-Assem: IO-Link Port X0",		$ IO-Link Port X0
+		,
+		24,
+		0x0000,
+		,,
+		8,Param19,					$ IO-Link Port X0 - IO-Link Function Pin 4
+		8,Param20,					$ IO-Link Port X0 - Validation & Backup
+		8,Param21,					$ IO-Link Port X0 - Behavior Pin 2 (Ch10)
+		8,Param22,					$ IO-Link Port X0 - PortCycleTime
+		16,Param23,					$ IO-Link Port X0 - Vendor ID
+		32,Param24,					$ IO-Link Port X0 - Device ID
+		8,Param25,					$ IO-Link Port X0 - IO-Link Process Data Swap
+		8,Param26,					$ IO-Link Port X0 - IO-Link Event Integration
+		8,Param27,					$ IO-Link Port X0 - Digital Input Signal Filter Pin 4
+		8,Param28,					$ IO-Link Port X0 - Digital Input Signal Filter Pin 2
+		8,0,						$ Vendor: Fixed value
+		8,0,						$ Vendor: Fixed value
+		8,Param31,					$ IO-Link Port X0 - Digital Port Function Configuration Pin 1
+		8,3,						$ Vendor: Fixed value
+		8,1,						$ Vendor: Fixed value
+		8,1,						$ Vendor: Fixed value
+		8,Param35,					$ IO-Link Port X0 - Output Fault Recovery Mode Pin 2
+		8,Param36,					$ IO-Link Port X0 - Output Fault Recovery Mode Pin 4
+		8,Param37,					$ IO-Link Port X0 - IO-Link Input Length
+		8,Param38;					$ IO-Link Port X0 - IO-Link Output Length
+
+	Assem11 = 
+		"Config Sub-Assem: IO-Link Port X1",		$ IO-Link Port X1
+		,
+		24,
+		0x0000,
+		,,
+		8,Param39,					$ IO-Link Port X1 - IO-Link Function Pin 4
+		8,Param40,					$ IO-Link Port X1 - Validation & Backup
+		8,Param41,					$ IO-Link Port X1 - Behavior Pin 2 (Ch11)
+		8,Param42,					$ IO-Link Port X1 - PortCycleTime
+		16,Param43,					$ IO-Link Port X1 - Vendor ID
+		32,Param44,					$ IO-Link Port X1 - Device ID
+		8,Param45,					$ IO-Link Port X1 - IO-Link Process Data Swap
+		8,Param46,					$ IO-Link Port X1 - IO-Link Event Integration
+		8,Param47,					$ IO-Link Port X1 - Digital Input Signal Filter Pin 4
+		8,Param48,					$ IO-Link Port X1 - Digital Input Signal Filter Pin 2
+		8,0,						$ Vendor: Fixed value
+		8,0,						$ Vendor: Fixed value
+		8,Param51,					$ IO-Link Port X1 - Digital Port Function Configuration Pin 1
+		8,3,						$ Vendor: Fixed value
+		8,1,						$ Vendor: Fixed value
+		8,1,						$ Vendor: Fixed value
+		8,Param55,					$ IO-Link Port X1 - Output Fault Recovery Mode Pin 2
+		8,Param56,					$ IO-Link Port X1 - Output Fault Recovery Mode Pin 4
+		8,Param57,					$ IO-Link Port X1 - IO-Link Input Length
+		8,Param58;					$ IO-Link Port X1 - IO-Link Output Length
+
+	Assem12 = 
+		"Config Sub-Assem: IO-Link Port X2",		$ IO-Link Port X2
+		,
+		24,
+		0x0000,
+		,,
+		8,Param59,					$ IO-Link Port X2 - IO-Link Function Pin 4
+		8,Param60,					$ IO-Link Port X2 - Validation & Backup
+		8,Param61,					$ IO-Link Port X2 - Behavior Pin 2 (Ch12)
+		8,Param62,					$ IO-Link Port X2 - PortCycleTime
+		16,Param63,					$ IO-Link Port X2 - Vendor ID
+		32,Param64,					$ IO-Link Port X2 - Device ID
+		8,Param65,					$ IO-Link Port X2 - IO-Link Process Data Swap
+		8,Param66,					$ IO-Link Port X2 - IO-Link Event Integration
+		8,Param67,					$ IO-Link Port X2 - Digital Input Signal Filter Pin 4
+		8,Param68,					$ IO-Link Port X2 - Digital Input Signal Filter Pin 2
+		8,0,						$ Vendor: Fixed value
+		8,0,						$ Vendor: Fixed value
+		8,Param71,					$ IO-Link Port X2 - Digital Port Function Configuration Pin 1
+		8,3,						$ Vendor: Fixed value
+		8,1,						$ Vendor: Fixed value
+		8,1,						$ Vendor: Fixed value
+		8,Param75,					$ IO-Link Port X2 - Output Fault Recovery Mode Pin 2
+		8,Param76,					$ IO-Link Port X2 - Output Fault Recovery Mode Pin 4
+		8,Param77,					$ IO-Link Port X2 - IO-Link Input Length
+		8,Param78;					$ IO-Link Port X2 - IO-Link Output Length
+
+	Assem13 = 
+		"Config Sub-Assem: IO-Link Port X3",		$ IO-Link Port X3
+		,
+		24,
+		0x0000,
+		,,
+		8,Param79,					$ IO-Link Port X3 - IO-Link Function Pin 4
+		8,Param80,					$ IO-Link Port X3 - Validation & Backup
+		8,Param81,					$ IO-Link Port X3 - Behavior Pin 2 (Ch13)
+		8,Param82,					$ IO-Link Port X3 - PortCycleTime
+		16,Param83,					$ IO-Link Port X3 - Vendor ID
+		32,Param84,					$ IO-Link Port X3 - Device ID
+		8,Param85,					$ IO-Link Port X3 - IO-Link Process Data Swap
+		8,Param86,					$ IO-Link Port X3 - IO-Link Event Integration
+		8,Param87,					$ IO-Link Port X3 - Digital Input Signal Filter Pin 4
+		8,Param88,					$ IO-Link Port X3 - Digital Input Signal Filter Pin 2
+		8,0,						$ Vendor: Fixed value
+		8,0,						$ Vendor: Fixed value
+		8,Param91,					$ IO-Link Port X3 - Digital Port Function Configuration Pin 1
+		8,3,						$ Vendor: Fixed value
+		8,1,						$ Vendor: Fixed value
+		8,1,						$ Vendor: Fixed value
+		8,Param95,					$ IO-Link Port X3 - Output Fault Recovery Mode Pin 2
+		8,Param96,					$ IO-Link Port X3 - Output Fault Recovery Mode Pin 4
+		8,Param97,					$ IO-Link Port X3 - IO-Link Input Length
+		8,Param98;					$ IO-Link Port X3 - IO-Link Output Length
+
+	Assem14 = 
+		"Config Sub-Assem: IO-Link Port X4",		$ IO-Link Port X4
+		,
+		24,
+		0x0000,
+		,,
+		8,Param99,					$ IO-Link Port X4 - IO-Link Function Pin 4
+		8,Param100,					$ IO-Link Port X4 - Validation & Backup
+		8,Param101,					$ IO-Link Port X4 - Behavior Pin 2 (Ch14)
+		8,Param102,					$ IO-Link Port X4 - PortCycleTime
+		16,Param103,					$ IO-Link Port X4 - Vendor ID
+		32,Param104,					$ IO-Link Port X4 - Device ID
+		8,Param105,					$ IO-Link Port X4 - IO-Link Process Data Swap
+		8,Param106,					$ IO-Link Port X4 - IO-Link Event Integration
+		8,Param107,					$ IO-Link Port X4 - Digital Input Signal Filter Pin 4
+		8,Param108,					$ IO-Link Port X4 - Digital Input Signal Filter Pin 2
+		8,0,						$ Vendor: Fixed value
+		8,0,						$ Vendor: Fixed value
+		8,Param111,					$ IO-Link Port X4 - Digital Port Function Configuration Pin 1
+		8,3,						$ Vendor: Fixed value
+		8,1,						$ Vendor: Fixed value
+		8,1,						$ Vendor: Fixed value
+		8,Param115,					$ IO-Link Port X4 - Output Fault Recovery Mode Pin 2
+		8,Param116,					$ IO-Link Port X4 - Output Fault Recovery Mode Pin 4
+		8,Param117,					$ IO-Link Port X4 - IO-Link Input Length
+		8,Param118;					$ IO-Link Port X4 - IO-Link Output Length
+
+	Assem15 = 
+		"Config Sub-Assem: IO-Link Port X5",		$ IO-Link Port X5
+		,
+		24,
+		0x0000,
+		,,
+		8,Param119,					$ IO-Link Port X5 - IO-Link Function Pin 4
+		8,Param120,					$ IO-Link Port X5 - Validation & Backup
+		8,Param121,					$ IO-Link Port X5 - Behavior Pin 2 (Ch15)
+		8,Param122,					$ IO-Link Port X5 - PortCycleTime
+		16,Param123,					$ IO-Link Port X5 - Vendor ID
+		32,Param124,					$ IO-Link Port X5 - Device ID
+		8,Param125,					$ IO-Link Port X5 - IO-Link Process Data Swap
+		8,Param126,					$ IO-Link Port X5 - IO-Link Event Integration
+		8,Param127,					$ IO-Link Port X5 - Digital Input Signal Filter Pin 4
+		8,Param128,					$ IO-Link Port X5 - Digital Input Signal Filter Pin 2
+		8,0,						$ Vendor: Fixed value
+		8,0,						$ Vendor: Fixed value
+		8,Param131,					$ IO-Link Port X5 - Digital Port Function Configuration Pin 1
+		8,3,						$ Vendor: Fixed value
+		8,1,						$ Vendor: Fixed value
+		8,1,						$ Vendor: Fixed value
+		8,Param135,					$ IO-Link Port X5 - Output Fault Recovery Mode Pin 2
+		8,Param136,					$ IO-Link Port X5 - Output Fault Recovery Mode Pin 4
+		8,Param137,					$ IO-Link Port X5 - IO-Link Input Length
+		8,Param138;					$ IO-Link Port X5 - IO-Link Output Length
+
+	Assem16 = 
+		"Config Sub-Assem: IO-Link Port X6",		$ IO-Link Port X6
+		,
+		24,
+		0x0000,
+		,,
+		8,Param139,					$ IO-Link Port X6 - IO-Link Function Pin 4
+		8,Param140,					$ IO-Link Port X6 - Validation & Backup
+		8,Param141,					$ IO-Link Port X6 - Behavior Pin 2 (Ch16)
+		8,Param142,					$ IO-Link Port X6 - PortCycleTime
+		16,Param143,					$ IO-Link Port X6 - Vendor ID
+		32,Param144,					$ IO-Link Port X6 - Device ID
+		8,Param145,					$ IO-Link Port X6 - IO-Link Process Data Swap
+		8,Param146,					$ IO-Link Port X6 - IO-Link Event Integration
+		8,Param147,					$ IO-Link Port X6 - Digital Input Signal Filter Pin 4
+		8,Param148,					$ IO-Link Port X6 - Digital Input Signal Filter Pin 2
+		8,0,						$ Vendor: Fixed value
+		8,0,						$ Vendor: Fixed value
+		8,Param151,					$ IO-Link Port X6 - Digital Port Function Configuration Pin 1
+		8,3,						$ Vendor: Fixed value
+		8,1,						$ Vendor: Fixed value
+		8,1,						$ Vendor: Fixed value
+		8,Param155,					$ IO-Link Port X6 - Output Fault Recovery Mode Pin 2
+		8,Param156,					$ IO-Link Port X6 - Output Fault Recovery Mode Pin 4
+		8,Param157,					$ IO-Link Port X6 - IO-Link Input Length
+		8,Param158;					$ IO-Link Port X6 - IO-Link Output Length
+
+	Assem17 = 
+		"Config Sub-Assem: IO-Link Port X7",		$ IO-Link Port X7
+		,
+		24,
+		0x0000,
+		,,
+		8,Param159,					$ IO-Link Port X7 - IO-Link Function Pin 4
+		8,Param160,					$ IO-Link Port X7 - Validation & Backup
+		8,Param161,					$ IO-Link Port X7 - Behavior Pin 2 (Ch17)
+		8,Param162,					$ IO-Link Port X7 - PortCycleTime
+		16,Param163,					$ IO-Link Port X7 - Vendor ID
+		32,Param164,					$ IO-Link Port X7 - Device ID
+		8,Param165,					$ IO-Link Port X7 - IO-Link Process Data Swap
+		8,Param166,					$ IO-Link Port X7 - IO-Link Event Integration
+		8,Param167,					$ IO-Link Port X7 - Digital Input Signal Filter Pin 4
+		8,Param168,					$ IO-Link Port X7 - Digital Input Signal Filter Pin 2
+		8,0,						$ Vendor: Fixed value
+		8,0,						$ Vendor: Fixed value
+		8,Param171,					$ IO-Link Port X7 - Digital Port Function Configuration Pin 1
+		8,3,						$ Vendor: Fixed value
+		8,1,						$ Vendor: Fixed value
+		8,1,						$ Vendor: Fixed value
+		8,Param175,					$ IO-Link Port X7 - Output Fault Recovery Mode Pin 2
+		8,Param176,					$ IO-Link Port X7 - Output Fault Recovery Mode Pin 4
+		8,Param177,					$ IO-Link Port X7 - IO-Link Input Length
+		8,Param178;					$ IO-Link Port X7 - IO-Link Output Length
+
+	Assem20 = 
+		"T->O Sub Assem: IO-Link Port X0",		$ IO-Link Port X0
+		,
+		40,
+		0x0000,
+		,,
+		256,Assem50,					$ IO-Link Port X0 - Input Data
+		16,Param213,					$ IO-Link Port X0 - Status
+		16,Param23,					$ IO-Link Port X0 - Vendor ID
+		32,Param24;					$ IO-Link Port X0 - Device ID
+
+	Assem21 = 
+		"T->O Sub Assem: IO-Link Port X1",		$ IO-Link Port X1
+		,
+		40,
+		0x0000,
+		,,
+		256,Assem51,					$ IO-Link Port X1 - Input Data
+		16,Param214,					$ IO-Link Port X1 - Status
+		16,Param43,					$ IO-Link Port X1 - Vendor ID
+		32,Param44;					$ IO-Link Port X1 - Device ID
+
+	Assem22 = 
+		"T->O Sub Assem: IO-Link Port X2",		$ IO-Link Port X2
+		,
+		40,
+		0x0000,
+		,,
+		256,Assem52,					$ IO-Link Port X2 - Input Data
+		16,Param215,					$ IO-Link Port X2 - Status
+		16,Param63,					$ IO-Link Port X2 - Vendor ID
+		32,Param64;					$ IO-Link Port X2 - Device ID
+
+	Assem23 = 
+		"T->O Sub Assem: IO-Link Port X3",		$ IO-Link Port X3
+		,
+		40,
+		0x0000,
+		,,
+		256,Assem53,					$ IO-Link Port X3 - Input Data
+		16,Param216,					$ IO-Link Port X3 - Status
+		16,Param83,					$ IO-Link Port X3 - Vendor ID
+		32,Param84;					$ IO-Link Port X3 - Device ID
+
+	Assem24 = 
+		"T->O Sub Assem: IO-Link Port X4",		$ IO-Link Port X4
+		,
+		40,
+		0x0000,
+		,,
+		256,Assem54,					$ IO-Link Port X4 - Input Data
+		16,Param217,					$ IO-Link Port X4 - Status
+		16,Param103,					$ IO-Link Port X4 - Vendor ID
+		32,Param104;					$ IO-Link Port X4 - Device ID
+
+	Assem25 = 
+		"T->O Sub Assem: IO-Link Port X5",		$ IO-Link Port X5
+		,
+		40,
+		0x0000,
+		,,
+		256,Assem55,					$ IO-Link Port X5 - Input Data
+		16,Param218,					$ IO-Link Port X5 - Status
+		16,Param123,					$ IO-Link Port X5 - Vendor ID
+		32,Param124;					$ IO-Link Port X5 - Device ID
+
+	Assem26 = 
+		"T->O Sub Assem: IO-Link Port X6",		$ IO-Link Port X6
+		,
+		40,
+		0x0000,
+		,,
+		256,Assem56,					$ IO-Link Port X6 - Input Data
+		16,Param219,					$ IO-Link Port X6 - Status
+		16,Param143,					$ IO-Link Port X6 - Vendor ID
+		32,Param144;					$ IO-Link Port X6 - Device ID
+
+	Assem27 = 
+		"T->O Sub Assem: IO-Link Port X7",		$ IO-Link Port X7
+		,
+		40,
+		0x0000,
+		,,
+		256,Assem57,					$ IO-Link Port X7 - Input Data
+		16,Param220,					$ IO-Link Port X7 - Status
+		16,Param163,					$ IO-Link Port X7 - Vendor ID
+		32,Param164;					$ IO-Link Port X7 - Device ID
+
+
+	Assem28 = 
+		"T->O Sub Assem: Diagnostic Messages",
+		,
+		64,
+		0x0000,
+		,,
+		8,Param221,					$ Diagnostic Message 1 - Last IP Octet
+		8,Param222,					$ Diagnostic Message 1 - Error Code Identification
+		8,Param223,					$ Diagnostic Message 1 - Channel Number IO-Link Master
+		8,Param224,					$ Diagnostic Message 1 - Channel Number IO-Link Device
+		8,Param225,					$ Diagnostic Message 1 - Error Code Byte 1
+		8,Param226,					$ Diagnostic Message 1 - Error Code Byte 2
+		8,Param227,					$ Diagnostic Message 1 - Severity and Coming/Going display
+		8,Param291,					$ Diagnostic Message 1 - Reserved
+
+		8,Param228,					$ Diagnostic Message 2 - Last IP Octet
+		8,Param229,					$ Diagnostic Message 2 - Error Code Identification
+		8,Param230,					$ Diagnostic Message 2 - Channel Number IO-Link Master
+		8,Param231,					$ Diagnostic Message 2 - Channel Number IO-Link Device
+		8,Param232,					$ Diagnostic Message 2 - Error Code Byte 1
+		8,Param233,					$ Diagnostic Message 2 - Error Code Byte 2
+		8,Param234,					$ Diagnostic Message 2 - Severity and Coming/Going display
+		8,Param292,					$ Diagnostic Message 2 - Reserved
+
+		8,Param235,					$ Diagnostic Message 3 - Last IP Octet
+		8,Param236,					$ Diagnostic Message 3 - Error Code Identification
+		8,Param237,					$ Diagnostic Message 3 - Channel Number IO-Link Master
+		8,Param238,					$ Diagnostic Message 3 - Channel Number IO-Link Device
+		8,Param239,					$ Diagnostic Message 3 - Error Code Byte 1
+		8,Param240,					$ Diagnostic Message 3 - Error Code Byte 2
+		8,Param241,					$ Diagnostic Message 3 - Severity and Coming/Going display
+		8,Param293,					$ Diagnostic Message 3 - Reserved
+
+		8,Param242,					$ Diagnostic Message 4 - Last IP Octet
+		8,Param243,					$ Diagnostic Message 4 - Error Code Identification
+		8,Param244,					$ Diagnostic Message 4 - Channel Number IO-Link Master
+		8,Param245,					$ Diagnostic Message 4 - Channel Number IO-Link Device
+		8,Param246,					$ Diagnostic Message 4 - Error Code Byte 1
+		8,Param247,					$ Diagnostic Message 4 - Error Code Byte 2
+		8,Param248,					$ Diagnostic Message 4 - Severity and Coming/Going display
+		8,Param294,					$ Diagnostic Message 4 - Reserved
+
+		8,Param249,					$ Diagnostic Message 5 - Last IP Octet
+		8,Param250,					$ Diagnostic Message 5 - Error Code Identification
+		8,Param251,					$ Diagnostic Message 5 - Channel Number IO-Link Master
+		8,Param252,					$ Diagnostic Message 5 - Channel Number IO-Link Device
+		8,Param253,					$ Diagnostic Message 5 - Error Code Byte 1
+		8,Param254,					$ Diagnostic Message 5 - Error Code Byte 2
+		8,Param255,					$ Diagnostic Message 5 - Severity and Coming/Going display
+		8,Param295,					$ Diagnostic Message 5 - Reserved
+
+		8,Param256,					$ Diagnostic Message 6 - Last IP Octet
+		8,Param257,					$ Diagnostic Message 6 - Error Code Identification
+		8,Param258,					$ Diagnostic Message 6 - Channel Number IO-Link Master
+		8,Param259,					$ Diagnostic Message 6 - Channel Number IO-Link Device
+		8,Param260,					$ Diagnostic Message 6 - Error Code Byte 1
+		8,Param261,					$ Diagnostic Message 6 - Error Code Byte 2
+		8,Param262,					$ Diagnostic Message 6 - Severity and Coming/Going display
+		8,Param296,					$ Diagnostic Message 6 - Reserved
+
+		8,Param263,					$ Diagnostic Message 7 - Last IP Octet
+		8,Param264,					$ Diagnostic Message 7 - Error Code Identification
+		8,Param265,					$ Diagnostic Message 7 - Channel Number IO-Link Master
+		8,Param266,					$ Diagnostic Message 7 - Channel Number IO-Link Device
+		8,Param267,					$ Diagnostic Message 7 - Error Code Byte 1
+		8,Param268,					$ Diagnostic Message 7 - Error Code Byte 2
+		8,Param269,					$ Diagnostic Message 7 - Severity and Coming/Going display
+		8,Param297,					$ Diagnostic Message 7 - Reserved
+
+		8,Param270,					$ Diagnostic Message 8 - Last IP Octet
+		8,Param271,					$ Diagnostic Message 8 - Error Code Identification
+		8,Param272,					$ Diagnostic Message 8 - Channel Number IO-Link Master
+		8,Param273,					$ Diagnostic Message 8 - Channel Number IO-Link Device
+		8,Param274,					$ Diagnostic Message 8 - Error Code Byte 1
+		8,Param275,					$ Diagnostic Message 8 - Error Code Byte 2
+		8,Param276,					$ Diagnostic Message 8 - Severity and Coming/Going display
+		8,Param298;					$ Diagnostic Message 8 - Reserved
+
+	Assem50 = 
+		"T->O Sub Assem: Process Data Port X0",
+		,
+		32,
+		0x0000,
+		,,
+		8,Param204,
+		8,Param204,
+		8,Param204,
+		8,Param204,
+		8,Param204,
+		8,Param204,
+		8,Param204,
+		8,Param204,
+		8,Param204,
+		8,Param204,
+		8,Param204,
+		8,Param204,
+		8,Param204,
+		8,Param204,
+		8,Param204,
+		8,Param204,
+		8,Param204,
+		8,Param204,
+		8,Param204,
+		8,Param204,
+		8,Param204,
+		8,Param204,
+		8,Param204,
+		8,Param204,
+		8,Param204,
+		8,Param204,
+		8,Param204,
+		8,Param204,
+		8,Param204,
+		8,Param204,
+		8,Param204,
+		8,Param204;
+
+	Assem51 = 
+		"T->O Sub Assem: Process Data Port X1",
+		,
+		32,
+		0x0000,
+		,,
+		8,Param205,
+		8,Param205,
+		8,Param205,
+		8,Param205,
+		8,Param205,
+		8,Param205,
+		8,Param205,
+		8,Param205,
+		8,Param205,
+		8,Param205,
+		8,Param205,
+		8,Param205,
+		8,Param205,
+		8,Param205,
+		8,Param205,
+		8,Param205,
+		8,Param205,
+		8,Param205,
+		8,Param205,
+		8,Param205,
+		8,Param205,
+		8,Param205,
+		8,Param205,
+		8,Param205,
+		8,Param205,
+		8,Param205,
+		8,Param205,
+		8,Param205,
+		8,Param205,
+		8,Param205,
+		8,Param205,
+		8,Param205;
+
+	Assem52 = 
+		"T->O Sub Assem: Process Data Port X2",
+		,
+		32,
+		0x0000,
+		,,
+		8,Param206,
+		8,Param206,
+		8,Param206,
+		8,Param206,
+		8,Param206,
+		8,Param206,
+		8,Param206,
+		8,Param206,
+		8,Param206,
+		8,Param206,
+		8,Param206,
+		8,Param206,
+		8,Param206,
+		8,Param206,
+		8,Param206,
+		8,Param206,
+		8,Param206,
+		8,Param206,
+		8,Param206,
+		8,Param206,
+		8,Param206,
+		8,Param206,
+		8,Param206,
+		8,Param206,
+		8,Param206,
+		8,Param206,
+		8,Param206,
+		8,Param206,
+		8,Param206,
+		8,Param206,
+		8,Param206,
+		8,Param206;
+
+	Assem53 = 
+		"T->O Sub Assem: Process Data Port X3",
+		,
+		32,
+		0x0000,
+		,,
+		8,Param207,
+		8,Param207,
+		8,Param207,
+		8,Param207,
+		8,Param207,
+		8,Param207,
+		8,Param207,
+		8,Param207,
+		8,Param207,
+		8,Param207,
+		8,Param207,
+		8,Param207,
+		8,Param207,
+		8,Param207,
+		8,Param207,
+		8,Param207,
+		8,Param207,
+		8,Param207,
+		8,Param207,
+		8,Param207,
+		8,Param207,
+		8,Param207,
+		8,Param207,
+		8,Param207,
+		8,Param207,
+		8,Param207,
+		8,Param207,
+		8,Param207,
+		8,Param207,
+		8,Param207,
+		8,Param207,
+		8,Param207;
+
+	Assem54 = 
+		"T->O Sub Assem: Process Data Port X4",
+		,
+		32,
+		0x0000,
+		,,
+		8,Param208,
+		8,Param208,
+		8,Param208,
+		8,Param208,
+		8,Param208,
+		8,Param208,
+		8,Param208,
+		8,Param208,
+		8,Param208,
+		8,Param208,
+		8,Param208,
+		8,Param208,
+		8,Param208,
+		8,Param208,
+		8,Param208,
+		8,Param208,
+		8,Param208,
+		8,Param208,
+		8,Param208,
+		8,Param208,
+		8,Param208,
+		8,Param208,
+		8,Param208,
+		8,Param208,
+		8,Param208,
+		8,Param208,
+		8,Param208,
+		8,Param208,
+		8,Param208,
+		8,Param208,
+		8,Param208,
+		8,Param208;
+
+	Assem55 = 
+		"T->O Sub Assem: Process Data Port X5",
+		,
+		32,
+		0x0000,
+		,,
+		8,Param209,
+		8,Param209,
+		8,Param209,
+		8,Param209,
+		8,Param209,
+		8,Param209,
+		8,Param209,
+		8,Param209,
+		8,Param209,
+		8,Param209,
+		8,Param209,
+		8,Param209,
+		8,Param209,
+		8,Param209,
+		8,Param209,
+		8,Param209,
+		8,Param209,
+		8,Param209,
+		8,Param209,
+		8,Param209,
+		8,Param209,
+		8,Param209,
+		8,Param209,
+		8,Param209,
+		8,Param209,
+		8,Param209,
+		8,Param209,
+		8,Param209,
+		8,Param209,
+		8,Param209,
+		8,Param209,
+		8,Param209;
+
+	Assem56 = 
+		"T->O Sub Assem: Process Data Port X6",
+		,
+		32,
+		0x0000,
+		,,
+		8,Param210,
+		8,Param210,
+		8,Param210,
+		8,Param210,
+		8,Param210,
+		8,Param210,
+		8,Param210,
+		8,Param210,
+		8,Param210,
+		8,Param210,
+		8,Param210,
+		8,Param210,
+		8,Param210,
+		8,Param210,
+		8,Param210,
+		8,Param210,
+		8,Param210,
+		8,Param210,
+		8,Param210,
+		8,Param210,
+		8,Param210,
+		8,Param210,
+		8,Param210,
+		8,Param210,
+		8,Param210,
+		8,Param210,
+		8,Param210,
+		8,Param210,
+		8,Param210,
+		8,Param210,
+		8,Param210,
+		8,Param210;
+
+	Assem57 = 
+		"T->O Sub Assem: Process Data Port X7",
+		,
+		32,
+		0x0000,
+		,,
+		8,Param211,
+		8,Param211,
+		8,Param211,
+		8,Param211,
+		8,Param211,
+		8,Param211,
+		8,Param211,
+		8,Param211,
+		8,Param211,
+		8,Param211,
+		8,Param211,
+		8,Param211,
+		8,Param211,
+		8,Param211,
+		8,Param211,
+		8,Param211,
+		8,Param211,
+		8,Param211,
+		8,Param211,
+		8,Param211,
+		8,Param211,
+		8,Param211,
+		8,Param211,
+		8,Param211,
+		8,Param211,
+		8,Param211,
+		8,Param211,
+		8,Param211,
+		8,Param211,
+		8,Param211,
+		8,Param211,
+		8,Param211;
+
+	Assem70 = 
+		"O->T Sub Assem: Process Data Port X0",
+		,
+		32,
+		0x0000,
+		,,
+		8,Param303,
+		8,Param303,
+		8,Param303,
+		8,Param303,
+		8,Param303,
+		8,Param303,
+		8,Param303,
+		8,Param303,
+		8,Param303,
+		8,Param303,
+		8,Param303,
+		8,Param303,
+		8,Param303,
+		8,Param303,
+		8,Param303,
+		8,Param303,
+		8,Param303,
+		8,Param303,
+		8,Param303,
+		8,Param303,
+		8,Param303,
+		8,Param303,
+		8,Param303,
+		8,Param303,
+		8,Param303,
+		8,Param303,
+		8,Param303,
+		8,Param303,
+		8,Param303,
+		8,Param303,
+		8,Param303,
+		8,Param303;
+
+	Assem71 = 
+		"O->T Sub Assem: Process Data Port X1",
+		,
+		32,
+		0x0000,
+		,,
+		8,Param304,
+		8,Param304,
+		8,Param304,
+		8,Param304,
+		8,Param304,
+		8,Param304,
+		8,Param304,
+		8,Param304,
+		8,Param304,
+		8,Param304,
+		8,Param304,
+		8,Param304,
+		8,Param304,
+		8,Param304,
+		8,Param304,
+		8,Param304,
+		8,Param304,
+		8,Param304,
+		8,Param304,
+		8,Param304,
+		8,Param304,
+		8,Param304,
+		8,Param304,
+		8,Param304,
+		8,Param304,
+		8,Param304,
+		8,Param304,
+		8,Param304,
+		8,Param304,
+		8,Param304,
+		8,Param304,
+		8,Param304;
+
+	Assem72 = 
+		"O->T Sub Assem: Process Data Port X2",
+		,
+		32,
+		0x0000,
+		,,
+		8,Param305,
+		8,Param305,
+		8,Param305,
+		8,Param305,
+		8,Param305,
+		8,Param305,
+		8,Param305,
+		8,Param305,
+		8,Param305,
+		8,Param305,
+		8,Param305,
+		8,Param305,
+		8,Param305,
+		8,Param305,
+		8,Param305,
+		8,Param305,
+		8,Param305,
+		8,Param305,
+		8,Param305,
+		8,Param305,
+		8,Param305,
+		8,Param305,
+		8,Param305,
+		8,Param305,
+		8,Param305,
+		8,Param305,
+		8,Param305,
+		8,Param305,
+		8,Param305,
+		8,Param305,
+		8,Param305,
+		8,Param305;
+
+	Assem73 = 
+		"O->T Sub Assem: Process Data Port X3",
+		,
+		32,
+		0x0000,
+		,,
+		8,Param306,
+		8,Param306,
+		8,Param306,
+		8,Param306,
+		8,Param306,
+		8,Param306,
+		8,Param306,
+		8,Param306,
+		8,Param306,
+		8,Param306,
+		8,Param306,
+		8,Param306,
+		8,Param306,
+		8,Param306,
+		8,Param306,
+		8,Param306,
+		8,Param306,
+		8,Param306,
+		8,Param306,
+		8,Param306,
+		8,Param306,
+		8,Param306,
+		8,Param306,
+		8,Param306,
+		8,Param306,
+		8,Param306,
+		8,Param306,
+		8,Param306,
+		8,Param306,
+		8,Param306,
+		8,Param306,
+		8,Param306;
+
+	Assem74 = 
+		"O->T Sub Assem: Process Data Port X4",
+		,
+		32,
+		0x0000,
+		,,
+		8,Param307,
+		8,Param307,
+		8,Param307,
+		8,Param307,
+		8,Param307,
+		8,Param307,
+		8,Param307,
+		8,Param307,
+		8,Param307,
+		8,Param307,
+		8,Param307,
+		8,Param307,
+		8,Param307,
+		8,Param307,
+		8,Param307,
+		8,Param307,
+		8,Param307,
+		8,Param307,
+		8,Param307,
+		8,Param307,
+		8,Param307,
+		8,Param307,
+		8,Param307,
+		8,Param307,
+		8,Param307,
+		8,Param307,
+		8,Param307,
+		8,Param307,
+		8,Param307,
+		8,Param307,
+		8,Param307,
+		8,Param307;
+
+	Assem75 = 
+		"O->T Sub Assem: Process Data Port X5",
+		,
+		32,
+		0x0000,
+		,,
+		8,Param308,
+		8,Param308,
+		8,Param308,
+		8,Param308,
+		8,Param308,
+		8,Param308,
+		8,Param308,
+		8,Param308,
+		8,Param308,
+		8,Param308,
+		8,Param308,
+		8,Param308,
+		8,Param308,
+		8,Param308,
+		8,Param308,
+		8,Param308,
+		8,Param308,
+		8,Param308,
+		8,Param308,
+		8,Param308,
+		8,Param308,
+		8,Param308,
+		8,Param308,
+		8,Param308,
+		8,Param308,
+		8,Param308,
+		8,Param308,
+		8,Param308,
+		8,Param308,
+		8,Param308,
+		8,Param308,
+		8,Param308;
+
+	Assem76 = 
+		"O->T Sub Assem: Process Data Port X6",
+		,
+		32,
+		0x0000,
+		,,
+		8,Param309,
+		8,Param309,
+		8,Param309,
+		8,Param309,
+		8,Param309,
+		8,Param309,
+		8,Param309,
+		8,Param309,
+		8,Param309,
+		8,Param309,
+		8,Param309,
+		8,Param309,
+		8,Param309,
+		8,Param309,
+		8,Param309,
+		8,Param309,
+		8,Param309,
+		8,Param309,
+		8,Param309,
+		8,Param309,
+		8,Param309,
+		8,Param309,
+		8,Param309,
+		8,Param309,
+		8,Param309,
+		8,Param309,
+		8,Param309,
+		8,Param309,
+		8,Param309,
+		8,Param309,
+		8,Param309,
+		8,Param309;
+
+	Assem77 = 
+		"O->T Sub Assem: Process Data Port X7",
+		,
+		32,
+		0x0000,
+		,,
+		8,Param310,
+		8,Param310,
+		8,Param310,
+		8,Param310,
+		8,Param310,
+		8,Param310,
+		8,Param310,
+		8,Param310,
+		8,Param310,
+		8,Param310,
+		8,Param310,
+		8,Param310,
+		8,Param310,
+		8,Param310,
+		8,Param310,
+		8,Param310,
+		8,Param310,
+		8,Param310,
+		8,Param310,
+		8,Param310,
+		8,Param310,
+		8,Param310,
+		8,Param310,
+		8,Param310,
+		8,Param310,
+		8,Param310,
+		8,Param310,
+		8,Param310,
+		8,Param310,
+		8,Param310,
+		8,Param310,
+		8,Param310;
+
+
+$	********************************
+$	* Assemblies
+$	********************************
+
+	Assem101 = 
+		"T->O (Input) Assembly",
+		,
+		394,
+		0x0000,
+		,,
+		16,Param200,					$ Digital Input Data
+		16,Param201,					$ Digital Input Qualifiers
+		16,Param202,					$ Digital Output Qualifiers
+		32,Param203,					$ System State
+		320,Assem20,					$ T->O Sub Assem: IO-Link Port X0
+		320,Assem21,					$ T->O Sub Assem: IO-Link Port X1
+		320,Assem22,					$ T->O Sub Assem: IO-Link Port X2
+		320,Assem23,					$ T->O Sub Assem: IO-Link Port X3
+		320,Assem24,					$ T->O Sub Assem: IO-Link Port X4
+		320,Assem25,					$ T->O Sub Assem: IO-Link Port X5
+		320,Assem26,					$ T->O Sub Assem: IO-Link Port X6
+		320,Assem27,					$ T->O Sub Assem: IO-Link Port X7
+		512,Assem28;					$ T->O Sub Assem: Diagnostic Messages
+
+	Assem111 = 
+		"O->T (Output) Assembly",
+		,
+		260,
+		0x0000,
+		,,
+		16,Param300,					$ Digital Output Data
+		256,Assem70,					$ IO-Link Port X0 - Output Data
+		256,Assem71,					$ IO-Link Port X1 - Output Data
+		256,Assem72,					$ IO-Link Port X2 - Output Data
+		256,Assem73,					$ IO-Link Port X3 - Output Data
+		256,Assem74,					$ IO-Link Port X4 - Output Data
+		256,Assem75,					$ IO-Link Port X5 - Output Data
+		256,Assem76,					$ IO-Link Port X6 - Output Data
+		256,Assem77,					$ IO-Link Port X7 - Output Data
+		16,Param312;					$ Diagnostic Acknowledgement
+		
+
+	Assem170 = 
+		"Configuration Assembly",			$ Full Configuration Assembly
+		,
+		384,
+		0x0000,
+		,,
+		8,Param1,					$ Pin/Port based IO layout for digital channels
+		8,,
+		144,Assem1,					$ Config Sub-Assem: Diagnostics
+		192,Assem10,					$ Config Sub-Assem: IO-Link Port X0
+		192,Assem11,					$ Config Sub-Assem: IO-Link Port X1
+		192,Assem12,					$ Config Sub-Assem: IO-Link Port X2
+		192,Assem13,					$ Config Sub-Assem: IO-Link Port X3
+		192,Assem14,					$ Config Sub-Assem: IO-Link Port X4
+		192,Assem15,					$ Config Sub-Assem: IO-Link Port X5
+		192,Assem16,					$ Config Sub-Assem: IO-Link Port X6
+		192,Assem17,					$ Config Sub-Assem: IO-Link Port X7
+		8,,
+		16,4840,					$ Vendor: Fixed value
+		64,,
+		8,23,						$ Vendor: Fixed value
+		192,,
+		8,64,						$ Vendor: Fixed value
+		520,,
+		8,64,						$ Vendor: Fixed value
+		520,,
+		8,Param188,					$ Use of WebUI
+		24,;
+
+[Connection Manager]
+	Object_Name = "Connection Manager Object";
+	Object_Class_Code = 0x06;
+
+		Connection1 = 
+			0x04010002,
+			0x44640405,
+			Param500,,Assem111,
+			Param500,,Assem101,
+			,,
+			,Assem170,
+			"Exclusive Owner (32B)",
+			"",
+			"20 04 24 AA 2C 6F 2C 65";
+
+		Connection2 = 
+			0x02010002,
+			0x44640305,
+			,0,,
+			Param500,,Assem101,
+			,,
+			,Assem170,
+			"Input Only (32B)",
+			"",
+			"20 04 24 AA 2C C1 2C 65";
+
+		Connection3 = 
+			0x01010002,
+			0x44240305,
+			,0,,
+			Param500,,Assem101,
+			,,
+			,,
+			"Listen Only (32B)",
+			"",
+			"20 04 24 AA 2C C0 2C 65";
+
+[Capacity]
+	ConnOverhead = .004;
+	MaxIOConnections = 3;
+	MaxMsgConnections = 6;
+	TSpec1 = TxRx, 10, 4000;
+	TSpec2 = TxRx, 504, 3000;
+
+[DLR Class]
+	Revision = 3;
+	Object_Name = "Device Level Ring Object";
+	Object_Class_Code = 0x47;
+	MaxInst = 1;
+	Number_Of_Static_Instances = 1;
+	Max_Number_Of_Dynamic_Instances = 0;
+
+[TCP/IP Interface Class]
+	Revision = 4;
+	Object_Name = "TCP/IP Interface Object";
+	Object_Class_Code = 0xF5;
+	MaxInst = 1;
+	Number_Of_Static_Instances = 1;
+	Max_Number_Of_Dynamic_Instances = 0;
+	ENetQCT1 = 
+		350,
+		50;
+
+[QoS Class]
+	Revision = 1;
+	Object_Name = "QoS Object";
+	Object_Class_Code = 0x48;
+	MaxInst = 1;
+	Number_Of_Static_Instances = 1;
+	Max_Number_Of_Dynamic_Instances = 0;
+	Class_Attributes = 
+		1,
+		2;
+	Instance_Attributes = 
+		1,
+		4,
+		5,
+		6,
+		7,
+		8;
+	Class_Services = {0x0E,*};
+	Instance_Services = 
+		{0x10,*},
+		{0x0E,*};
+		
+			

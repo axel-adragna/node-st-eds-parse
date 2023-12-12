@@ -1,0 +1,95 @@
+[File]
+   DescText   = "Mettler-Toledo Scale terminal";
+   CreateDate = 13-11-2008;
+   CreateTime = 15:33:13;
+   ModDate    = 13-11-2008;
+   ModTime    = 15:33:13;
+   Revision   = 1.0;
+
+
+[Device]
+   VendCode    = 666;
+   VendName    = "Mettler-Toledo";
+   ProdType    = 12;
+   ProdTypeStr = "Communication Adaptor";
+   ProdCode    = 9;
+   MajRev      = 1;
+   MinRev      = 35;
+   ProdName    = "IND131-ETHIP";
+   Catalog     = "IND EtherNet/IP";
+
+[Device Classification]
+   Class1 = EtherNetIP;
+
+
+[Port]
+   Port1 =
+      TCP,                          $ port type name
+      "TCP/IP",                     $ name of port
+      "20 F5 24 01",                $ instance one of the TCP/IP interface object
+      2;                            $ port number
+
+
+[Params]
+   Param1 =
+      0,                            $ first field shall equal 0
+      ,,                            $ path size,path
+      0x0000,                       $ descriptor
+      0xC7,                         $ data type : 16-bit Unsigned Integer
+      2,                            $ data size in bytes
+      "Output Size",                $ name
+      "",                           $ units
+      "",                           $ help string
+      0, 504, 16,                   $ min, max, default data values
+      ,,,,                          $ mult, dev, base, offset scaling not used
+      ,,,,                          $ mult, dev, base, offset link not used
+      0;                            $ decimal places not used
+
+   Param2 =
+      0,                            $ first field shall equal 0
+      ,,                            $ path size,path
+      0x0000,                       $ descriptor
+      0xC7,                         $ data type : 16-bit Unsigned Integer
+      2,                            $ data size in bytes
+      "Input Size",                 $ name
+      "",                           $ units
+      "",                           $ help string
+      0, 504, 16,                   $ min, max, default data values
+      ,,,,                	    $ mult, dev, base, offset scaling not used
+      ,,,,                          $ mult, dev, base, offset link not used
+      0;                            $ decimal places not used
+
+
+[Connection Manager]
+   Connection1 =
+      0x04010002,                   $ trigger & transport
+                                    $  0-15  = supported transport classes (class 1)
+                                    $  16 = cyclic (1 = supported)
+                                    $  17 = change of state (0 = not supported)
+                                    $  18 = on demand (0 = not supported)
+                                    $  19-23 = reserved (must be zero)
+                                    $  24-27 = exclusive owner
+                                    $  28-30 = reserved (must be zero)
+                                    $  31 = client 0 (don't care for classes 0 and 1)
+      0x44240405,                   $ point/multicast & priority & realtime format
+                                    $   0     = O=>T fixed (1 = supported)
+                                    $   1     = O=>T variable (0 = not supported)
+                                    $   2     = T=>O fixed (1 = supported)
+                                    $   3     = T=>O variable (0 = not supported)
+                                    $  4-7   = reserved (must be zero)
+                                    $  8-10  = O=>T header (4 byte run/idle)
+                                    $  11  = reserved (must be zero)
+                                    $  12-14 = T=>O header
+                                    $  15  = reserved (must be zero)
+                                    $  16-19 = O=>T point-to-point
+                                    $  20-23 = T=>O multicast
+                                    $  24-27 = O=>T scheduled
+                                    $  28-31 = T=>O scheduled
+      ,Param1,,                     $ O=>T RPI,Size,Format
+      ,Param2,,                     $ T=>O RPI,Size,Format
+      ,,                            $ config part 1 (dynamic assemblies)
+      ,,                            $ config part 2 (module configuration)
+      "Discrete Exclusive Owner",   $ connection name
+      "",                           $ Help string
+      "20 04 24 01 2C 96 2C 64";    $ exclusive output path
+   
