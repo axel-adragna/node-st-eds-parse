@@ -48,18 +48,23 @@ function splitQuotes(str, sep) {
     let array = [];
     let item = '';
     let quotes = 0;
-    for (i = 0; i < str.length; i++) {
-        if (str[i] === sep && !(quotes % 2)) {
+    for (let i = 0; i < str.length; i++) {
+        if (str[i] === sep && (quotes % 2) === 0) {
+            // removes double quotes for string items
+            if (item.startsWith('"') && item.endsWith('"'))
+                item = item.substring(1, item.length - 1);
             array.push(item);
             item = '';
         } else {
-            item = item + str[i]
+            item += str[i];
             if (str[i] === '"') {
                 quotes++;
             }
         }
     }
     if (item.length > 0) {
+        if (item.startsWith('"') && item.endsWith('"'))
+            item = item.substring(1, item.length - 1);
         array.push(item);
     }
     return array;

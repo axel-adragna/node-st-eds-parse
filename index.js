@@ -8,7 +8,7 @@ exports.ParseEDS = function(str) {
     if(eds.ConnectionManager) {
         Object.keys(eds.ConnectionManager).forEach(item => {
             if (item.slice(0,10) === 'Connection') {
-                eds.ConnectionManager[item] = EDSTypes.connection(splitQuotes(eds.ConnectionManager[item], ','))
+                eds.ConnectionManager[item] = EDSTypes.connection(splitQuotes(eds.ConnectionManager[item], ','));
             }
         });
     }
@@ -16,10 +16,10 @@ exports.ParseEDS = function(str) {
     if(eds.Params) {
         Object.keys(eds.Params).forEach(item => {
             if (item.slice(0,5) === 'Param') {
-                eds.Params[item] = EDSTypes.parameter(splitQuotes(eds.Params[item], ','))
+                eds.Params[item] = EDSTypes.parameter(splitQuotes(eds.Params[item], ','));
             };
             if (item.slice(0,4) === 'Enum') {
-                eds.Params[item] = EDSTypes.enum(splitQuotes(eds.Params[item], ','))
+                eds.Params[item] = EDSTypes.enum(splitQuotes(eds.Params[item], ','));
             };
         })
     }
@@ -27,14 +27,14 @@ exports.ParseEDS = function(str) {
     if (eds.Assembly) {
         Object.keys(eds.Assembly).forEach(item => {
             if (item.slice(0,5) === 'Assem') {
-                eds.Assembly[item] = EDSTypes.assembly(splitQuotes(eds.Assembly[item], ','))
+                eds.Assembly[item] = EDSTypes.assembly(splitQuotes(eds.Assembly[item], ','));
             }
         });
     }
 
     if (eds.Groups) {
         Object.keys(eds.Groups).forEach(item => {
-            eds.Groups[item] = EDSTypes.group(splitQuotes(eds.Groups[item], ','))
+            eds.Groups[item] = EDSTypes.group(splitQuotes(eds.Groups[item], ','));
         });
     }
 
