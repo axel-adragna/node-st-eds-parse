@@ -31,6 +31,13 @@ exports.ParseEDS = function(str) {
             }
         });
     }
+
+    if (eds.Groups) {
+        Object.keys(eds.Groups).forEach(item => {
+            eds.Groups[item] = EDSTypes.group(splitQuotes(eds.Groups[item], ','))
+        });
+    }
+
     return eds;
 }
 

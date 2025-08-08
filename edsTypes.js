@@ -70,3 +70,15 @@ exports.assembly = array => {
         params: params
     }
 }
+
+exports.group = array => {
+    let params = [];
+    for(let i = 2; i < array.length; i++) {
+        params.push(parseInt(array[i]));
+    }
+    return {
+        name: array[0],
+        size: parseInt(array[1]),
+        params: params
+    }
+}
