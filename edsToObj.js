@@ -33,6 +33,8 @@ function initObj(lineArray) {
 function sepSectionName(array) {
     let result = []
     array.forEach(item => {
+        // if '[' char is ecountered, a string containing the section header + the following property is expected, for example '[File]DescText=Adapter EDS'.
+        // so the section '[File]' and also the property 'DescText' are pushed to the result array.
         if (item[0] === '[') {
             result.push(item.slice(0,item.search("]") + 1));
             result.push(item.slice(item.search("]") + 1))
@@ -45,28 +47,35 @@ function sepSectionName(array) {
 }
 
 function splitQuotes(str, sep) {
-    let array = [];
-    let item = '';
-    let quotes = 0;
+    const stripQuotes = s => (s.startsWith('"') && s.endsWith('"')) ? s.slice(1, -1) : s;
+
+    const array = [];
+    let item = "";
+    let inQuotes = false;
+
+    // this crazy char-by-char parsing is needed:
+    // if the separator is encountered and the double quote is closed, ends the parsing of the current element.
+    // this is needed in order to continue parsing a quoted property if the separator is encountered in between.
+    // example: HelpString of a Param object can be: "foo, bar, baz" with ',' separator.
     for (let i = 0; i < str.length; i++) {
-        if (str[i] === sep && (quotes % 2) === 0) {
-            // removes double quotes for string items
-            if (item.startsWith('"') && item.endsWith('"'))
-                item = item.substring(1, item.length - 1);
-            array.push(item);
-            item = '';
-        } else {
-            item += str[i];
-            if (str[i] === '"') {
-                quotes++;
-            }
+        const currentChar = str[i];
+
+        if (currentChar === '"') {
+            inQuotes = !inQuotes;
+            item += currentChar;
+        }
+        else if (currentChar === sep && !inQuotes) {
+            array.push(stripQuotes(item));
+            item = "";
+        }
+        else {
+            item += currentChar;
         }
     }
-    if (item.length > 0) {
-        if (item.startsWith('"') && item.endsWith('"'))
-            item = item.substring(1, item.length - 1);
-        array.push(item);
-    }
+
+    if (item.length > 0)
+        array.push(stripQuotes(item));
+
     return array;
 }
 
